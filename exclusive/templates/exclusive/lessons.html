@@ -1,0 +1,498 @@
+{% extends 'exclusive/base.html' %}
+{% load static %}
+
+{% block navbar_fixed %}
+{% endblock %}
+
+
+{% block content %}
+    <div class="flq-background py-7">
+            <div class="flq-background-ticker">
+                <div class="flq-image-ticker mb-3" data-gap=20 data-pixels-per-second=20>
+                    <div class="flq-image-ticker-inner">
+                        <div class="flq-image-ticker-item">
+                            <span class="flq-image">
+                                <img src="{% static 'exclusive/assets/images/background-ticker/1.jpg' %}" alt="">
+                            </span>
+                        </div>
+                        <div class="flq-image-ticker-item">
+                            <span class="flq-image">
+                                <img src="{% static 'exclusive/assets/images/background-ticker/2.jpg' %}" alt="">
+                            </span>
+                        </div>
+                        <div class="flq-image-ticker-item">
+                            <span class="flq-image">
+                                <img src="{% static 'exclusive/assets/images/background-ticker/3.jpg' %}" alt="">
+                            </span>
+                        </div>
+                        <div class="flq-image-ticker-item">
+                            <span class="flq-image">
+                                <img src="{% static 'exclusive/assets/images/background-ticker/4.jpg' %}" alt="">
+                            </span>
+                        </div>
+                        <div class="flq-image-ticker-item">
+                            <span class="flq-image">
+                                <img src="{% static 'exclusive/assets/images/background-ticker/5.jpg' %}" alt="">
+                            </span>
+                        </div>
+                        <div class="flq-image-ticker-item">
+                            <span class="flq-image">
+                                <img src="{% static 'exclusive/assets/images/background-ticker/6.jpg' %}" alt="">
+                            </span>
+                        </div>
+                        <div class="flq-image-ticker-item">
+                            <span class="flq-image">
+                                <img src="{% static 'exclusive/assets/images/background-ticker/7.jpg' %}" alt="">
+                            </span>
+                        </div>
+                        <div class="flq-image-ticker-item">
+                            <span class="flq-image">
+                                <img src="{% static 'exclusive/assets/images/background-ticker/8.jpg' %}" alt="">
+                            </span>
+                        </div>
+                        <div class="flq-image-ticker-item">
+                            <span class="flq-image">
+                                <img src="{% static 'exclusive/assets/images/background-ticker/9.jpg' %}" alt="">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flq-image-ticker" data-gap=20 data-pixels-per-second=20 data-inverted>
+                    <div class="flq-image-ticker-inner">
+                        <div class="flq-image-ticker-item">
+                            <span class="flq-image">
+                                <img src="{% static 'exclusive/assets/images/background-ticker/10.jpg' %}" alt="">
+                            </span>
+                        </div>
+                        <div class="flq-image-ticker-item">
+                            <span class="flq-image">
+                                <img src="{% static 'exclusive/assets/images/background-ticker/11.jpg' %}" alt="">
+                            </span>
+                        </div>
+                        <div class="flq-image-ticker-item">
+                            <span class="flq-image">
+                                <img src="{% static 'exclusive/assets/images/background-ticker/12.jpg' %}" alt="">
+                            </span>
+                        </div>
+                        <div class="flq-image-ticker-item">
+                            <span class="flq-image">
+                                <img src="{% static 'exclusive/assets/images/background-ticker/13.jpg' %}" alt="">
+                            </span>
+                        </div>
+                        <div class="flq-image-ticker-item">
+                            <span class="flq-image">
+                                <img src="{% static 'exclusive/assets/images/background-ticker/14.jpg' %}" alt="">
+                            </span>
+                        </div>
+                        <div class="flq-image-ticker-item">
+                            <span class="flq-image">
+                                <img src="{% static 'exclusive/assets/images/background-ticker/15.jpg' %}" alt="">
+                            </span>
+                        </div>
+                        <div class="flq-image-ticker-item">
+                            <span class="flq-image">
+                                <img src="{% static 'exclusive/assets/images/background-ticker/16.jpg' %}" alt="">
+                            </span>
+                        </div>
+                        <div class="flq-image-ticker-item">
+                            <span class="flq-image">
+                                <img src="{% static 'exclusive/assets/images/background-ticker/17.jpg' %}" alt="">
+                            </span>
+                        </div>
+                        <div class="flq-image-ticker-item">
+                            <span class="flq-image">
+                                <img src="{% static 'exclusive/assets/images/background-ticker/18.jpg' %}" alt="">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flq-background-overlay" style="background-color: hsla(var(--flq-color-black), 0.8);"></div>
+            <div class="container text-center" data-sr="banner-text" data-sr-interval="100" data-sr-distance="10" data-sr-duration="1000">
+                <h1 class="display-5 mb-1" data-sr-item="banner-text">TV Shows</h1>
+                <nav aria-label="breadcrumb" data-sr-item="banner-text">
+                    <ol class="breadcrumb flq-color-opacity">
+                        <li class="breadcrumb-item"><a href="demo.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">TV Shows</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    <div class="content-wrap">
+        <div class="py-7">
+            <div class="container flq-isotope" data-sr="tvshow-item" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
+                <div class="row align-items-center gy-4 mb-5">
+                    <div class="col-12 col-md">
+                        <nav>
+                            <ul class="nav nav-tabs flq-isotope-options" data-sr="tvshow-options" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
+                                <li class="nav-item" data-sr-item="tvshow-options">
+                                    <a href="#" data-filter="all" class="nav-link active"><span class="nav-link-name">All</span></a>
+                                </li>
+                                <li class="nav-item" data-sr-item="tvshow-options">
+                                    <a href="#" data-filter="romance" class="nav-link"><span class="nav-link-name">Romance</span></a>
+                                </li>
+                                <li class="nav-item" data-sr-item="tvshow-options">
+                                    <a href="#" data-filter="action" class="nav-link"><span class="nav-link-name">Action</span></a>
+                                </li>
+                                <li class="nav-item" data-sr-item="tvshow-options">
+                                    <a href="#" data-filter="horror" class="nav-link"><span class="nav-link-name">Horror</span></a>
+                                </li>
+                                <li class="nav-item" data-sr-item="tvshow-options">
+                                    <a href="#" data-filter="adventure" class="nav-link"><span class="nav-link-name">Adventure</span></a>
+                                </li>
+                                <li class="nav-item" data-sr-item="tvshow-options">
+                                    <a href="#" data-filter="comedy" class="nav-link"><span class="nav-link-name">Comedy</span></a>
+                                </li>
+                                <li class="nav-item" data-sr-item="tvshow-options">
+                                    <a href="#" data-filter="drama" class="nav-link"><span class="nav-link-name">Drama</span></a>
+                                </li>
+                                <li class="nav-item" data-sr-item="tvshow-options">
+                                    <a href="#" data-filter="war" class="nav-link"><span class="nav-link-name">War</span></a>
+                                </li>
+                                <li class="nav-item" data-sr-item="tvshow-options">
+                                    <a href="#" data-filter="crime" class="nav-link"><span class="nav-link-name">Crime</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-12 col-md-auto" data-sr data-sr-delay="160" data-sr-duration="1000" data-sr-distance="10">
+                        <select class="form-select">
+                            <option>By popularity</option>
+                            <option>By rating</option>
+                            <option>By date</option>
+                            <option>By name</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row gy-5 justify-content-center flq-isotope-grid">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 flq-isotope-item" data-filters="romance">
+                        <div data-sr-item="tvshow-item">
+                            <div class="card flq-card-blog">
+                                <div class="card-img-wrap">
+                                    <a href="single-movie.html">
+                                        <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
+                                            <img src="{% static 'exclusive/assets/images/tv-shows/show-1-390x440.jpg' %}" alt="">
+                                        </span>
+                                        <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">7.2</span>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title h6"><a href="single-movie.html">Believe</a></h5>
+                                    <div class="flq-meta flq-meta-sm">
+                                        <ul>
+                                            <li>
+                                                <a href="#" class="card-year">2021</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="card-category">Romance</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 flq-isotope-item" data-filters="horror">
+                        <div data-sr-item="tvshow-item">
+                            <div class="card flq-card-blog">
+                                <div class="card-img-wrap">
+                                    <a href="single-movie.html">
+                                        <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
+                                            <img src="{% static 'exclusive/assets/images/tv-shows/show-2-390x440.jpg' %}" alt="">
+                                        </span>
+                                        <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">6.9</span>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title h6"><a href="single-movie.html">Ghost</a></h5>
+                                    <div class="flq-meta flq-meta-sm">
+                                        <ul>
+                                            <li>
+                                                <a href="#" class="card-year">2019</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="card-category">Horror</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 flq-isotope-item" data-filters="adventure">
+                        <div data-sr-item="tvshow-item">
+                            <div class="card flq-card-blog">
+                                <div class="card-img-wrap">
+                                    <a href="single-movie.html">
+                                        <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
+                                            <img src="{% static 'exclusive/assets/images/tv-shows/show-3-390x440.jpg' %}" alt="">
+                                        </span>
+                                        <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">6.2</span>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title h6"><a href="single-movie.html">Busanhaeng</a></h5>
+                                    <div class="flq-meta flq-meta-sm">
+                                        <ul>
+                                            <li>
+                                                <a href="#" class="card-year">2016</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="card-category">Adventure</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 flq-isotope-item" data-filters="comedy">
+                        <div data-sr-item="tvshow-item">
+                            <div class="card flq-card-blog">
+                                <div class="card-img-wrap">
+                                    <a href="single-movie.html">
+                                        <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
+                                            <img src="{% static 'exclusive/assets/images/tv-shows/show-4-390x440.jpg' %}" alt="">
+                                        </span>
+                                        <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">7.6</span>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title h6"><a href="single-movie.html">The Ultimate Wave</a></h5>
+                                    <div class="flq-meta flq-meta-sm">
+                                        <ul>
+                                            <li>
+                                                <a href="#" class="card-year">2018</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="card-category">Comedy</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 flq-isotope-item" data-filters="adventure">
+                        <div data-sr-item="tvshow-item">
+                            <div class="card flq-card-blog">
+                                <div class="card-img-wrap">
+                                    <a href="single-movie.html">
+                                        <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
+                                            <img src="{% static 'exclusive/assets/images/tv-shows/show-5-390x440.jpg' %}" alt="">
+                                        </span>
+                                        <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">7.8</span>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title h6"><a href="single-movie.html">Traveler</a></h5>
+                                    <div class="flq-meta flq-meta-sm">
+                                        <ul>
+                                            <li>
+                                                <a href="#" class="card-year">2021</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="card-category">Adventure</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 flq-isotope-item" data-filters="drama">
+                        <div data-sr-item="tvshow-item">
+                            <div class="card flq-card-blog">
+                                <div class="card-img-wrap">
+                                    <a href="single-movie.html">
+                                        <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
+                                            <img src="{% static 'exclusive/assets/images/tv-shows/show-6-390x440.jpg' %}" alt="">
+                                        </span>
+                                        <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">9.0</span>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title h6"><a href="single-movie.html">Spirit</a></h5>
+                                    <div class="flq-meta flq-meta-sm">
+                                        <ul>
+                                            <li>
+                                                <a href="#" class="card-year">2014</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="card-category">Drama</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 flq-isotope-item" data-filters="action">
+                        <div data-sr-item="tvshow-item">
+                            <div class="card flq-card-blog">
+                                <div class="card-img-wrap">
+                                    <a href="single-movie.html">
+                                        <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
+                                            <img src="{% static 'exclusive/assets/images/tv-shows/show-7-390x440.jpg' %}" alt="">
+                                        </span>
+                                        <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">6.0</span>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title h6"><a href="single-movie.html">Everest</a></h5>
+                                    <div class="flq-meta flq-meta-sm">
+                                        <ul>
+                                            <li>
+                                                <a href="#" class="card-year">2000</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="card-category">Action</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 flq-isotope-item" data-filters="war">
+                        <div data-sr-item="tvshow-item">
+                            <div class="card flq-card-blog">
+                                <div class="card-img-wrap">
+                                    <a href="single-movie.html">
+                                        <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
+                                            <img src="{% static 'exclusive/assets/images/tv-shows/show-8-390x440.jpg' %}" alt="">
+                                        </span>
+                                        <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">6.2</span>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title h6"><a href="single-movie.html">Sniper</a></h5>
+                                    <div class="flq-meta flq-meta-sm">
+                                        <ul>
+                                            <li>
+                                                <a href="#" class="card-year">2015</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="card-category">War</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 flq-isotope-item" data-filters="drama">
+                        <div data-sr-item="tvshow-item">
+                            <div class="card flq-card-blog">
+                                <div class="card-img-wrap">
+                                    <a href="single-movie.html">
+                                        <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
+                                            <img src="{% static 'exclusive/assets/images/tv-shows/show-9-390x440.jpg' %}" alt="">
+                                        </span>
+                                        <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">7.1</span>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title h6"><a href="single-movie.html">Life of Pi</a></h5>
+                                    <div class="flq-meta flq-meta-sm">
+                                        <ul>
+                                            <li>
+                                                <a href="#" class="card-year">2019</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="card-category">Drama</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 flq-isotope-item" data-filters="crime">
+                        <div data-sr-item="tvshow-item">
+                            <div class="card flq-card-blog">
+                                <div class="card-img-wrap">
+                                    <a href="single-movie.html">
+                                        <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
+                                            <img src="{% static 'exclusive/assets/images/tv-shows/show-10-390x440.jpg' %}" alt="">
+                                        </span>
+                                        <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">6.7</span>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title h6"><a href="single-movie.html">Freedom Writers</a></h5>
+                                    <div class="flq-meta flq-meta-sm">
+                                        <ul>
+                                            <li>
+                                                <a href="#" class="card-year">2017</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="card-category">Crime</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 flq-isotope-item" data-filters="action">
+                        <div data-sr-item="tvshow-item">
+                            <div class="card flq-card-blog">
+                                <div class="card-img-wrap">
+                                    <a href="single-movie.html">
+                                        <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
+                                            <img src="{% static 'exclusive/assets/images/tv-shows/show-11-390x440.jpg' %}" alt="">
+                                        </span>
+                                        <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">6.3</span>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title h6"><a href="single-movie.html">Grind</a></h5>
+                                    <div class="flq-meta flq-meta-sm">
+                                        <ul>
+                                            <li>
+                                                <a href="#" class="card-year">2003</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="card-category">Action</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 flq-isotope-item" data-filters="adventure">
+                        <div data-sr-item="tvshow-item">
+                            <div class="card flq-card-blog">
+                                <div class="card-img-wrap">
+                                    <a href="single-movie.html">
+                                        <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
+                                            <img src="{% static 'exclusive/assets/images/tv-shows/show-12-390x440.jpg' %}" alt="">
+                                        </span>
+                                        <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">8.6</span>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title h6"><a href="single-movie.html">Interstellar</a></h5>
+                                    <div class="flq-meta flq-meta-sm">
+                                        <ul>
+                                            <li>
+                                                <a href="#" class="card-year">2014</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="card-category">Adventure</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5" data-sr-item="tvshow-item"><button class="btn btn-outline btn-white">Show More</button></div>
+            </div>
+        </div>
+        {% include 'exclusive/utilities/footer.html' %}
+    </div>
+{% endblock %}

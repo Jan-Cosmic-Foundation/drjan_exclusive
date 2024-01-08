@@ -36,17 +36,18 @@
         <!-- Preloader -->
         <div class="flq-preloader">
             <div class="flq-preloader-title display-1 h1">
-                <span>F</span>
-                <span>L</span>
-                <span>I</span>
-                <span>Q</span>
-                <span>S</span>
+                <span>D</span>
+                <span>R</span>
+                <span>.</span>
+                <span>J</span>
+                <span>A</span>
+                <span>N</span>
             </div>
         </div>
         <div class="flq-preloader-bg"></div>
         <!-- / Preloader -->
         <!-- Navbar top -->
-        <nav class="flq-navbar flq-navbar-top flq-navbar-top-cloud flq-navbar-top-fixed">
+        <nav class="flq-navbar flq-navbar-top {% block navbar_fixed %}flq-navbar-top-cloud flq-navbar-top-fixed {% endblock %}">
             <div class="flq-navbar-container container-fluid">
                 <button class="btn btn-link me-4" data-bs-toggle="offcanvas" data-bs-target="#flq_offcanvas">
                     <span></span>
@@ -62,40 +63,46 @@
                             <span class="nav-link-name">Home</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="pricing.html" class="nav-link">
-                            <span class="nav-link-name">Pricing</span>
-                        </a>
-                    </li>
                     <li class="nav-item flq-dropdown flq-dropdown-nav">
-                        <a href="movies.html" class="nav-link" role="button">
-                            <span class="nav-link-name">Movies</span>
+                        <a href="pathways.html" class="nav-link" role="button">
+                            <span class="nav-link-name">Pathways</span>
                         </a>
                         <div class="dropdown-menu gy-2">
                             <ul class="nav">
                                 <li class="nav-item">
-                                    <a href="movies.html" class="nav-link">
-                                        <span class="nav-link-name">Movies</span>
+                                    <a href="pathways.html" class="nav-link">
+                                        <span class="nav-link-name">Pathways</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="single-movie.html" class="nav-link">
-                                        <span class="nav-link-name">Single Movie</span>
+                                        <span class="nav-link-name">Intermediate</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="single-actor.html" class="nav-link">
-                                        <span class="nav-link-name">Single Actor</span>
+                                        <span class="nav-link-name">Advanced</span>
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="tv-shows.html" class="nav-link">
-                            <span class="nav-link-name">TV Shows</span>
+                        <a href="pricing.html" class="nav-link">
+                            <span class="nav-link-name">Intermediate</span>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="pricing.html" class="nav-link">
+                            <span class="nav-link-name">Advanced</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="lessons.html" class="nav-link">
+                            <span class="nav-link-name">Contact Us</span>
+                        </a>
+                    </li>
+                    {% comment %}
                     <li class="nav-item flq-dropdown flq-dropdown-nav">
                         <a href="blog.html" class="nav-link" role="button">
                             <span class="nav-link-name">Blog</span>
@@ -149,6 +156,7 @@
                             </ul>
                         </div>
                     </li>
+                    {% endcomment%}
                 </ul>
                 <button class="btn btn-link btn-icon-md ms-5 d-none d-sm-flex" data-fancybox data-src="#flq_popup_search" data-base-class="flq-fancybox-search" data-animation-duration="1000" data-keyboard="false" data-auto-focus="true" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -316,7 +324,7 @@
                                 <div class="accordion-collapse collapse" id="Movies">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a href="movies.html" class="nav-link">
+                                            <a href="pathways.html" class="nav-link">
                                                 <span class="nav-link-name">Movies</span>
                                             </a>
                                         </li>
@@ -334,7 +342,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a href="tv-shows.html" class="nav-link">
+                                <a href="lessons.html" class="nav-link">
                                     <span class="nav-link-name">TV Shows</span>
                                 </a>
                             </li>
