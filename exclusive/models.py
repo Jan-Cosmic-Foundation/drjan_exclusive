@@ -2,11 +2,27 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+class Profile(models.Model):
+    """
+    Model for user profiles: user, bio, profile pic, social links
+    """
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
+    phone_number = models.CharField(max_length=20, blank=True)
+    profile_pic = models.ImageField(upload_to='profile_pics', blank=True)
+    registered = models.BooleanField(default=False)
+    intermediate_access = models.BooleanField(default=False)
+    advanced_access = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.user.username
+
+
 class Course(models.Model):
     name = models.CharField(max_length=50, unique=True)
     description = models.CharField(max_length=200)
     thumbnail = models.ImageField(upload_to='course_images', blank=True)
     level = models.CharField(max_length=50)
+    core = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
@@ -32,7 +48,8 @@ class Lesson(models.Model):
     description = models.TextField()
     lesson_type = models.CharField(max_length=50, choices=TYPE_CHOICES, default='lesson')
     thumbnail = models.ImageField(upload_to='lesson_thumbnails', blank=True)
-    video_link = models.CharField(max_length=200, blank=True)
+    video_source = models.CharField(max_length=50, default='vimeo')
+    video_link = models.CharField(max_length=200)
     twi_video_link = models.CharField(max_length=200, blank=True)
 
     def __str__(self):

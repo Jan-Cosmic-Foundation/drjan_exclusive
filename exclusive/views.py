@@ -7,12 +7,17 @@ def index(request):
     return render(request, 'exclusive/index.html')
 
 
-def lesson(request):
-    return render(request, 'exclusive/single-lesson.html')
-
-
 def lessons(request):
     return render(request, 'exclusive/lessons.html')
 
+
 def pathways(request):
     return render(request, 'exclusive/pathways.html')
+
+
+def pathway_detail(request):
+    return render(request, 'exclusive/single-course.html')
+
+
+def lesson_detail(request):
+    return render(request, 'exclusive/single-lesson.html')

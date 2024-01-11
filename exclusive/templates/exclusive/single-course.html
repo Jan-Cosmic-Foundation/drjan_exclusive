@@ -1,0 +1,399 @@
+
+
+
+{% extends 'exclusive/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="py-7 min-vh-100 flq-background d-flex align-items-center">
+            <div class="flq-background-image">
+                <span class="flq-image jarallax" data-speed=0.7>
+                    <img src="{% static 'exclusive/assets/images/movies/movie-1-blur-1920x1080.jpg' %}" class="jarallax-img" alt="">
+                </span>
+            </div>
+            <div class="flq-background-overlay" style="background-color: hsla(var(--flq-color-black), 0.8);"></div>
+            <div class="container pt-navbar" data-sr="movie" data-sr-interval="70" data-sr-duration="1200" data-sr-distance="10">
+                <div class="row gy-6 gx-6">
+                    <div class="col-12 col-lg-6 col-xl-5 col-xxl-4" data-sr data-sr-duration="1600" data-sr-distance="10">
+                        <div class="card flq-card-image flq-card-favorites h-lg-100">
+                            <a href="{% static 'exclusive/assets/images/movies/movie-1-3840x2160.jpg' %}" class="card-image" data-fancybox>
+                                <span class="flq-image flq-responsive flq-responsive-lg-3x4">
+                                    <img src="{% static 'exclusive/assets/images/movies/movie-1-1290x1290.jpg' %}" alt="">
+                                </span>
+                                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 20H16M4 8V4V8ZM4 4H8H4ZM4 4L9 9L4 4ZM20 8V4V8ZM20 4H16H20ZM20 4L15 9L20 4ZM4 16V20V16ZM4 20H8H4ZM4 20L9 15L4 20ZM20 20L15 15L20 20ZM20 20V16V20Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            <div class="card-body">
+                                <a href="#" class="btn btn-dark btn-glass btn-block" data-bs-toggle="button">
+                                    <span class="btn-icon">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.3671 3.84166C16.9415 3.41583 16.4361 3.07803 15.8799 2.84757C15.3237 2.6171 14.7275 2.49847 14.1254 2.49847C13.5234 2.49847 12.9272 2.6171 12.371 2.84757C11.8147 3.07803 11.3094 3.41583 10.8838 3.84166L10.0004 4.725L9.11709 3.84166C8.25735 2.98192 7.09128 2.49892 5.87542 2.49892C4.65956 2.49892 3.4935 2.98192 2.63376 3.84166C1.77401 4.70141 1.29102 5.86747 1.29102 7.08333C1.29102 8.29919 1.77401 9.46525 2.63376 10.325L3.51709 11.2083L10.0004 17.6917L16.4838 11.2083L17.3671 10.325C17.7929 9.89937 18.1307 9.39401 18.3612 8.83779C18.5917 8.28158 18.7103 7.6854 18.7103 7.08333C18.7103 6.48126 18.5917 5.88508 18.3612 5.32887C18.1307 4.77265 17.7929 4.26729 17.3671 3.84166V3.84166Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.3671 3.84166C16.9415 3.41583 16.4361 3.07803 15.8799 2.84757C15.3237 2.6171 14.7275 2.49847 14.1254 2.49847C13.5234 2.49847 12.9272 2.6171 12.371 2.84757C11.8147 3.07803 11.3094 3.41583 10.8838 3.84166L10.0004 4.725L9.11709 3.84166C8.25735 2.98192 7.09128 2.49892 5.87542 2.49892C4.65956 2.49892 3.4935 2.98192 2.63376 3.84166C1.77401 4.70141 1.29102 5.86747 1.29102 7.08333C1.29102 8.29919 1.77401 9.46525 2.63376 10.325L3.51709 11.2083L10.0004 17.6917L16.4838 11.2083L17.3671 10.325C17.7929 9.89937 18.1307 9.39401 18.3612 8.83779C18.5917 8.28158 18.7103 7.6854 18.7103 7.08333C18.7103 6.48126 18.5917 5.88508 18.3612 5.32887C18.1307 4.77265 17.7929 4.26729 17.3671 3.84166V3.84166Z" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    <span class="btn-name">Add to favorites</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 py-lg-2 flq-vertical-rhythm">
+                        <span class="flq-subtitle badge badge-white badge-translucent" data-sr-item="movie">Adventure</span>
+                        <h1 class="mb-0" data-sr-item="movie">Princess Yako</h1>
+                        <div class="mt-3">
+                            <div class="row gy-1 flq-color-opacity">
+                                <div class="col-auto" data-sr-item="movie">
+                                    <div class="d-flex align-items-center">
+                                        <svg width="43" height="22" viewBox="0 0 43 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M43 1.89083C42.8833 0.922265 42.1751 0.150295 41.2733 0C37.3203 0 5.69694 0 1.74393 0C0.756052 0.164717 0 1.07484 0 2.17169C0 3.935 0 18.0384 0 19.801C0 21.0155 0.925061 22 2.06699 22C5.95494 22 37.0623 22 40.9502 22C42.0017 22 42.8699 21.1643 43 20.0826C43 16.4444 43 3.70955 43 1.89083Z" fill="#F6C700" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M34.2105 15.7931C34.4184 15.7931 34.6936 15.7074 34.7565 15.5381C34.7983 15.425 34.8297 15.0174 34.8514 14.3152V10.8987C34.8514 10.3347 34.8155 9.96654 34.7445 9.79423C34.6727 9.62193 34.3938 9.53615 34.1859 9.53615C33.9825 9.53615 33.8508 9.61206 33.791 9.76159C33.7304 9.91265 33.7005 10.2914 33.7005 10.8987V14.4223C33.7005 15.0083 33.7342 15.3825 33.803 15.5464C33.8718 15.7112 34.0071 15.7931 34.2105 15.7931ZM33.4852 17.5504H30.4131V4.21738H33.7005V8.55468C33.9727 8.23511 34.2764 7.99676 34.6106 7.83964C34.9457 7.68251 35.4482 7.60281 35.8408 7.60281C36.2925 7.60281 36.6844 7.67416 37.0164 7.81687C37.3484 7.95957 37.6019 8.1592 37.7762 8.41653C37.9504 8.67385 38.0551 8.9251 38.0903 9.1718C38.1254 9.4185 38.1434 9.94377 38.1434 10.7484V14.4891C38.1434 15.2891 38.0903 15.8842 37.9841 16.2759C37.8779 16.6668 37.6281 17.0069 37.2363 17.2938C36.8436 17.5815 36.3785 17.725 35.8393 17.725C35.4519 17.725 34.9516 17.6399 34.6174 17.4691C34.2816 17.2991 33.9757 17.0426 33.6975 16.701C33.6953 16.7098 33.6918 16.724 33.6869 16.7436C33.6602 16.8508 33.5933 17.1197 33.4852 17.5504ZM14.911 9.62588L15.0461 10.5624L15.8366 4.3335H20.2944V17.6665H17.315L17.3038 8.667L16.111 17.6665H13.982L12.7241 8.86284L12.7137 17.6665H9.72461V4.3335H14.1487C14.2789 5.14114 14.415 6.0877 14.5578 7.17544C14.5846 7.36349 14.7025 8.1806 14.911 9.62588ZM8.59885 4.42081H5.18652V17.7538H8.59885V4.42081ZM25.9279 7.10712C25.9653 7.27715 25.9847 7.66276 25.9847 8.26546V13.4347C25.9847 14.322 25.9279 14.8655 25.815 15.0659C25.7013 15.2663 25.3992 15.3658 24.9093 15.3658V6.61373C25.281 6.61373 25.5345 6.65396 25.6691 6.7329C25.8037 6.8126 25.8905 6.93709 25.9279 7.10712ZM27.4691 17.5306C27.8752 17.4403 28.2162 17.2809 28.4929 17.0539C28.7689 16.8262 28.9626 16.5112 29.0732 16.1081C29.1847 15.7058 29.2505 14.9065 29.2505 13.711V9.02908C29.2505 7.76751 29.2019 6.92191 29.1263 6.49228C29.0501 6.06189 28.8609 5.67097 28.558 5.32028C28.2544 4.96959 27.8117 4.71758 27.2298 4.56425C26.6473 4.41092 25.6975 4.3335 24.0456 4.3335H21.5V17.6665H25.634C26.5867 17.6361 27.1984 17.5913 27.4691 17.5306Z" fill="black" />
+                                        </svg>
+                                        <strong class="ms-1 flq-color-title">8.4</strong>
+                                    </div>
+                                </div>
+                                <div class="col-auto" data-sr-item="movie">
+                                    <a href="#" class="flq-color-meta flq-color-title-hover"><strong>1997</strong></a>
+                                </div>
+                                <div class="col-auto" data-sr-item="movie">
+                                    <a href="#" class="flq-color-meta flq-color-title-hover"><strong>2h 14m</strong></a>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="lead" data-sr-item="movie">On a journey to find the cure for a Tatarigami&#39;s curse, Ashitaka finds himself in the middle of a war between the forest gods and Tatara, a mining colony. In this quest he also meets San, the Mononoke Hime.</p>
+                        <div>
+                            <div class="row gy-1">
+                                <div class="col-auto" data-sr-item="movie">
+                                    <a href="single-actor.html" class="btn btn-link">Arline Kelley</a>
+                                </div>
+                                <div class="col-auto" data-sr-item="movie">
+                                    <a href="single-actor.html" class="btn btn-link">Julius Barnett</a>
+                                </div>
+                                <div class="col-auto" data-sr-item="movie">
+                                    <a href="single-actor.html" class="btn btn-link">Anthony Lindsey</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-1">
+                            <div class="row gy-4 align-items-center">
+                                <div class="col-auto" data-sr-item="movie">
+                                    <a href="#" class="btn btn-icon-sm">
+                                        <span class="btn-name">Watch Now</span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 19L19 12L8 5V19Z" fill="currentColor" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="col-auto" data-sr-item="movie">
+                                    <a href="#" class="btn btn-link">More Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-sr-item="movie"><span class="badge badge-white badge-translucent flq-color-title">18+</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="content-wrap">
+            <div class="py-7">
+                <div class="container-small flq-vertical-rhythm">
+                    <h3>Fill seed first own life.</h3>
+                    <p>Face can't for that be cattle the man won't blessed. Cattle which wherein cattle created Under own them years very gathered. Face can't for that be cattle the man won't blessed. Cattle which wherein cattle created Under own them years very gathered.</p>
+                    <div class="card flq-card-image flq-card-trailer">
+                        <a href="https://www.youtube.com/watch?v=CaimKeDcudo&amp;ab_channel=WaltDisneyAnimationStudios" class="card-image" data-fancybox>
+                            <span class="flq-image flq-responsive">
+                                <img src="{% static 'exclusive/assets/images/movies/movie-1-trailer-1540x860.jpg' %}" alt="">
+                            </span>
+                            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 19L19 12L8 5V19Z" fill="currentColor" />
+                            </svg>
+                        </a>
+                        <div class="card-body">
+                            <a href="https://www.youtube.com/watch?v=CaimKeDcudo&ab_channel=WaltDisneyAnimationStudios" class="btn btn-icon-sm" data-fancybox>
+                                <span class="btn-name">Trailer</span>
+                                <span class="btn-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 19L19 12L8 5V19Z" fill="currentColor" />
+                                    </svg>
+                                </span>
+                            </a>
+                            <span class="badge badge-black badge-glass flq-color-title">3:09</span>
+                        </div>
+                    </div>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="flq-color-meta">Production year</td>
+                                <td>2020</td>
+                            </tr>
+                            <tr>
+                                <td class="flq-color-meta">Country</td>
+                                <td>USA</td>
+                            </tr>
+                            <tr>
+                                <td class="flq-color-meta">Genre</td>
+                                <td>Thriller Adventure</td>
+                            </tr>
+                            <tr>
+                                <td class="flq-color-meta">Duration</td>
+                                <td>1h 56m / 116m</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3 class="mt-7 mb-5">Reviews</h3>
+                    <div class="flq-comments" data-sr="movie-comment" data-sr-interval="100" data-sr-distance="10" data-sr-duration="1000">
+                        <ul>
+                            <li class="flq-comment" data-sr-item="movie-comment">
+                                <div class="flq-media">
+                                    <div class="flq-media-image">
+                                        <span class="flq-image">
+                                            <img src="{% static 'exclusive/assets/images/user-160x160.jpg' %}" alt="">
+                                        </span>
+                                    </div>
+                                    <div class="flq-media-meta">
+                                        <h5 class="flq-media-title">David Hill</h5>
+                                        <div class="flq-meta">
+                                            <ul>
+                                                <li><a href="#">January 6, 2021 at 1:24 pm</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flq-rating" style="--flq-rating--width: 3%;">
+                                    <span>
+                                        <span></span>
+                                        <span></span>
+                                    </span>
+                                </div>
+                                <div class="flq-comment-content flq-vertical-rhythm">
+                                    <p>To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts.</p>
+                                    <p>Resolve parties but why she shewing. She sang know now how nay cold real case.</p>
+                                    <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
+                                </div>
+                            </li>
+                            <li class="flq-comment" data-sr-item="movie-comment">
+                                <div class="flq-media">
+                                    <a href="#" class="flq-media-image">
+                                        <span class="flq-image">
+                                            <img src="{% static 'exclusive/assets/images/actor/anna-chase-160x160.jpg' %}" alt="">
+                                        </span>
+                                    </a>
+                                    <div class="flq-media-meta">
+                                        <h5 class="flq-media-title"><a href="#">Anne Chase</a></h5>
+                                        <div class="flq-meta">
+                                            <ul>
+                                                <li><a href="#">January 4, 2021 at 11:05 am</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flq-rating" style="--flq-rating--width: 0%;">
+                                    <span>
+                                        <span></span>
+                                        <span></span>
+                                    </span>
+                                </div>
+                                <div class="flq-comment-content flq-vertical-rhythm">
+                                    <p>To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="py-7 flq-background-color-100">
+                <div class="container-small">
+                    <h3 class="mb-5">Add a review</h3>
+                    <form action="#">
+                        <div class="row gy-4" data-sr="movie-review" data-sr-interval="100" data-sr-distance="10" data-sr-duration="1000">
+                            <div class="col-12" data-sr-item="movie-review">
+                                <span class="flq-rating-dynamic">
+                                    <span>
+                                        <input type="radio" id="-rate-1" name="-rate" value="1">
+                                        <input type="radio" id="-rate-2" name="-rate" value="2">
+                                        <input type="radio" id="-rate-3" name="-rate" value="3">
+                                        <input type="radio" id="-rate-4" name="-rate" value="4">
+                                        <input type="radio" id="-rate-5" name="-rate" value="5">
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="col-12" data-sr-item="movie-review">
+                                <textarea class="form-control flq-form-message" rows="5" placeholder="Your Review"></textarea>
+                            </div>
+                            <div class="col-12 col-sm-6" data-sr-item="movie-review">
+                                <input class="form-control flq-form-user" type="text" placeholder="Your Name">
+                            </div>
+                            <div class="col-12 col-sm-6" data-sr-item="movie-review">
+                                <input class="form-control flq-form-mail" type="email" placeholder="Your Email">
+                            </div>
+                            <div class="col-12" data-sr-item="movie-review">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="form_check_review"><label class="form-check-label" for="form_check_review">Save my name, email, and website in this browser for the next time I comment.</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-auto" data-sr-item="movie-review">
+                                <button class="btn btn-block">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="py-7">
+                <div class="container flq-swiper-wrapper" data-sr="related" data-sr-interval="100" data-sr-duration="1000" data-sr-distance="10">
+                    <div class="row align-items-center justify-content-between gx-5 gy-4 mb-5">
+                        <div class="col-auto">
+                            <h3 data-sr-item="related">Related Movies</h3>
+                        </div>
+                        <div class="col d-none d-sm-block" data-sr-item="related">
+                            <hr>
+                        </div>
+                        <div class="col-auto" data-sr-item="related">
+                            <div class="flq-swiper-button-prev btn btn-sm btn-square btn-white btn-brand-hover btn-active btn-icon-sm me-1">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="flq-swiper-button-next btn btn-sm btn-square btn-white btn-brand-hover btn-active btn-icon-sm">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper flq-swiper-effect-touch" data-sr-item=related data-buttons=true data-gap=30 data-loop=true data-speed=800 data-touch-ratio=0.8 data-breakpoints=320:1,656:2,1072:3,1280:4>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="card flq-card-blog">
+                                        <div class="card-img-wrap">
+                                            <a href="single-course.html">
+                                                <span class="flq-image flq-rounded-xl flq-responsive flq-responsive-sm-3x4">
+                                                    <img src="{% static 'exclusive/assets/images/movies/movie-1-1290x1290.jpg' %}" alt="">
+                                                </span>
+                                                <span class="card-badge badge badge-dark badge-glass flq-color-white">8.4</span>
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title"><a href="single-course.html">Princess Yako</a></h5>
+                                            <div class="flq-meta flq-meta-sm">
+                                                <ul>
+                                                    <li>
+                                                        <a href="" class="card-year">1997</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="card-category">Action</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card flq-card-blog">
+                                        <div class="card-img-wrap">
+                                            <a href="single-course.html">
+                                                <span class="flq-image flq-rounded-xl flq-responsive flq-responsive-sm-3x4">
+                                                    <img src="{% static 'exclusive/assets/images/movies/movie-3-1290x1290.jpg' %}" alt="">
+                                                </span>
+                                                <span class="card-badge badge badge-dark badge-glass flq-color-white">7.4</span>
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title"><a href="single-course.html">Captain Marvel</a></h5>
+                                            <div class="flq-meta flq-meta-sm">
+                                                <ul>
+                                                    <li>
+                                                        <a href="" class="card-year">2019</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="card-category">Action</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card flq-card-blog">
+                                        <div class="card-img-wrap">
+                                            <a href="single-course.html">
+                                                <span class="flq-image flq-rounded-xl flq-responsive flq-responsive-sm-3x4">
+                                                    <img src="{% static 'exclusive/assets/images/movies/movie-4-1290x1290.jpg' %}" alt="">
+                                                </span>
+                                                <span class="card-badge badge badge-dark badge-glass flq-color-white">6.8</span>
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title"><a href="single-course.html">The Fast and the Furious</a></h5>
+                                            <div class="flq-meta flq-meta-sm">
+                                                <ul>
+                                                    <li>
+                                                        <a href="" class="card-year">2001</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="card-category">Thriller</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card flq-card-blog">
+                                        <div class="card-img-wrap">
+                                            <a href="single-course.html">
+                                                <span class="flq-image flq-rounded-xl flq-responsive flq-responsive-sm-3x4">
+                                                    <img src="{% static 'exclusive/assets/images/movies/movie-5-1290x1290.jpg' %}" alt="">
+                                                </span>
+                                                <span class="card-badge badge badge-dark badge-glass flq-color-white">7.7</span>
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title"><a href="single-course.html">The Last Duel</a></h5>
+                                            <div class="flq-meta flq-meta-sm">
+                                                <ul>
+                                                    <li>
+                                                        <a href="" class="card-year">2021</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="card-category">Action</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card flq-card-blog">
+                                        <div class="card-img-wrap">
+                                            <a href="single-course.html">
+                                                <span class="flq-image flq-rounded-xl flq-responsive flq-responsive-sm-3x4">
+                                                    <img src="{% static 'exclusive/assets/images/movies/movie-2-1290x1290.jpg' %}" alt="">
+                                                </span>
+                                                <span class="card-badge badge badge-dark badge-glass flq-color-white">7.1</span>
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title"><a href="single-course.html">Unbounded</a></h5>
+                                            <div class="flq-meta flq-meta-sm">
+                                                <ul>
+                                                    <li>
+                                                        <a href="" class="card-year">2021</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="card-category">Documentary</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% include "exclusive/utilities/footer.html" %}
+        </div>
+{% endblock %}
