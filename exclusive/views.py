@@ -21,3 +21,15 @@ def pathway_detail(request):
 
 def lesson_detail(request):
     return render(request, 'exclusive/single-lesson.html')
+
+
+def faqs(request):
+    return render(request, 'exclusive/faq.html')
+
+
+def contact(request):
+    return render(request, 'exclusive/contact.html')
+
+
+def pricing(request):
+    return render(request, 'exclusive/pricing.html')
