@@ -18,14 +18,15 @@ class Profile(models.Model):
 
 
 class Course(models.Model):
-    name = models.CharField(max_length=50, unique=True)
-    description = models.CharField(max_length=200)
+    title = models.CharField(max_length=50, unique=True)
+    mini_description = models.CharField(max_length=150)
+    description = models.TextField()
     thumbnail = models.ImageField(upload_to='course_images', blank=True)
     level = models.CharField(max_length=50)
     core = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.name
+        return self.title
 
 
 # class Enrollment(models.Model):
@@ -40,6 +41,7 @@ class Course(models.Model):
 class Lesson(models.Model):
     TYPE_CHOICES = (
         ('lesson', 'Lesson'),
+        ('supplementary', 'supplementary'),
         ('q&a', 'Q&A'),
     )
     lesson_number = models.IntegerField()
@@ -48,7 +50,7 @@ class Lesson(models.Model):
     description = models.TextField()
     lesson_type = models.CharField(max_length=50, choices=TYPE_CHOICES, default='lesson')
     thumbnail = models.ImageField(upload_to='lesson_thumbnails', blank=True)
-    video_source = models.CharField(max_length=50, default='vimeo')
+    video_source = models.CharField(max_length=50, choices=(('youtube', 'Y'), ('vimeo', 'V')))
     video_link = models.CharField(max_length=200)
     twi_video_link = models.CharField(max_length=200, blank=True)
 

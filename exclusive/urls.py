@@ -4,10 +4,10 @@ from . import views
 app_name = 'course'
 urlpatterns = [
     path('', views.index, name='index'),
-    path('pathways/', views.pathways, name='pathways'),
-    path('lessons/', views.lessons, name='lessons'),
-    path('lesson_detail/', views.lesson_detail, name='lesson_detail'),
-    path('pathway_detail/', views.pathway_detail, name='pathway_detail'),
+    path('courses/', views.courses, name='courses'),
+    path('courses/<int:course_id>/', views.course_detail, name='course_detail'),
+    path('lessons/<int:course_id>', views.lessons, name='lessons'),
+    path('lessons/<int:lesson_id>/', views.lesson_detail, name='lesson_detail'),
     path('faqs/', views.faqs, name='faqs'),
     path('contact/', views.contact, name='contact'),
     path('pricing/', views.pricing, name='pricing'),

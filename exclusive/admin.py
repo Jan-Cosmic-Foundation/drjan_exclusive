@@ -7,7 +7,7 @@ class ProfileAdmin(admin.ModelAdmin):
 
 
 class CourseAdmin(admin.ModelAdmin):
-    list_display = ('name', 'description', 'level')
+    list_display = ('title', 'mini_description', 'level')
 
 
 class LessonAdmin(admin.ModelAdmin):
