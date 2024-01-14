@@ -42,7 +42,7 @@
                         {% for course in courses %}
                         <div class="col-12 col-lg-6 flq-isotope-item" data-filters="{{ course.level }}">
                             <div data-sr-item="movies-item">
-                                <a href="{% url 'course:lessons' course.id %}" class="card flq-card-movie flq-color-opacity">
+                                <a href="{% url 'course:lessons' course.slug %}" class="card flq-card-movie flq-color-opacity">
                                     <span class="card-img-wrap">
                                         <span class="flq-image flq-responsive flq-responsive-lg-1x1 flq-responsive-xl-16x9">
                                             <img src="{{ course.thumbnail.url }}" alt="">

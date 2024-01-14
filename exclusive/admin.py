@@ -8,10 +8,12 @@ class ProfileAdmin(admin.ModelAdmin):
 
 class CourseAdmin(admin.ModelAdmin):
     list_display = ('title', 'mini_description', 'level')
+    prepopulated_fields = {'slug': ('title',)}
 
 
 class LessonAdmin(admin.ModelAdmin):
     list_display = ('lesson_number', 'course', 'title', 'lesson_type', 'video_source')
+    prepopulated_fields = {'slug': ('title',)}
 
 
 admin.site.register(Profile, ProfileAdmin)

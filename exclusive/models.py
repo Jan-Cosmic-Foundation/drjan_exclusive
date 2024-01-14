@@ -19,6 +19,7 @@ class Profile(models.Model):
 
 class Course(models.Model):
     title = models.CharField(max_length=50, unique=True)
+    slug = models.SlugField(max_length=50, unique=True)
     mini_description = models.CharField(max_length=150)
     description = models.TextField()
     thumbnail = models.ImageField(upload_to='course_images', blank=True)
@@ -47,12 +48,13 @@ class Lesson(models.Model):
     lesson_number = models.IntegerField()
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='lessons')
     title = models.CharField(max_length=50, unique=True)
+    slug = models.SlugField(max_length=50, unique=True)
     description = models.TextField()
     lesson_type = models.CharField(max_length=50, choices=TYPE_CHOICES, default='lesson')
     thumbnail = models.ImageField(upload_to='lesson_thumbnails', blank=True)
     video_source = models.CharField(max_length=50, choices=(('youtube', 'Y'), ('vimeo', 'V')))
-    video_link = models.CharField(max_length=200)
-    twi_video_link = models.CharField(max_length=200, blank=True)
+    video_id = models.CharField(max_length=100)
+    twi_video_id = models.CharField(max_length=50, blank=True)
 
     def __str__(self):
         return self.title

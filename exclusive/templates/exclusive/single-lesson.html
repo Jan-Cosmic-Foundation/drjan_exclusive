@@ -5,22 +5,16 @@
     <div class="content-wrap">
         <div class="py-7">
             <div class="container-small flq-vertical-rhythm">
-                <h3>Lesson 1<br>Antakarana The Narrow Way sdfgsdghsfghsdfgdfhj</h3>
+                <h3>{{ lesson.title }}</h3>
                 <h3></h3>
                 <div class="card flq-card-image flq-card-trailer">
-                    {% comment %}
-                    <a href="https://vimeo.com/851368248?h=64217b00ff&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" class="card-image" data-fancybox>
-                        <span class="flq-image flq-responsive">
-                            <img src="{% static 'exclusive/assets/images/movies/movie-1-trailer-1540x860.jpg' %}" alt="">
-                        </span>
-                        <svg width="42" height="42" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8 19L19 12L8 5V19Z" fill="currentColor" />
-                        </svg>
-                    </a>
-                    {% endcomment %}
-                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/851368248?h=64217b00ff&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Post-Impartation Practice"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                    {% if lesson.video_source == 'youtube' %}
+                        <div style="padding:56.25% 0 0 0;position:relative;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://www.youtube-nocookie.com/embed/{{ lesson.video_id }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                    {% elif lesson.video_source == 'vimeo' %}
+                        <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/{{ lesson.video_id }}?h=64217b00ff&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title=""></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                    {% endif %}
                 </div>
-                <p>Face can't for that be cattle the man won't blessed. Cattle which wherein cattle created Under own them years very gathered. Face can't for that be cattle the man won't blessed. Cattle which wherein cattle created Under own them years very gathered.</p>
+                <p>{{ lesson.description }}</p>
                 <a href="https://www.youtube.com/watch?v=CaimKeDcudo&ab_channel=WaltDisneyAnimationStudios" class="btn btn-icon-sm" data-fancybox>
                     <span class="btn-name">Next Lesson</span>
                     <span class="btn-icon">
@@ -35,7 +29,7 @@
             <div class="container flq-swiper-wrapper" data-sr="related" data-sr-interval="100" data-sr-duration="1000" data-sr-distance="10">
                 <div class="row align-items-center justify-content-between gx-5 gy-4 mb-5">
                     <div class="col-auto">
-                        <h3 data-sr-item="related">Course Lessons</h3>
+                        <h3 data-sr-item="related">Continue</h3>
                     </div>
                     <div class="col d-none d-sm-block" data-sr-item="related">
                         <hr>
@@ -56,18 +50,19 @@
                 <div class="swiper flq-swiper-effect-touch" data-sr-item=related data-buttons=true data-gap=30 data-loop=true data-speed=800 data-touch-ratio=0.8 data-breakpoints=320:1,656:2,1072:3,1280:4>
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
+                            {% for lesson in related_lessons %}
                             <div class="swiper-slide">
                                 <div class="card flq-card-blog">
                                     <div class="card-img-wrap">
-                                        <a href="single-course.html">
+                                        <a href="{% url 'course:lesson' course.slug lesson.slug %}">
                                             <span class="flq-image flq-rounded-xl flq-responsive ">
-                                                <img src="{% static 'exclusive/assets/images/movies/movie-1-1290x1290.jpg' %}" alt="">
+                                                <img src="{{ lesson.thumbnail.url }}" alt="">
                                             </span>
-                                            <span class="card-badge badge badge-dark badge-glass flq-color-white">8.4</span>
+                                            <span class="card-badge badge badge-dark badge-glass flq-color-white">5.0</span>
                                         </a>
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title"><a href="single-course.html">Princess Yako</a></h5>
+                                        <h5 class="card-title"><a href="{% url 'course:lesson' course.slug lesson.slug %}">{{ lesson.title }}</a></h5>
                                         <div class="flq-meta flq-meta-sm">
                                             <ul>
                                                 <li>
@@ -81,6 +76,8 @@
                                     </div>
                                 </div>
                             </div>
+                            {% endfor %}
+
                             <div class="swiper-slide">
                                 <div class="card flq-card-blog">
                                     <div class="card-img-wrap">

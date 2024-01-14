@@ -23,7 +23,7 @@
                         <div data-sr-item="tvshow-item">
                             <div class="card flq-card-blog">
                                 <div class="card-img-wrap">
-                                    <a href="single-course.html">
+                                    <a href="{% url 'course:lesson' course.slug lesson.slug %}">
                                         <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
                                             <img src="{{ lesson.thumbnail.url }}" alt="">
                                         </span>
@@ -31,7 +31,7 @@
                                     </a>
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title h6"><a href="single-course.html">{{ lesson.title }}</a></h5>
+                                    <h5 class="card-title h6"><a href="{% url 'course:lesson' course.slug lesson.slug %}">{{ lesson.title }}</a></h5>
                                     <div class="flq-meta flq-meta-sm">
                                         <ul>
                                             <li>
