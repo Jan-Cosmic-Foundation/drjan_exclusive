@@ -6,9 +6,7 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title> Exclusive Programs | Dr. Baffour Jan </title>
-        <meta name="description" content="Fliqs - Superpower for Gaming Websites" />
-        <meta name="keywords" content="gaming, game, esports, community, template, html, bootstrap, webpack" />
-        <meta name="author" content="nK" />
+
         <link rel="icon" type="image/png" href="{% static 'exclusive/assets/images/favicon.png' %}" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <!-- START: Styles -->
@@ -54,7 +52,7 @@
                     <span></span>
                     <span></span>
                 </button>
-                <a href="index.html" class="flq-navbar-brand me-auto me-auto me-lg-4">
+                <a href="{% url 'course:index' %}" class="flq-navbar-brand me-auto me-auto me-lg-4">
                     <img class="img" height="15" src="{% static 'exclusive/assets/images/logo.png' %}" class="flq-logo" alt="">
                 </a>
                 <ul class="nav nav-parent flex-grow-1 flq-navbar-nav justify-content-center d-none d-lg-flex">
@@ -64,13 +62,13 @@
                         </a>
                     </li>
                     <li class="nav-item flq-dropdown flq-dropdown-nav">
-                        <a href="pathways.html" class="nav-link" role="button">
+                        <a href="{% url 'course:courses' %}" class="nav-link" role="button">
                             <span class="nav-link-name">Pathways</span>
                         </a>
                         <div class="dropdown-menu gy-2">
                             <ul class="nav">
                                 <li class="nav-item">
-                                    <a href="pathways.html" class="nav-link">
+                                    <a href="{% url 'course:courses' %}" class="nav-link">
                                         <span class="nav-link-name">Pathways</span>
                                     </a>
                                 </li>
@@ -93,12 +91,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="pricing.html" class="nav-link">
-                            <span class="nav-link-name">Advanced</span>
+                        <a href="{% url 'course:faqs' %}" class="nav-link">
+                            <span class="nav-link-name">FAQs</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="lessons.html" class="nav-link">
+                        <a href="{% url 'course:contact' %}" class="nav-link">
                             <span class="nav-link-name">Contact Us</span>
                         </a>
                     </li>
@@ -307,12 +305,12 @@
                     <div class="col-12 col-lg">
                         <ul class="nav flex-column flq-navbar-nav accordion gy-3">
                             <li class="nav-item active">
-                                <a href="index.html" class="nav-link">
+                                <a href="{% url 'course:courses' %}" class="nav-link">
                                     <span class="nav-link-name">Home</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pricing.html" class="nav-link">
+                                <a href="{% url 'course:pricing' %}" class="nav-link">
                                     <span class="nav-link-name">Sign Up</span>
                                 </a>
                             </li>
@@ -324,7 +322,7 @@
                                 <div class="accordion-collapse collapse" id="Movies">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a href="pathways.html" class="nav-link">
+                                            <a href="{% url 'course:courses' %}" class="nav-link">
                                                 <span class="nav-link-name">Pathways</span>
                                             </a>
                                         </li>
@@ -342,12 +340,12 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a href="lessons.html" class="nav-link">
+                                <a href="{% url 'course:contact' %}" class="nav-link">
                                     <span class="nav-link-name">Contact Us</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="lessons.html" class="nav-link">
+                                <a href="{% url 'course:faqs' %}" class="nav-link">
                                     <span class="nav-link-name">FAQs</span>
                                 </a>
                             </li>

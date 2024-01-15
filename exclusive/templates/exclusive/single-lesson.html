@@ -15,7 +15,8 @@
                     {% endif %}
                 </div>
                 <p>{{ lesson.description }}</p>
-                <a href="https://www.youtube.com/watch?v=CaimKeDcudo&ab_channel=WaltDisneyAnimationStudios" class="btn btn-icon-sm" data-fancybox>
+                {% if next_lesson %}
+                <a href="{% url 'course:lesson' course.slug next_lesson.slug %}" class="btn btn-icon-sm" data-fancybox>
                     <span class="btn-name">Next Lesson</span>
                     <span class="btn-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,13 +24,14 @@
                         </svg>
                     </span>
                 </a>
+                {% endif %}
             </div>
         </div>
         <div class="py-2">
             <div class="container flq-swiper-wrapper" data-sr="related" data-sr-interval="100" data-sr-duration="1000" data-sr-distance="10">
                 <div class="row align-items-center justify-content-between gx-5 gy-4 mb-5">
                     <div class="col-auto">
-                        <h3 data-sr-item="related">Continue</h3>
+                        <h3 data-sr-item="related">Related Lessons</h3>
                     </div>
                     <div class="col d-none d-sm-block" data-sr-item="related">
                         <hr>
