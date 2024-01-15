@@ -26,23 +26,13 @@
         <!-- END: Styles -->
         <!-- jQuery -->
         <script src="{% static 'exclusive/assets/vendor/jquery/dist/jquery.min.js' %}"></script>
-        <!-- Preloader -->
-        <script src="{% static 'exclusive/assets/js/preloader.min.js' %}"></script>
+
     </head>
 
     <body id="page" class="flq-navbar-icons-existence">
         <!-- Preloader -->
-        <div class="flq-preloader">
-            <div class="flq-preloader-title display-1 h1">
-                <span>D</span>
-                <span>R</span>
-                <span>.</span>
-                <span>J</span>
-                <span>A</span>
-                <span>N</span>
-            </div>
-        </div>
-        <div class="flq-preloader-bg"></div>
+        {% block preloader %}
+        {% endblock %}
         <!-- / Preloader -->
         <!-- Navbar top -->
         <nav class="flq-navbar flq-navbar-top {% block navbar_fixed %}flq-navbar-top-cloud flq-navbar-top-fixed {% endblock %}">
