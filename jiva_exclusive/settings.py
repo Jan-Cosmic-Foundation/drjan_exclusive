@@ -33,7 +33,7 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 DEBUG = True if os.environ["DEBUG"] == 'True' else False
 
 ALLOWED_HOSTS = ["*"]
-
+CSRF_TRUSTED_ORIGINS=['*']
 
 # Application definition
 
