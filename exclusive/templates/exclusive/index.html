@@ -208,24 +208,26 @@
                 <div class="swiper flq-swiper-effect-touch mb-5" data-sr-item=upcoming-movies data-buttons=true data-pagination-progress=true data-gap=30 data-speed=800 data-touch-ratio=0.8 data-breakpoints=656:1,1072:2>
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
+                            {% for course in courses %}
                             <div class="swiper-slide">
-                                <a href="single-course.html" class="card flq-card-movie flq-color-opacity">
+                                <a href="{% url 'course:lessons' course.slug %}" class="card flq-card-movie flq-color-opacity">
                                     <span class="card-img-wrap">
                                         <span class="flq-image flq-responsive
     flq-responsive-lg-1x1 flq-responsive-xl-16x9">
-                                            <img src="{% static 'exclusive/assets/images/movies/movie-2-1290x1290.jpg' %}" alt="">
+                                            <img src="{{ course.thumbnail.url }}" alt="">
                                         </span>
                                     </span>
                                     <span class="card-body">
                                         <span class="card-badge">
                                             <img height="22" src="{% static 'exclusive/assets/images/icons/premium.png' %}"> <span class="mx-1">5.0</span></span>
-                                        <span class="card-title h5">Unbounded</span>
+                                        <span class="card-title h5">{{ course.title }}</span>
                                         <span class="card-description">
-                                            <span>Unaided and inexperienced, a crew of four venture through the most rural and inaccessible natural areas of...</span>
+                                            <span>{{ course.mini_description }}...</span>
                                         </span>
                                     </span>
                                 </a>
                             </div>
+                            {% endfor %}
                             <div class="swiper-slide">
                                 <a href="single-course.html" class="card flq-card-movie flq-color-opacity">
                                     <span class="card-img-wrap">
@@ -348,6 +350,36 @@
                 <div class="swiper flq-swiper-effect-touch" data-sr-item=new-releases data-buttons=true data-pagination-custom=true data-gap=30 data-speed=800 data-touch-ratio=0.8 data-slides=1, data-breakpoints=636:2,1072:3,1280:4>
                     <div class="swiper-container container">
                         <div class="swiper-wrapper">
+                            {% for course in courses %}
+                                {% if not course.core %}
+                                    <div class="swiper-slide">
+                                <div class="card flq-card-blog">
+                                    <div class="card-img-wrap">
+                                        <a href="{% url 'course:lessons' course.slug %}">
+                                            <span class="flq-image flq-rounded-xl flq-responsive
+    flq-responsive-sm-3x4">
+                                                <img src="{{ course.thumbnail.url }}" alt="">
+                                            </span>
+                                            <span class="card-badge badge badge-dark badge-glass flq-color-white">5.0</span>
+                                        </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title"><a href="{% url 'course:lessons' course.slug %}">{{ course.title }}</a></h5>
+                                        <div class="flq-meta flq-meta-sm">
+                                            <ul>
+                                                <li>
+                                                    <a href="" class="card-year">{{ course.lessons.all.count }} lessons</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="card-category">{{ course.level | capfirst }}</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                {% endif %}
+                            {% endfor %}
                             <div class="swiper-slide">
                                 <div class="card flq-card-blog">
                                     <div class="card-img-wrap">
@@ -683,32 +715,38 @@
                 <div class="swiper flq-swiper-effect-touch" data-sr-item=best-serials data-buttons=true data-gap=30 data-loop=true data-speed=800 data-touch-ratio=0.8 data-breakpoints=320:1,656:2,1072:3,1280:4>
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
+                            {% for course in courses %}
+                                {% if course.slug == "deep-insights" %}
+                                {% for lesson in course.lessons.all %}
+                                    <div class="swiper-slide">
                                 <div class="card flq-card-blog">
                                     <div class="card-img-wrap">
-                                        <a href="single-course.html">
+                                        <a href="{% url 'course:lesson' course.slug lesson.slug %}">
                                             <span class="flq-image flq-responsive
     flq-responsive-sm-3x4">
-                                                <img src="{% static 'exclusive/assets/images/tv-shows/show-3-1290x1290.jpg' %}" alt="">
+                                                <img src="{{ lesson.thumbnail.url }}" alt="">
                                             </span>
-                                            <span class="card-badge badge badge-dark badge-glass flq-color-white">6.2</span>
+                                            <span class="card-badge badge badge-dark badge-glass flq-color-white">5.0</span>
                                         </a>
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title"><a href="single-course.html">Busanhaeng</a></h5>
+                                        <h5 class="card-title"><a href="{% url 'course:lesson' course.slug lesson.slug %}">{{ lesson.title }}</a></h5>
                                         <div class="flq-meta flq-meta-sm">
                                             <ul>
                                                 <li>
                                                     <a href="#" class="card-year">2016</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" class="card-category">Adventure</a>
+                                                    <a href="#" class="card-category">Freedom</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                                {% endfor %}
+                                {% endif %}
+                            {% endfor%}
                             <div class="swiper-slide">
                                 <div class="card flq-card-blog">
                                     <div class="card-img-wrap">
@@ -842,7 +880,7 @@
                                     <div class="card flq-card-feature">
                                         <div class="card-body">
                                             <div class="card-icon">
-                                                <h4>1</h4>
+                                                <h4>0</h4>
                                             </div>
                                             <div class="card-title h5">First Principles</div>
                                             <p>Let a beginning place dry stars appear seasons winged said whales creature there darkness be dry. Itself let morning fourth.</p>
@@ -853,7 +891,7 @@
                                     <div class="card flq-card-feature">
                                         <div class="card-body">
                                             <div class="card-icon">
-                                                <h4>2</h4>
+                                                <h4>1</h4>
                                             </div>
                                             <div class="card-title h5">Inner Transformation</div>
                                             <p>Let a beginning place dry stars appear seasons winged said whales creature there darkness be dry. Itself let morning fourth.</p>
@@ -864,7 +902,7 @@
                                     <div class="card flq-card-feature">
                                         <div class="card-body">
                                             <div class="card-icon">
-                                                <h4>3</h4>
+                                                <h4>2</h4>
                                             </div>
                                             <div class="card-title h5">Transcendental Knowledge</div>
                                             <p>Let a beginning place dry stars appear seasons winged said whales creature there darkness be dry. Itself let morning fourth.</p>
@@ -875,7 +913,7 @@
                                     <div class="card flq-card-feature">
                                         <div class="card-body">
                                             <div class="card-icon">
-                                                <h4>4</h4>
+                                                <h4>3</h4>
                                             </div>
                                             <div class="card-title h5">Impartation</div>
                                             <p>Let a beginning place dry stars appear seasons winged said whales creature there darkness be dry. Itself let morning fourth.</p>
@@ -887,6 +925,7 @@
                     </div>
                 </div>
             </div>
+            {% comment %}
             <div class="container my-7" data-sr="online-streaming" data-sr-interval="100" data-sr-duration="1000" data-sr-distance="10">
                 <div class="text-center mb-5">
                     <span class="flq-subtitle badge" data-sr-item="online-streaming">Online Streaming</span>
@@ -1210,7 +1249,6 @@
                     <a href="lessons.html" class="btn">Browse All</a>
                 </div>
             </div>
-            {% comment %}
             <div class="py-7" style="
     background-image: linear-gradient(
       95.92deg,
