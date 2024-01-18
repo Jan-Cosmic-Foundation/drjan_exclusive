@@ -3,16 +3,16 @@ from .models import *
 
 
 class ProfileAdmin(admin.ModelAdmin):
-    list_display = ('user', 'phone_number', 'registered', 'intermediate_access', 'advanced_access')
+    list_display = ('id', 'user', 'phone_number', 'registered', 'intermediate_access', 'advanced_access')
 
 
 class CourseAdmin(admin.ModelAdmin):
-    list_display = ('title', 'mini_description', 'level')
+    list_display = ('id', 'title', 'mini_description', 'level')
     prepopulated_fields = {'slug': ('title',)}
 
 
 class LessonAdmin(admin.ModelAdmin):
-    list_display = ('lesson_number', 'course', 'title', 'lesson_type', 'video_source')
+    list_display = ('id', 'lesson_number', 'course', 'title', 'lesson_type', 'video_source')
     prepopulated_fields = {'slug': ('title',)}
 
 
