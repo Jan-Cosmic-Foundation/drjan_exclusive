@@ -209,23 +209,25 @@
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             {% for course in courses %}
-                            <div class="swiper-slide">
-                                <a href="{% url 'course:lessons' course.slug %}" class="card flq-card-movie flq-color-opacity">
-                                    <span class="card-img-wrap">
-                                        <span class="flq-image flq-responsive flq-responsive-lg-1x1 flq-responsive-xl-16x9">
-                                            <img src="{{ course.thumbnail.url }}" alt="">
+                                {% if course.core %}
+                                <div class="swiper-slide">
+                                    <a href="{% url 'course:lessons' course.slug %}" class="card flq-card-movie flq-color-opacity">
+                                        <span class="card-img-wrap">
+                                            <span class="flq-image flq-responsive flq-responsive-lg-1x1 flq-responsive-xl-16x9">
+                                                <img src="{{ course.thumbnail.url }}" alt="">
+                                            </span>
                                         </span>
-                                    </span>
-                                    <span class="card-body">
-                                        <span class="card-badge">
-                                            <img height="22" src="{% static 'exclusive/assets/images/icons/premium.png' %}"> <span class="mx-1">5.0</span></span>
-                                        <span class="card-title h5">{{ course.title }}</span>
-                                        <span class="card-description">
-                                            <span>{{ course.mini_description }}...</span>
+                                        <span class="card-body">
+                                            <span class="card-badge">
+                                                <img height="22" src="{% static 'exclusive/assets/images/icons/premium.png' %}"> <span class="mx-1">5.0</span></span>
+                                            <span class="card-title h5">{{ course.title }}</span>
+                                            <span class="card-description">
+                                                <span>{{ course.mini_description }}...</span>
+                                            </span>
                                         </span>
-                                    </span>
-                                </a>
-                            </div>
+                                    </a>
+                                </div>
+                                {% endif %}
                             {% endfor %}
                             {% comment %}
                             <div class="swiper-slide">
