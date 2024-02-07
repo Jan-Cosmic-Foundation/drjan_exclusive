@@ -5,116 +5,12 @@
 {% endblock %}
 
 {% block content %}
-    <div class="flq-background py-7">
-        <div class="flq-background-ticker">
-            <div class="flq-image-ticker mb-3" data-gap=20 data-pixels-per-second=20>
-                <div class="flq-image-ticker-inner">
-                    <div class="flq-image-ticker-item">
-                        <span class="flq-image">
-                            <img src="{% static 'exclusive/assets/images/background-ticker/1.jpg' %}" alt="">
-                        </span>
-                    </div>
-                    <div class="flq-image-ticker-item">
-                        <span class="flq-image">
-                            <img src="{% static 'exclusive/assets/images/background-ticker/2.jpg' %}" alt="">
-                        </span>
-                    </div>
-                    <div class="flq-image-ticker-item">
-                        <span class="flq-image">
-                            <img src="{% static 'exclusive/assets/images/background-ticker/3.jpg' %}" alt="">
-                        </span>
-                    </div>
-                    <div class="flq-image-ticker-item">
-                        <span class="flq-image">
-                            <img src="{% static 'exclusive/assets/images/background-ticker/4.jpg' %}" alt="">
-                        </span>
-                    </div>
-                    <div class="flq-image-ticker-item">
-                        <span class="flq-image">
-                            <img src="{% static 'exclusive/assets/images/background-ticker/5.jpg' %}" alt="">
-                        </span>
-                    </div>
-                    <div class="flq-image-ticker-item">
-                        <span class="flq-image">
-                            <img src="{% static 'exclusive/assets/images/background-ticker/6.jpg' %}" alt="">
-                        </span>
-                    </div>
-                    <div class="flq-image-ticker-item">
-                        <span class="flq-image">
-                            <img src="{% static 'exclusive/assets/images/background-ticker/7.jpg' %}" alt="">
-                        </span>
-                    </div>
-                    <div class="flq-image-ticker-item">
-                        <span class="flq-image">
-                            <img src="{% static 'exclusive/assets/images/background-ticker/8.jpg' %}" alt="">
-                        </span>
-                    </div>
-                    <div class="flq-image-ticker-item">
-                        <span class="flq-image">
-                            <img src="{% static 'exclusive/assets/images/background-ticker/9.jpg' %}" alt="">
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="flq-image-ticker" data-gap=20 data-pixels-per-second=20 data-inverted>
-                <div class="flq-image-ticker-inner">
-                    <div class="flq-image-ticker-item">
-                        <span class="flq-image">
-                            <img src="{% static 'exclusive/assets/images/background-ticker/10.jpg' %}" alt="">
-                        </span>
-                    </div>
-                    <div class="flq-image-ticker-item">
-                        <span class="flq-image">
-                            <img src="{% static 'exclusive/assets/images/background-ticker/11.jpg' %}" alt="">
-                        </span>
-                    </div>
-                    <div class="flq-image-ticker-item">
-                        <span class="flq-image">
-                            <img src="{% static 'exclusive/assets/images/background-ticker/12.jpg' %}" alt="">
-                        </span>
-                    </div>
-                    <div class="flq-image-ticker-item">
-                        <span class="flq-image">
-                            <img src="{% static 'exclusive/assets/images/background-ticker/13.jpg' %}" alt="">
-                        </span>
-                    </div>
-                    <div class="flq-image-ticker-item">
-                        <span class="flq-image">
-                            <img src="{% static 'exclusive/assets/images/background-ticker/14.jpg' %}" alt="">
-                        </span>
-                    </div>
-                    <div class="flq-image-ticker-item">
-                        <span class="flq-image">
-                            <img src="{% static 'exclusive/assets/images/background-ticker/15.jpg' %}" alt="">
-                        </span>
-                    </div>
-                    <div class="flq-image-ticker-item">
-                        <span class="flq-image">
-                            <img src="{% static 'exclusive/assets/images/background-ticker/16.jpg' %}" alt="">
-                        </span>
-                    </div>
-                    <div class="flq-image-ticker-item">
-                        <span class="flq-image">
-                            <img src="{% static 'exclusive/assets/images/background-ticker/17.jpg' %}" alt="">
-                        </span>
-                    </div>
-                    <div class="flq-image-ticker-item">
-                        <span class="flq-image">
-                            <img src="{% static 'exclusive/assets/images/background-ticker/18.jpg' %}" alt="">
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="flq-background-overlay" style="background-color: hsla(var(--flq-color-black), 0.8);"></div>
-        <div class="container text-center" data-sr="banner-text" data-sr-interval="100" data-sr-distance="10" data-sr-duration="1000">
-            <h1 class="display-5 mb-1" data-sr-item="banner-text">Pricing</h1>
-            <nav aria-label="breadcrumb" data-sr-item="banner-text">
-                <ol class="breadcrumb flq-color-opacity">
-                    <li class="breadcrumb-item"><a href="demo.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Pricing</li>
-                </ol>
-            </nav>
+    <div class="flq-background py-md-7 py-6" style="background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('{% static 'exclusive/assets/images/background/pricing.jpg' %}'); background-size: cover; background-position: top">
+        <div class="container text-center">
+            <h1 class="display-6 mb-1 d-none d-md-block">Register</h1>
+            <!-- for phone -->
+            <h2 class="mb-1 d-md-none">Register</h2>
+            <p class="">Be Free, Awake and Aware</p>
         </div>
     </div>
     <div class="content-wrap">
@@ -124,22 +20,23 @@
                         <div class="col-12 col-sm-10 col-md-6 col-lg-5 col-xl-4" data-sr-item="pricing">
                             <div class="card flq-card-pricing">
                                 <div class="card-head">
-                                    <div class="card-subtitle h6">1-months plan</div>
-                                    <div class="card-price h1"><span>$</span>9.99<span>month</span></div>
+                                    <div class="card-subtitle h6">Lifetime Plan</div>
+                                    <div class="card-price h1"><span>$</span>249<span></span></div>
                                 </div>
                                 <div class="card-body flq-vertical-rhythm">
-                                    <p>Morning isn&#39;t second the seasons evening earth the brought</p>
+                                    <p>Lifetime access to a program of transformation and exclusive lessons.</p>
                                     <ul>
-                                        <li>4k Live Streams</li>
-                                        <li>Multi Platform</li>
+                                        <li>Access to all Exclusive Courses</li>
+                                        <li>Access to Exclusive Videos</li>
                                         <li>Secure Connection</li>
                                     </ul>
                                 </div>
                                 <div class="card-footer">
-                                    <a href="#" class="btn btn-block btn-outline btn-brand-hover">Get The Deal</a>
+                                    <a href="#" class="btn btn-block btn-outline btn-brand-hover">Register</a>
                                 </div>
                             </div>
                         </div>
+                        {% comment %}
                         <div class="col-12 col-sm-10 col-md-6 col-lg-5 col-xl-4" data-sr-item="pricing">
                             <div class="card flq-card-pricing">
                                 <div class="card-head">
@@ -179,6 +76,7 @@
                                 </div>
                             </div>
                         </div>
+                        {% endcomment %}
                     </div>
                 </div>
             </div>

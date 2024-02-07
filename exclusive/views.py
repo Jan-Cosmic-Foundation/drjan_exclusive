@@ -10,6 +10,14 @@ def index(request):
     return render(request, 'exclusive/index.html', context)
 
 
+def course_index(request):
+    courses_ = Course.objects.all()
+    context = {
+        "courses": courses_
+    }
+    return render(request, 'exclusive/main-landing.html', context)
+
+
 def courses(request):
     courses_ = Course.objects.all()
 
