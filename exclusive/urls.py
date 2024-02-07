@@ -3,7 +3,8 @@ from . import views
 
 app_name = 'course'
 urlpatterns = [
-    path('', views.index, name='course_index'),
+    path('', views.course_index, name='course_index'),
+    path('index/', views.index, name='index'),
     path('courses/', views.courses, name='courses'),
     path('courses/<slug:course_slug>', views.course_detail, name='course_detail'),
     path('lessons/<slug:course_slug>', views.lessons, name='lessons'),
