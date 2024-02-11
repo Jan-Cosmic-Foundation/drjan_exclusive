@@ -19,7 +19,7 @@ def course_index(request):
 
 
 def courses(request):
-    courses_ = Course.objects.all()
+    courses_ = Course.objects.filter(core=True).order_by('course_number')
 
     context = {
         'courses': courses_,

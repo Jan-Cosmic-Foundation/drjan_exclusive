@@ -53,32 +53,32 @@
                     </li>
                     <li class="nav-item flq-dropdown flq-dropdown-nav">
                         <a href="{% url 'course:courses' %}" class="nav-link" role="button">
-                            <span class="nav-link-name">Pathways</span>
+                            <span class="nav-link-name">Courses</span>
                         </a>
                         <div class="dropdown-menu gy-2">
                             <ul class="nav">
                                 <li class="nav-item">
                                     <a href="{% url 'course:courses' %}" class="nav-link">
-                                        <span class="nav-link-name">Pathways</span>
+                                        <span class="nav-link-name">All Courses</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="single-course.html" class="nav-link">
-                                        <span class="nav-link-name">Intermediate</span>
+                                        <span class="nav-link-name">Inner Awareness</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="single-actor.html" class="nav-link">
-                                        <span class="nav-link-name">Advanced</span>
+                                        <span class="nav-link-name">The Absolute Truth</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="single-actor.html" class="nav-link">
+                                        <span class="nav-link-name">Transcendental Knowledge</span>
                                     </a>
                                 </li>
                             </ul>
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <a href="pricing.html" class="nav-link">
-                            <span class="nav-link-name">Intermediate</span>
-                        </a>
                     </li>
                     <li class="nav-item">
                         <a href="{% url 'course:faqs' %}" class="nav-link">
@@ -88,6 +88,11 @@
                     <li class="nav-item">
                         <a href="{% url 'course:contact' %}" class="nav-link">
                             <span class="nav-link-name">Contact Us</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'course:pricing' %}" class="nav-link">
+                            <span class="nav-link-name">Register</span>
                         </a>
                     </li>
                     {% comment %}
@@ -146,12 +151,14 @@
                     </li>
                     {% endcomment%}
                 </ul>
+                {% comment %}
                 <button class="btn btn-link btn-icon-md ms-5 d-none d-sm-flex" data-fancybox data-src="#flq_popup_search" data-base-class="flq-fancybox-search" data-animation-duration="1000" data-keyboard="false" data-auto-focus="true" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.0833 17.4167C14.1334 17.4167 17.4167 14.1334 17.4167 10.0833C17.4167 6.03325 14.1334 2.75 10.0833 2.75C6.03325 2.75 2.75 6.03325 2.75 10.0833C2.75 14.1334 6.03325 17.4167 10.0833 17.4167Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M19.25 19.25L15.2625 15.2625" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
+                {% endcomment %}
                 <div class="d-flex align-items-center ms-4 d-none d-sm-flex">
                     <button class="btn btn-xs btn-outline btn-white d-none d-md-flex" data-fancybox data-src="#flq_popup_signin" data-base-class="flq-fancybox-signin" data-animation-duration="1000" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false"> Join Now </button>
                     <button class="btn btn-link btn-icon-md d-md-none" data-fancybox data-src="#flq_popup_signin" data-base-class="flq-fancybox-signin" data-animation-duration="1000" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
@@ -306,24 +313,29 @@
                             </li>
                             <li class="nav-item accordion-item flq-dropdown-nav">
                                 <button class="nav-link accordion-button collapsed" data-bs-target="#Movies" data-bs-toggle="collapse" aria-expanded="false">
-                                    <span class="nav-link-name">Pathways</span>
+                                    <span class="nav-link-name">Courses</span>
                                     <span class="accordion-button-icon"></span>
                                 </button>
                                 <div class="accordion-collapse collapse" id="Movies">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a href="{% url 'course:courses' %}" class="nav-link">
-                                                <span class="nav-link-name">Pathways</span>
+                                                <span class="nav-link-name">All Courses</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="single-course.html" class="nav-link">
-                                                <span class="nav-link-name">Intermediate</span>
+                                                <span class="nav-link-name">Inner Awareness</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="single-actor.html" class="nav-link">
-                                                <span class="nav-link-name">Advanced</span>
+                                                <span class="nav-link-name">The Absolute Truth</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="single-actor.html" class="nav-link">
+                                                <span class="nav-link-name">Transcendental Knowledge</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -398,6 +410,7 @@
                             {% endcomment %}
                         </ul>
                     </div>
+                    {% comment %}
                     <div class="col-auto">
                         <div class="flq-sidebar flq-sidebar-lg flq-fancybox-sidebar ms-lg-6">
                             <div class="flq-widget flq-widget-search">
@@ -455,7 +468,6 @@
                                     </ul>
                                 </div>
                             </div>
-                            {% comment %}
                             <div class="flq-widget flq-widget-blog">
                                 <h4 class="flq-widget-title h5 flq-color-opacity"><span>Recent Posts</span></h4>
                                 <ul>
@@ -509,9 +521,9 @@
                                     </li>
                                 </ul>
                             </div>
-                            {% endcomment %}
                         </div>
                     </div>
+                    {% endcomment %}
                 </div>
             </div>
         </nav>
@@ -681,6 +693,7 @@
         </nav>
         <!-- / Popup navbar user -->
         <!-- Popup search -->
+        {% comment %}
         <div class="flq-fancybox-content-search fancybox-content" id="flq_popup_search">
             <div class="flq-search">
                 <div class="flq-fancybox-body pb-6">
@@ -740,6 +753,7 @@
             </div>
         </div>
         <!-- / Popup search -->
+        {% endcomment %}
         <!-- Popup signin -->
         <div class="flq-fancybox-content-signin fancybox-content" id="flq_popup_signin">
             <div class="flq-signin">
@@ -855,6 +869,60 @@
                     </form>
                 </div>
                 <div class="flq-widget flq-widget-blog">
+                    <h4 class="flq-widget-title h5"><span>Program Instructions</span></h4>
+                    <ul>
+                        <li>
+                            <div class="card flq-card-blog">
+                                <div class="card-img-wrap">
+                                    <a href="single-post.html">
+                                        <span class="flq-image flq-responsive">
+                                            <img src="{% static 'exclusive/assets/images/blog/post-1-740x420.jpg' %}" alt="">
+                                        </span>
+                                        <span class="card-badge badge badge-dark badge-glass">November 20, 2021</span>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title h5"><a href="single-post.html">Girlfriend. How and why</a></h5>
+                                    <p>Earth first saw earth which seas void i thing said bearing behold and can&#39;t unto. Blessed...</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card flq-card-blog">
+                                <div class="card-img-wrap">
+                                    <a href="single-post.html">
+                                        <span class="flq-image flq-responsive">
+                                            <img src="{% static 'exclusive/assets/images/blog/post-2-740x420.jpg' %}" alt="">
+                                        </span>
+                                        <span class="card-badge badge badge-dark badge-glass">November 18, 2021</span>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title h5"><a href="single-post.html">Years is air whose lesser. You&#39;ll thing waters unto brought.</a></h5>
+                                    <p>From said, our they&#39;re darkness void meat from, bearing. Void, beginning fruitful he were...</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card flq-card-blog">
+                                <div class="card-img-wrap">
+                                    <a href="single-post.html">
+                                        <span class="flq-image flq-responsive">
+                                            <img src="{% static 'exclusive/assets/images/blog/post-3-740x420.jpg' %}" alt="">
+                                        </span>
+                                        <span class="card-badge badge badge-dark badge-glass">November 15, 2021</span>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title h5"><a href="single-post.html">Is under void created his hath. One moving Appear hath.</a></h5>
+                                    <p>Spirit herb subdue second form lights green isn&#39;t a sixth had creepeth is night spirit...</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                {% comment %}
+                <div class="flq-widget flq-widget-blog">
                     <h4 class="flq-widget-title h5"><span>Recent Posts</span></h4>
                     <ul>
                         <li>
@@ -950,6 +1018,7 @@
                         </ul>
                     </div>
                 </div>
+                {% endcomment %}
             </div>
         </div>
         <!-- / Offcanvas -->
