@@ -5,8 +5,7 @@
     <div class="content-wrap">
         <div class="py-7">
             <div class="container-small flq-vertical-rhythm">
-                <h3>{{ lesson.title }}</h3>
-                <h3></h3>
+                <h3>{{ lesson.title }} {% if twi %}| Twi {% endif %}</h3>
                 <div class="card flq-card-image flq-card-trailer">
                     {% if lesson.video_source == 'youtube' %}
                         <div style="padding:56.25% 0 0 0;position:relative;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://www.youtube-nocookie.com/embed/{{ lesson.video_id }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
@@ -57,7 +56,7 @@
                 <div class="swiper flq-swiper-effect-touch" data-sr-item=related data-buttons=true data-gap=30 data-loop=true data-speed=800 data-touch-ratio=0.8 data-breakpoints=320:1,656:2,1072:3,1280:4>
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
-                            {% for lesson in related_lessons %}
+                            {% for lesson in course_lessons %}
                             <div class="swiper-slide">
                                 <div class="card flq-card-blog">
                                     <div class="card-img-wrap">
@@ -192,4 +191,113 @@
         </div>
         {% include 'exclusive/utilities/footer.html' %}
     </div>
+{% endblock %}
+
+
+{% block offcanvas %}
+<!-- Offcanvas -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="flq_offcanvas">
+    <div class="offcanvas-header">
+        <a href="{% url 'course:index' %}" class="flq-fancybox-brand me-auto">
+            <img src="{% static 'exclusive/assets/images/logo.png' %}" class="flq-logo" alt="">
+        </a>
+        <button type="button" class="btn btn-link offcanvas-close" data-bs-dismiss="offcanvas" aria-label="Close">
+            <span></span>
+        </button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="flq-widget flq-widget-blog">
+            <h4 class="flq-widget-title h5"><span>{{ course.title }}</span></h4>
+            <p style="font-size: 15px">{{ course.description }}</p>
+        </div>
+        <div class="flq-widget flq-widget-blog">
+            <h4 class="flq-widget-title h5"><span>Lessons ({{ course_lessons.count }})</span></h4>
+            <ul>
+                {% for lesson_ in course_lessons %}
+                <li>
+                    <div class="card-body">
+                        {% if lesson_.title == lesson.title %}
+                        <h6 class="card-title h6 text-warning">{{ lesson_.title }}</h6>
+                        {% else %}
+                        <h6 class="card-title h6"><a href="{% url 'course:lesson' course.slug lesson_.slug %}">{{ lesson_.title }}</a></h6>
+                        {% endif %}
+
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="flq-widget flq-widget-blog">
+            <h4 class="flq-widget-title h5"><span>Program Requirements</span></h4>
+            <ul>
+                <li>
+                    <div>
+                        <p style="font-size: 15px">
+                            Our program welcomes open-hearted individuals ready to embark on a transformative journey. While no prior experience is
+                            necessary, your success and potential for deep inner shifts will be greatly enhanced by the following:
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h6 class="h6">1. Dedication</h6>
+                        <p style="font-size: 15px">This path requires a willingness to step out of your comfort zone and consistently devote time and energy to exploring your inner world. Carve out a consistent practice schedule that aligns with your commitment to transformation.</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h6 class="h6">2. A Quiet Space</h6>
+                        <p style="font-size: 15px">Find a place where you can be undisturbed for periods of meditation, contemplation, or any practices provided in the program. This dedicated space helps to cultivate focus and supports deepening your experience.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        {% comment %}
+        <div class="flq-widget flq-widget-tag">
+            <h4 class="flq-widget-title h5"><span>Tags</span></h4>
+            <div class="flq-tags">
+                <ul>
+                    <li>
+                        <a href="#" class="flq-tag">#Comedy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flq-tag">#Drama</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flq-tag">#Trailers</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flq-tag">#Movie Trailers</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flq-tag">#Horror</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flq-tag">#Thriller</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flq-tag">#TV Shows</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flq-tag">#Action</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flq-tag">#Music</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flq-tag">#Rider</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flq-tag">#Travel</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flq-tag">#Car</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        {% endcomment %}
+    </div>
+</div>
+<!-- / Offcanvas -->
 {% endblock %}

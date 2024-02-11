@@ -45,7 +45,8 @@ def lessons(request, course_slug):
 def lesson_detail(request, course_slug, lesson_slug):
     course = Course.objects.get(slug=course_slug)
     lesson = Lesson.objects.get(slug=lesson_slug)
-    related_lessons = course.lessons.all().exclude(slug=lesson_slug)
+    course_lessons = course.lessons.all()
+    # related_lessons = course.lessons.all().exclude(slug=lesson_slug)
 
     next_lesson = lesson.lesson_number + 1
     if next_lesson <= course.lessons.count():
@@ -62,7 +63,7 @@ def lesson_detail(request, course_slug, lesson_slug):
     context = {
         'course': course,
         'lesson': lesson,
-        'related_lessons': related_lessons,
+        'course_lessons': course_lessons,
         'next_lesson': next_lesson,
         'twi': twi
     }

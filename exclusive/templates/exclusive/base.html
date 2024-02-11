@@ -410,6 +410,35 @@
                             {% endcomment %}
                         </ul>
                     </div>
+                    <div class="col-auto">
+                        <div class="flq-sidebar flq-sidebar-lg flq-fancybox-sidebar ms-lg-6">
+                            <div class="flq-widget flq-widget-blog">
+                                <h4 class="flq-widget-title h5 flq-color-opacity"><span>Musings</span></h4>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <p class="h6">"The greatest magic is revealing God in You."</p>
+                                            <p>~ Dr. Jan</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <p class="h6">"To know is of Mind, To realize is of Spirit."</p>
+                                            <p>~ Dr. Jan</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <p class="h6">"All the endeavour to understand spirit (God) with your mind can never yield results. To know (realize) the spirit, you have
+                                                to withdraw from mind, you have to silence the mind."</p>
+                                            <p>~ Dr. Jan</p>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
                     {% comment %}
                     <div class="col-auto">
                         <div class="flq-sidebar flq-sidebar-lg flq-fancybox-sidebar ms-lg-6">
@@ -845,6 +874,7 @@
             </div>
         </div>
         <!-- / Popup signup -->
+        {% block offcanvas %}
         <!-- Offcanvas -->
         <div class="offcanvas offcanvas-start" tabindex="-1" id="flq_offcanvas">
             <div class="offcanvas-header">
@@ -1022,6 +1052,7 @@
             </div>
         </div>
         <!-- / Offcanvas -->
+        {% endblock %}
         <!-- START: Scripts -->
         <!-- Object Fit Polyfill -->
         <script src="{% static 'exclusive/assets/vendor/object-fit-images/dist/ofi.min.js' %}"></script>
