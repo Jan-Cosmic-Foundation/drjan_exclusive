@@ -7,6 +7,7 @@ urlpatterns = [
     path('index/', IndexView.as_view(), name='c_index'),
     path('login/', LoginView.as_view(), name='login'),
     path('signup/', SignupView.as_view(), name='signup'),
+    path('profile/', ProfileView.as_view(), name='profile'),
     path('courses/', CoursesView.as_view(), name='courses'),
     path('courses/<slug:course_slug>', CourseDetailView.as_view(), name='course_detail'),
     path('lessons/<slug:course_slug>', LessonsView.as_view(), name='lessons'),

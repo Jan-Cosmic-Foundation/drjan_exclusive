@@ -55,6 +55,19 @@ class SignupView(View):
         return redirect('course:index')
 
 
+class ProfileView(LoginRequiredMixin, View):
+    template_name = 'exclusive/account-profile.html'
+    login_url = "/login/"
+
+    def get(self, request):
+        # get current user
+        user = request.user
+        context = {
+            "user": user
+        }
+        return render(request, self.template_name, context)
+
+
 class IndexView(View):
     template_name = 'exclusive/index.html'
 

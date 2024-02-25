@@ -176,7 +176,7 @@
                     <div class="dropdown-menu gy-2">
                         <ul class="nav">
                             <li class="nav-item">
-                                <a href="account-profile.html" class="nav-link">
+                                <a href="{% url 'course:profile' %}" class="nav-link">
                                     <span class="nav-link-name">Profile</span>
                                 </a>
                             </li>
@@ -782,7 +782,6 @@
             </div>
         </div>
         <!-- / Popup search -->
-        {% endcomment %}
         <!-- Popup signin -->
         <div class="flq-fancybox-content-signin fancybox-content" id="flq_popup_signin">
             <div class="flq-signin">
@@ -874,6 +873,7 @@
             </div>
         </div>
         <!-- / Popup signup -->
+        {% endcomment %}
         {% block offcanvas %}
         <!-- Offcanvas -->
         <div class="offcanvas offcanvas-start" tabindex="-1" id="flq_offcanvas">
