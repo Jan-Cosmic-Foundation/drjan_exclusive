@@ -4,7 +4,6 @@ from .views import *
 app_name = 'course'
 urlpatterns = [
     path('', CourseIndexView.as_view(), name='index'),
-    path('index/', IndexView.as_view(), name='c_index'),
     path('login/', LoginView.as_view(), name='login'),
     path('signup/', SignupView.as_view(), name='signup'),
     path('profile/', ProfileView.as_view(), name='profile'),
@@ -15,4 +14,5 @@ urlpatterns = [
     path('faqs/', FAQsView.as_view(), name='faqs'),
     path('contact/', ContactView.as_view(), name='contact'),
     path('pricing/', PricingView.as_view(), name='pricing'),
+    path('logout/', LogoutView.as_view(), name='logout'),
 ]

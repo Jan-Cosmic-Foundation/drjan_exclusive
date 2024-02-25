@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 from django.views import View
 from django.contrib.auth.models import User
@@ -68,15 +68,15 @@ class ProfileView(LoginRequiredMixin, View):
         return render(request, self.template_name, context)
 
 
-class IndexView(View):
-    template_name = 'exclusive/index.html'
-
-    def get(self, request):
-        courses_ = Course.objects.all()
-        context = {
-            "courses": courses_
-        }
-        return render(request, self.template_name, context)
+# class IndexView(View):
+#     template_name = 'exclusive/index.html'
+#
+#     def get(self, request):
+#         courses_ = Course.objects.all()
+#         context = {
+#             "courses": courses_
+#         }
+#         return render(request, self.template_name, context)
 
 
 class CourseIndexView(LoginRequiredMixin, View):
@@ -162,7 +162,7 @@ class FAQsView(View):
         return render(request, self.template_name)
 
 
-class ContactView(View):
+class ContactView(LoginRequiredMixin, View):
     template_name = 'exclusive/contact.html'
 
     def get(self, request):
@@ -175,3 +175,11 @@ class PricingView(LoginRequiredMixin, View):
 
     def get(self, request):
         return render(request, self.template_name)
+
+
+class LogoutView(View):
+
+    def get(self, request):
+        logout(request)
+        return redirect('course:login')
+

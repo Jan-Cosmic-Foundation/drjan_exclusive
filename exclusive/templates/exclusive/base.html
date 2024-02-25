@@ -226,12 +226,13 @@
         <div class="flq-navbar-icons">
             <ul>
                 <li>
-                    <a href="index.html" class="btn btn-link btn-icon-md">
+                    <a href="{% url 'course:index' %}" class="btn btn-link btn-icon-md">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M15 12H9V22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0392 3 20.5305 3 20V9.9782C3 9.36102 3.28495 8.77841 3.77212 8.39949L10.7721 2.95505C11.4943 2.39332 12.5057 2.39332 13.2279 2.95505L20.2279 8.39949C20.7151 8.77841 21 9.36102 21 9.9782V20C21 20.5305 20.7893 21.0392 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H15V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </a>
                 </li>
+                {% comment %}
                 <li>
                     <button class="btn btn-link btn-icon-md" data-fancybox data-src="#flq_popup_search" data-base-class="flq-fancybox-search" data-animation-duration="1000" data-keyboard="false" data-auto-focus="true" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -240,6 +241,7 @@
                         </svg>
                     </button>
                 </li>
+                {% endcomment %}
                 <li>
                     <button class="btn btn-link btn-icon-md" data-fancybox data-src="#flq_popup_user" data-base-class="flq-fancybox-navbar" data-animation-duration="1000" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -248,11 +250,11 @@
                     </button>
                 </li>
                 <li>
-                    <button class="btn btn-link btn-icon-md" data-fancybox data-src="#flq_popup_signin" data-base-class="flq-fancybox-signin" data-animation-duration="1000" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
+                    <a href="{% url 'course:logout' %}" class="btn btn-link btn-icon-md">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10 17L15 12M15 12L10 7M15 12H3M15 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                    </button>
+                    </a>
                 </li>
                 <li class="d-flex align-items-center">
                     <div class="flq-scroll-top-wrapper">
@@ -574,10 +576,11 @@
                     <div class="col-12 col-lg">
                         <ul class="nav flex-column flq-navbar-nav accordion gy-3">
                             <li class="nav-item">
-                                <a href="account-profile.html" class="nav-link">
+                                <a href="{% url 'course:profile' %}" class="nav-link">
                                     <span class="nav-link-name">Profile</span>
                                 </a>
                             </li>
+                            {% comment %}
                             <li class="nav-item">
                                 <a href="account-favorites.html" class="nav-link">
                                     <span class="nav-link-name">Favorites</span>
@@ -598,13 +601,15 @@
                                     <span class="nav-link-name">Notifications</span>
                                 </a>
                             </li>
+                            {% endcomment %}
                             <li class="nav-item">
-                                <a href="account-logout.html" class="nav-link">
+                                <a href="{% url 'course:logout' %}" class="nav-link">
                                     <span class="nav-link-name">Logout</span>
                                 </a>
                             </li>
                         </ul>
                     </div>
+                    {% comment %}
                     <div class="col-auto">
                         <div class="flq-sidebar flq-sidebar-lg flq-fancybox-sidebar ms-lg-6">
                             <div class="flq-widget flq-widget-search">
@@ -717,6 +722,7 @@
                             </div>
                         </div>
                     </div>
+                    {% endcomment %}
                 </div>
             </div>
         </nav>
