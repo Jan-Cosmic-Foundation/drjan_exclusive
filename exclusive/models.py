@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 class Profile(models.Model):
     """
-    Model for user profiles: user, bio, profile pic, social links
+    Model for user profiles: user, bio, profile pic
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
     phone_number = models.CharField(max_length=20, blank=True)
