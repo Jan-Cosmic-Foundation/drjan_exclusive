@@ -90,11 +90,13 @@
                             <span class="nav-link-name">Contact Us</span>
                         </a>
                     </li>
+                    {% if not request.user.profile.registered %}
                     <li class="nav-item">
                         <a href="{% url 'course:pricing' %}" class="nav-link">
                             <span class="nav-link-name">Register</span>
                         </a>
                     </li>
+                    {% endif %}
                     {% comment %}
                     <li class="nav-item flq-dropdown flq-dropdown-nav">
                         <a href="blog.html" class="nav-link" role="button">
@@ -308,11 +310,13 @@
                                     <span class="nav-link-name">Home</span>
                                 </a>
                             </li>
+                            {% if not request.user.profile.registered %}
                             <li class="nav-item">
                                 <a href="{% url 'course:pricing' %}" class="nav-link">
                                     <span class="nav-link-name">Sign Up</span>
                                 </a>
                             </li>
+                            {% endif %}
                             <li class="nav-item accordion-item flq-dropdown-nav">
                                 <button class="nav-link accordion-button collapsed" data-bs-target="#Movies" data-bs-toggle="collapse" aria-expanded="false">
                                     <span class="nav-link-name">Courses</span>

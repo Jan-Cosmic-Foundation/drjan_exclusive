@@ -5,207 +5,620 @@
 {% endblock %}
 
 {% block content %}
-    <div class="flq-background py-md-7 py-6" style="background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('{% static 'exclusive/assets/images/background/pricing.jpg' %}'); background-size: cover; background-position: top">
-        <div class="container text-center">
-            <h1 class="display-6 mb-1 d-none d-md-block">Spark your Transformation</h1>
-            <!-- for phone -->
-            <h2 class="mb-1 d-md-none">Spark your Transformation</h2>
-            <p class="">The wisdom shared here is invaluable, but your contribution sustains Dr. Jan's mission and brings positive change to countless individuals.</p>
+<div class="flq-background py-md-7 py-6"
+     style="background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('{% static 'exclusive/assets/images/background/pricing.jpg' %}'); background-size: cover; background-position: top">
+    <div class="container text-center">
+        <h1 class="display-6 mb-1 d-none d-md-block">Spark your Transformation</h1>
+        <!-- for phone -->
+        <h2 class="mb-1 d-md-none">Spark your Transformation</h2>
+        <p class="">Discover priceless wisdom that empowers your growth. Your support fuels Dr. Jan's mission to spread
+            this knowledge and uplift lives.</p>
+    </div>
+</div>
+<div class="content-wrap">
+    <div class="py-7 flq-background-color-100"
+         style="background-image: radial-gradient(100% 100% at 50% 0%, hsla(var(--flq-color-brand), 0.14) 25%, hsla(var(--flq-color-background), 0) 100%);">
+        <div class="container" data-sr="pricing" data-sr-interval="150" data-sr-duration="1200" data-sr-distance="30">
+            <div class="row align-items-center justify-content-center g-5">
+                {% comment %}
+                <div class="col-12 col-sm-10 col-md-6 col-lg-5 col-xl-4" data-sr-item="pricing">
+                    <div class="card flq-card-pricing">
+                        <div class="card-head">
+                            <div class="card-subtitle h6">Intermediate</div>
+                            <div class="card-price h2"><span>$</span>99<span>month</span></div>
+                        </div>
+                        <div class="card-body flq-vertical-rhythm">
+                            <p>Lifetime access to a program of transformation and exclusive lessons.</p>
+                            <ul>
+                                <li>Access to Core Modules</li>
+                                <li>On-Demand Video Lessons</li>
+                                <li>Community Forum</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-block btn-outline btn-brand-hover">Register</a>
+                        </div>
+                    </div>
+                </div>
+                {% endcomment %}
+                <div class="col-12 col-sm-10 col-md-6 col-lg-5 col-xl-4" data-sr-item="pricing">
+                    <div class="card flq-card-pricing">
+                        <div class="card-head">
+                            <div class="card-subtitle h6">Awake and Aware</div>
+                            <div class="card-price h2"><span>$</span>249<span class="d-none"></span></div>
+                        </div>
+                        <div class="card-body flq-vertical-rhythm">
+                            <p style="font-size: 15.5px">Unlock the full program: intermediate, advanced courses, and
+                                exclusive benefits.</p>
+                            <ul style="font-size: 14.5px">
+                                <li>Complete curriculum access</li>
+                                <li>On-demand video lessons</li>
+                                <li>Exclusive practices & techniques</li>
+                                <li>Exclusive Q&A sessions</li>
+                                <li>Annual impartation event</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-block">Register</a>
+                        </div>
+                    </div>
+                </div>
+                {% comment %}
+                <div class="col-12 col-sm-10 col-md-6 col-lg-5 col-xl-4" data-sr-item="pricing">
+                    <div class="card flq-card-pricing">
+                        <div class="card-head">
+                            <div class="card-subtitle h6">Advanced</div>
+                            <div class="card-price h2"><span>$</span>159<span>month</span></div>
+                        </div>
+                        <div class="card-body flq-vertical-rhythm">
+                            <p>Morning isn&#39;t second the seasons evening earth the brought</p>
+                            <ul>
+                                <li>Access to In-depth Modules</li>
+                                <li>Exclusive Live Events</li>
+                                <li>On-Demand Video Lessons</li>
+                                <li>Exclusive Q&A sessions</li>
+                                <!--                                        <li>Community Forum</li>-->
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-block btn-outline btn-brand-hover">Register</a>
+                        </div>
+                    </div>
+                </div>
+                {% endcomment %}
+            </div>
         </div>
     </div>
-    <div class="content-wrap">
-            <div class="py-7 flq-background-color-100" style="background-image: radial-gradient(100% 100% at 50% 0%, hsla(var(--flq-color-brand), 0.14) 25%, hsla(var(--flq-color-background), 0) 100%);">
-                <div class="container" data-sr="pricing" data-sr-interval="150" data-sr-duration="1200" data-sr-distance="30">
-                    <div class="row align-items-center justify-content-center g-5">
-                        {% comment %}
-                        <div class="col-12 col-sm-10 col-md-6 col-lg-5 col-xl-4" data-sr-item="pricing">
-                            <div class="card flq-card-pricing">
-                                <div class="card-head">
-                                    <div class="card-subtitle h6">Intermediate</div>
-                                    <div class="card-price h2"><span>$</span>99<span>month</span></div>
-                                </div>
-                                <div class="card-body flq-vertical-rhythm">
-                                    <p>Lifetime access to a program of transformation and exclusive lessons.</p>
-                                    <ul>
-                                        <li>Access to Core Modules</li>
-                                        <li>On-Demand Video Lessons</li>
-                                        <li>Community Forum</li>
-                                    </ul>
-                                </div>
-                                <div class="card-footer">
-                                    <a href="#" class="btn btn-block btn-outline btn-brand-hover">Register</a>
-                                </div>
-                            </div>
-                        </div>
-                        {% endcomment %}
-                        <div class="col-12 col-sm-10 col-md-6 col-lg-5 col-xl-4" data-sr-item="pricing">
-                            <div class="card flq-card-pricing">
-                                <div class="card-head">
-                                    <div class="card-subtitle h6">Intermediate + Advanced</div>
-                                    <div class="card-price h2"><span>$</span>249<span>month</span></div>
-                                </div>
-                                <div class="card-body flq-vertical-rhythm">
-                                    <p>Comprehensive access to everything, both intermediate and advanced course content.</p>
-                                    <ul>
-                                        <li>Access to Everything</li>
-                                        <li>Exclusive Impartation Event</li>
-                                        <li>Seamless progression</li>
-                                        <li>On-Demand Video Lessons</li>
-                                        <li>Exclusive Q&A sessions</li>
-
-                                    </ul>
-                                </div>
-                                <div class="card-footer">
-                                    <a href="#" class="btn btn-block">Register</a>
-                                </div>
-                            </div>
-                        </div>
-                        {% comment %}
-                        <div class="col-12 col-sm-10 col-md-6 col-lg-5 col-xl-4" data-sr-item="pricing">
-                            <div class="card flq-card-pricing">
-                                <div class="card-head">
-                                    <div class="card-subtitle h6">Advanced</div>
-                                    <div class="card-price h2"><span>$</span>159<span>month</span></div>
-                                </div>
-                                <div class="card-body flq-vertical-rhythm">
-                                    <p>Morning isn&#39;t second the seasons evening earth the brought</p>
-                                    <ul>
-                                        <li>Access to In-depth Modules</li>
-                                        <li>Exclusive Live Events</li>
-                                        <li>On-Demand Video Lessons</li>
-                                        <li>Exclusive Q&A sessions</li>
-<!--                                        <li>Community Forum</li>-->
-                                    </ul>
-                                </div>
-                                <div class="card-footer">
-                                    <a href="#" class="btn btn-block btn-outline btn-brand-hover">Register</a>
-                                </div>
-                            </div>
-                        </div>
-                        {% endcomment %}
-                    </div>
-                </div>
-            </div>
-            <div class="py-7">
-                <div class="container">
-                    <div class="accordion" data-sr="accordion" data-sr-interval="100" data-sr-duration="1000" data-sr-distance="10">
-                        <div class="accordion-item" data-sr-item="accordion">
-                            <h2 class="accordion-header h5">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1" aria-expanded="true" aria-controls="faq-1"> Let may one from won&#39;t seasons beast lights under he? <span class="accordion-button-icon"></span>
-                                </button>
-                            </h2>
-                            <div id="faq-1" class="accordion-collapse collapse  show">
-                                <div class="accordion-body">
-                                    <p>Said whales place. And kind under moveth spirit be she'd you'll that. Rule created darkness. Second. Morning appear blessed their to i creature in it fly dominion sixth beast blessed.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item" data-sr-item="accordion">
-                            <h2 class="accordion-header h5">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2" aria-expanded="false" aria-controls="faq-2"> May Fly behold, living days him divided signs forth after? <span class="accordion-button-icon"></span>
-                                </button>
-                            </h2>
-                            <div id="faq-2" class="accordion-collapse collapse">
-                                <div class="accordion-body">
-                                    <p>Said whales place. And kind under moveth spirit be she'd you'll that. Rule created darkness. Second. Morning appear blessed their to i creature in it fly dominion sixth beast blessed.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item" data-sr-item="accordion">
-                            <h2 class="accordion-header h5">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3" aria-expanded="false" aria-controls="faq-3"> Hath doesn&#39;t own it to, face open third replenish dry seed for he had bring great fourth creepeth thing to? <span class="accordion-button-icon"></span>
-                                </button>
-                            </h2>
-                            <div id="faq-3" class="accordion-collapse collapse">
-                                <div class="accordion-body">
-                                    <p>Said whales place. And kind under moveth spirit be she'd you'll that. Rule created darkness. Second. Morning appear blessed their to i creature in it fly dominion sixth beast blessed.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item" data-sr-item="accordion">
-                            <h2 class="accordion-header h5">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-4" aria-expanded="false" aria-controls="faq-4"> It man sixth the dominion gathering unto Female above you&#39;re dry fill evening creature in tree divided there beginning creeping Lights. Our together above subdue. Likeness be let light have? <span class="accordion-button-icon"></span>
-                                </button>
-                            </h2>
-                            <div id="faq-4" class="accordion-collapse collapse">
-                                <div class="accordion-body">
-                                    <p>Said whales place. And kind under moveth spirit be she'd you'll that. Rule created darkness. Second. Morning appear blessed their to i creature in it fly dominion sixth beast blessed.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item" data-sr-item="accordion">
-                            <h2 class="accordion-header h5">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-5" aria-expanded="false" aria-controls="faq-5"> You blessed blessed created day seed in set evening man? <span class="accordion-button-icon"></span>
-                                </button>
-                            </h2>
-                            <div id="faq-5" class="accordion-collapse collapse">
-                                <div class="accordion-body">
-                                    <p>Said whales place. And kind under moveth spirit be she'd you'll that. Rule created darkness. Second. Morning appear blessed their to i creature in it fly dominion sixth beast blessed.</p>
-                                </div>
-                            </div>
+    {% comment %}
+    <div class="swiper flq-swiper-effect-touch container-fluid mt-7 mb-3" data-sr data-sr-duration=1500 data-gap=20
+         data-buttons=true data-autoplay=2000 data-loop=true data-free-mode=true data-speed=1000 data-touch-ratio=0.6
+         data-breakpoints=320:3,500:4,848:5,1072:6,1280:8,1480:10>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card flq-card-image flq-card-image-instagram">
+                        <a href="#" class="card-image">
+                                    <span class="flq-image flq-responsive
+  flq-responsive-1x1">
+                                        <img src="{% static 'exclusive/assets/images/background-ticker/1.jpg' %}"
+                                             alt="">
+                                    </span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M6.22506 0.450134C3.03566 0.450134 0.450134 3.03566 0.450134 6.22506V17.7749C0.450134 20.9643 3.03566 23.5498 6.22506 23.5498H17.7749C20.9643 23.5498 23.5498 20.9643 23.5498 17.7749V6.22506C23.5498 3.03566 20.9643 0.450134 17.7749 0.450134H6.22506ZM5.5834 12C5.5834 15.5437 8.45621 18.4166 12 18.4166C15.5437 18.4166 18.4166 15.5437 18.4166 12C18.4166 8.45621 15.5437 5.5834 12 5.5834C8.45621 5.5834 5.5834 8.45621 5.5834 12ZM12 15.8499C14.1263 15.8499 15.8499 14.1263 15.8499 12C15.8499 9.87365 14.1263 8.15003 12 8.15003C9.87366 8.15003 8.15004 9.87365 8.15004 12C8.15004 14.1263 9.87366 15.8499 12 15.8499ZM19.6999 4.30008C19.6999 5.00883 19.1253 5.5834 18.4166 5.5834C17.7078 5.5834 17.1333 5.00883 17.1333 4.30008C17.1333 3.59133 17.7078 3.01677 18.4166 3.01677C19.1253 3.01677 19.6999 3.59133 19.6999 4.30008Z"
+                                      fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <div class="card-body">
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="flq-background-color-100">
-                <div class="container">
-                    <div class="row gx-0 justify-content-center">
-                        <div class="col-12 col-lg-10 col-xl">
-                            <div class="py-7 flq-vertical-rhythm" data-sr="contact-form" data-sr-interval="100" data-sr-duration="1000" data-sr-distance="10">
-                                <h2 class="h1" data-sr-item="contact-form">Still Have Questions?</h2>
-                                <p data-sr-item="contact-form">One face Cattle which lesser morning. Fly won't multiply they're rule moving fifth. I brought without second of. Called fly she'd, blessed appear saying saying give tree without itself evening tree.</p>
-                                <div class="flq-social" data-sr-item=contact-form>
-                                    <ul class="g-4">
-                                        <li>
-                                            <a href="#" class="flq-social-link">
-                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M21.533 7.11169C21.5482 7.32488 21.5482 7.53811 21.5482 7.7513C21.5482 14.2538 16.599 21.7462 7.5533 21.7462C4.76648 21.7462 2.17767 20.9391 0 19.5381C0.395953 19.5838 0.776625 19.599 1.18781 19.599C3.48727 19.599 5.60405 18.8224 7.29441 17.4975C5.13197 17.4518 3.31978 16.0356 2.69541 14.0863C3 14.132 3.30455 14.1624 3.62437 14.1624C4.06598 14.1624 4.50764 14.1015 4.91878 13.995C2.66498 13.5381 0.974578 11.5584 0.974578 9.16753V9.10664C1.62937 9.47213 2.39086 9.70055 3.19791 9.73097C1.87303 8.8477 1.00505 7.34011 1.00505 5.63452C1.00505 4.72083 1.24866 3.88327 1.67508 3.1523C4.09641 6.13706 7.73601 8.08627 11.8172 8.2995C11.7411 7.93402 11.6954 7.55335 11.6954 7.17263C11.6954 4.46194 13.8883 2.25385 16.6141 2.25385C18.0304 2.25385 19.3095 2.84775 20.208 3.80714C21.3197 3.59395 22.3857 3.18277 23.3299 2.61933C22.9643 3.76149 22.1877 4.72088 21.1674 5.32997C22.1573 5.22342 23.1167 4.94925 23.9999 4.56858C23.33 5.54316 22.4924 6.41114 21.533 7.11169V7.11169Z" fill="currentColor" />
-                                                </svg>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="flq-social-link">
-                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M23.625 12C23.625 5.57812 18.4219 0.375 12 0.375C5.57812 0.375 0.375 5.57812 0.375 12C0.375 17.8022 4.62609 22.6116 10.1836 23.4844V15.3605H7.23047V12H10.1836V9.43875C10.1836 6.52547 11.918 4.91625 14.5744 4.91625C15.8466 4.91625 17.1769 5.14313 17.1769 5.14313V8.0025H15.7106C14.2669 8.0025 13.8164 8.89875 13.8164 9.81797V12H17.0405L16.5248 15.3605H13.8164V23.4844C19.3739 22.6116 23.625 17.8022 23.625 12Z" fill="currentColor" />
-                                                </svg>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="flq-social-link">
-                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.22506 0.450134C3.03566 0.450134 0.450134 3.03566 0.450134 6.22506V17.7749C0.450134 20.9643 3.03566 23.5498 6.22506 23.5498H17.7749C20.9643 23.5498 23.5498 20.9643 23.5498 17.7749V6.22506C23.5498 3.03566 20.9643 0.450134 17.7749 0.450134H6.22506ZM5.5834 12C5.5834 15.5437 8.45621 18.4166 12 18.4166C15.5437 18.4166 18.4166 15.5437 18.4166 12C18.4166 8.45621 15.5437 5.5834 12 5.5834C8.45621 5.5834 5.5834 8.45621 5.5834 12ZM12 15.8499C14.1263 15.8499 15.8499 14.1263 15.8499 12C15.8499 9.87365 14.1263 8.15003 12 8.15003C9.87366 8.15003 8.15004 9.87365 8.15004 12C8.15004 14.1263 9.87366 15.8499 12 15.8499ZM19.6999 4.30008C19.6999 5.00883 19.1253 5.5834 18.4166 5.5834C17.7078 5.5834 17.1333 5.00883 17.1333 4.30008C17.1333 3.59133 17.7078 3.01677 18.4166 3.01677C19.1253 3.01677 19.6999 3.59133 19.6999 4.30008Z" fill="currentColor" />
-                                                </svg>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <form class="mt-6" action="#">
-                                    <div class="row gy-4">
-                                        <div class="col-12 col-sm" data-sr-item="contact-form">
-                                            <input class="form-control flq-form-user form-control-lg" type="text" placeholder="Your Name">
-                                        </div>
-                                        <div class="col-12 col-sm" data-sr-item="contact-form">
-                                            <input class="form-control flq-form-mail form-control-lg" type="email" placeholder="Your Email">
-                                        </div>
-                                        <div class="col-12" data-sr-item="contact-form">
-                                            <textarea class="form-control flq-form-message form-control-lg" rows="5" placeholder="Your Message"></textarea>
-                                        </div>
-                                        <div class="col-12" data-sr-item="contact-form">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="contact_form"><label class="form-check-label" for="contact_form">Save my name, email, and website in this browser for the next time I comment.</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-auto" data-sr-item="contact-form">
-                                            <button class="btn btn-block btn-lg">Submit</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+                <div class="swiper-slide">
+                    <div class="card flq-card-image flq-card-image-instagram">
+                        <a href="#" class="card-image">
+                                    <span class="flq-image flq-responsive
+  flq-responsive-1x1">
+                                        <img src="{% static 'exclusive/assets/images/background-ticker/2.jpg' %}"
+                                             alt="">
+                                    </span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M6.22506 0.450134C3.03566 0.450134 0.450134 3.03566 0.450134 6.22506V17.7749C0.450134 20.9643 3.03566 23.5498 6.22506 23.5498H17.7749C20.9643 23.5498 23.5498 20.9643 23.5498 17.7749V6.22506C23.5498 3.03566 20.9643 0.450134 17.7749 0.450134H6.22506ZM5.5834 12C5.5834 15.5437 8.45621 18.4166 12 18.4166C15.5437 18.4166 18.4166 15.5437 18.4166 12C18.4166 8.45621 15.5437 5.5834 12 5.5834C8.45621 5.5834 5.5834 8.45621 5.5834 12ZM12 15.8499C14.1263 15.8499 15.8499 14.1263 15.8499 12C15.8499 9.87365 14.1263 8.15003 12 8.15003C9.87366 8.15003 8.15004 9.87365 8.15004 12C8.15004 14.1263 9.87366 15.8499 12 15.8499ZM19.6999 4.30008C19.6999 5.00883 19.1253 5.5834 18.4166 5.5834C17.7078 5.5834 17.1333 5.00883 17.1333 4.30008C17.1333 3.59133 17.7078 3.01677 18.4166 3.01677C19.1253 3.01677 19.6999 3.59133 19.6999 4.30008Z"
+                                      fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <div class="card-body">
                         </div>
-                        <div class="col-1 d-none d-xl-block"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card flq-card-image flq-card-image-instagram">
+                        <a href="#" class="card-image">
+                                    <span class="flq-image flq-responsive
+  flq-responsive-1x1">
+                                        <img src="{% static 'exclusive/assets/images/background-ticker/3.jpg' %}"
+                                             alt="">
+                                    </span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M6.22506 0.450134C3.03566 0.450134 0.450134 3.03566 0.450134 6.22506V17.7749C0.450134 20.9643 3.03566 23.5498 6.22506 23.5498H17.7749C20.9643 23.5498 23.5498 20.9643 23.5498 17.7749V6.22506C23.5498 3.03566 20.9643 0.450134 17.7749 0.450134H6.22506ZM5.5834 12C5.5834 15.5437 8.45621 18.4166 12 18.4166C15.5437 18.4166 18.4166 15.5437 18.4166 12C18.4166 8.45621 15.5437 5.5834 12 5.5834C8.45621 5.5834 5.5834 8.45621 5.5834 12ZM12 15.8499C14.1263 15.8499 15.8499 14.1263 15.8499 12C15.8499 9.87365 14.1263 8.15003 12 8.15003C9.87366 8.15003 8.15004 9.87365 8.15004 12C8.15004 14.1263 9.87366 15.8499 12 15.8499ZM19.6999 4.30008C19.6999 5.00883 19.1253 5.5834 18.4166 5.5834C17.7078 5.5834 17.1333 5.00883 17.1333 4.30008C17.1333 3.59133 17.7078 3.01677 18.4166 3.01677C19.1253 3.01677 19.6999 3.59133 19.6999 4.30008Z"
+                                      fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card flq-card-image flq-card-image-instagram">
+                        <a href="#" class="card-image">
+                                    <span class="flq-image flq-responsive
+  flq-responsive-1x1">
+                                        <img src="{% static 'exclusive/assets/images/background-ticker/4.jpg' %}"
+                                             alt="">
+                                    </span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M6.22506 0.450134C3.03566 0.450134 0.450134 3.03566 0.450134 6.22506V17.7749C0.450134 20.9643 3.03566 23.5498 6.22506 23.5498H17.7749C20.9643 23.5498 23.5498 20.9643 23.5498 17.7749V6.22506C23.5498 3.03566 20.9643 0.450134 17.7749 0.450134H6.22506ZM5.5834 12C5.5834 15.5437 8.45621 18.4166 12 18.4166C15.5437 18.4166 18.4166 15.5437 18.4166 12C18.4166 8.45621 15.5437 5.5834 12 5.5834C8.45621 5.5834 5.5834 8.45621 5.5834 12ZM12 15.8499C14.1263 15.8499 15.8499 14.1263 15.8499 12C15.8499 9.87365 14.1263 8.15003 12 8.15003C9.87366 8.15003 8.15004 9.87365 8.15004 12C8.15004 14.1263 9.87366 15.8499 12 15.8499ZM19.6999 4.30008C19.6999 5.00883 19.1253 5.5834 18.4166 5.5834C17.7078 5.5834 17.1333 5.00883 17.1333 4.30008C17.1333 3.59133 17.7078 3.01677 18.4166 3.01677C19.1253 3.01677 19.6999 3.59133 19.6999 4.30008Z"
+                                      fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card flq-card-image flq-card-image-instagram">
+                        <a href="#" class="card-image">
+                                    <span class="flq-image flq-responsive
+  flq-responsive-1x1">
+                                        <img src="{% static 'exclusive/assets/images/background-ticker/5.jpg' %}"
+                                             alt="">
+                                    </span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M6.22506 0.450134C3.03566 0.450134 0.450134 3.03566 0.450134 6.22506V17.7749C0.450134 20.9643 3.03566 23.5498 6.22506 23.5498H17.7749C20.9643 23.5498 23.5498 20.9643 23.5498 17.7749V6.22506C23.5498 3.03566 20.9643 0.450134 17.7749 0.450134H6.22506ZM5.5834 12C5.5834 15.5437 8.45621 18.4166 12 18.4166C15.5437 18.4166 18.4166 15.5437 18.4166 12C18.4166 8.45621 15.5437 5.5834 12 5.5834C8.45621 5.5834 5.5834 8.45621 5.5834 12ZM12 15.8499C14.1263 15.8499 15.8499 14.1263 15.8499 12C15.8499 9.87365 14.1263 8.15003 12 8.15003C9.87366 8.15003 8.15004 9.87365 8.15004 12C8.15004 14.1263 9.87366 15.8499 12 15.8499ZM19.6999 4.30008C19.6999 5.00883 19.1253 5.5834 18.4166 5.5834C17.7078 5.5834 17.1333 5.00883 17.1333 4.30008C17.1333 3.59133 17.7078 3.01677 18.4166 3.01677C19.1253 3.01677 19.6999 3.59133 19.6999 4.30008Z"
+                                      fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card flq-card-image flq-card-image-instagram">
+                        <a href="#" class="card-image">
+                                    <span class="flq-image flq-responsive
+  flq-responsive-1x1">
+                                        <img src="{% static 'exclusive/assets/images/background-ticker/6.jpg' %}"
+                                             alt="">
+                                    </span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M6.22506 0.450134C3.03566 0.450134 0.450134 3.03566 0.450134 6.22506V17.7749C0.450134 20.9643 3.03566 23.5498 6.22506 23.5498H17.7749C20.9643 23.5498 23.5498 20.9643 23.5498 17.7749V6.22506C23.5498 3.03566 20.9643 0.450134 17.7749 0.450134H6.22506ZM5.5834 12C5.5834 15.5437 8.45621 18.4166 12 18.4166C15.5437 18.4166 18.4166 15.5437 18.4166 12C18.4166 8.45621 15.5437 5.5834 12 5.5834C8.45621 5.5834 5.5834 8.45621 5.5834 12ZM12 15.8499C14.1263 15.8499 15.8499 14.1263 15.8499 12C15.8499 9.87365 14.1263 8.15003 12 8.15003C9.87366 8.15003 8.15004 9.87365 8.15004 12C8.15004 14.1263 9.87366 15.8499 12 15.8499ZM19.6999 4.30008C19.6999 5.00883 19.1253 5.5834 18.4166 5.5834C17.7078 5.5834 17.1333 5.00883 17.1333 4.30008C17.1333 3.59133 17.7078 3.01677 18.4166 3.01677C19.1253 3.01677 19.6999 3.59133 19.6999 4.30008Z"
+                                      fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card flq-card-image flq-card-image-instagram">
+                        <a href="#" class="card-image">
+                                    <span class="flq-image flq-responsive
+  flq-responsive-1x1">
+                                        <img src="{% static 'exclusive/assets/images/background-ticker/7.jpg' %}"
+                                             alt="">
+                                    </span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M6.22506 0.450134C3.03566 0.450134 0.450134 3.03566 0.450134 6.22506V17.7749C0.450134 20.9643 3.03566 23.5498 6.22506 23.5498H17.7749C20.9643 23.5498 23.5498 20.9643 23.5498 17.7749V6.22506C23.5498 3.03566 20.9643 0.450134 17.7749 0.450134H6.22506ZM5.5834 12C5.5834 15.5437 8.45621 18.4166 12 18.4166C15.5437 18.4166 18.4166 15.5437 18.4166 12C18.4166 8.45621 15.5437 5.5834 12 5.5834C8.45621 5.5834 5.5834 8.45621 5.5834 12ZM12 15.8499C14.1263 15.8499 15.8499 14.1263 15.8499 12C15.8499 9.87365 14.1263 8.15003 12 8.15003C9.87366 8.15003 8.15004 9.87365 8.15004 12C8.15004 14.1263 9.87366 15.8499 12 15.8499ZM19.6999 4.30008C19.6999 5.00883 19.1253 5.5834 18.4166 5.5834C17.7078 5.5834 17.1333 5.00883 17.1333 4.30008C17.1333 3.59133 17.7078 3.01677 18.4166 3.01677C19.1253 3.01677 19.6999 3.59133 19.6999 4.30008Z"
+                                      fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card flq-card-image flq-card-image-instagram">
+                        <a href="#" class="card-image">
+                                    <span class="flq-image flq-responsive
+  flq-responsive-1x1">
+                                        <img src="{% static 'exclusive/assets/images/background-ticker/8.jpg' %}"
+                                             alt="">
+                                    </span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M6.22506 0.450134C3.03566 0.450134 0.450134 3.03566 0.450134 6.22506V17.7749C0.450134 20.9643 3.03566 23.5498 6.22506 23.5498H17.7749C20.9643 23.5498 23.5498 20.9643 23.5498 17.7749V6.22506C23.5498 3.03566 20.9643 0.450134 17.7749 0.450134H6.22506ZM5.5834 12C5.5834 15.5437 8.45621 18.4166 12 18.4166C15.5437 18.4166 18.4166 15.5437 18.4166 12C18.4166 8.45621 15.5437 5.5834 12 5.5834C8.45621 5.5834 5.5834 8.45621 5.5834 12ZM12 15.8499C14.1263 15.8499 15.8499 14.1263 15.8499 12C15.8499 9.87365 14.1263 8.15003 12 8.15003C9.87366 8.15003 8.15004 9.87365 8.15004 12C8.15004 14.1263 9.87366 15.8499 12 15.8499ZM19.6999 4.30008C19.6999 5.00883 19.1253 5.5834 18.4166 5.5834C17.7078 5.5834 17.1333 5.00883 17.1333 4.30008C17.1333 3.59133 17.7078 3.01677 18.4166 3.01677C19.1253 3.01677 19.6999 3.59133 19.6999 4.30008Z"
+                                      fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card flq-card-image flq-card-image-instagram">
+                        <a href="#" class="card-image">
+                                    <span class="flq-image flq-responsive
+  flq-responsive-1x1">
+                                        <img src="{% static 'exclusive/assets/images/background-ticker/9.jpg' %}"
+                                             alt="">
+                                    </span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M6.22506 0.450134C3.03566 0.450134 0.450134 3.03566 0.450134 6.22506V17.7749C0.450134 20.9643 3.03566 23.5498 6.22506 23.5498H17.7749C20.9643 23.5498 23.5498 20.9643 23.5498 17.7749V6.22506C23.5498 3.03566 20.9643 0.450134 17.7749 0.450134H6.22506ZM5.5834 12C5.5834 15.5437 8.45621 18.4166 12 18.4166C15.5437 18.4166 18.4166 15.5437 18.4166 12C18.4166 8.45621 15.5437 5.5834 12 5.5834C8.45621 5.5834 5.5834 8.45621 5.5834 12ZM12 15.8499C14.1263 15.8499 15.8499 14.1263 15.8499 12C15.8499 9.87365 14.1263 8.15003 12 8.15003C9.87366 8.15003 8.15004 9.87365 8.15004 12C8.15004 14.1263 9.87366 15.8499 12 15.8499ZM19.6999 4.30008C19.6999 5.00883 19.1253 5.5834 18.4166 5.5834C17.7078 5.5834 17.1333 5.00883 17.1333 4.30008C17.1333 3.59133 17.7078 3.01677 18.4166 3.01677C19.1253 3.01677 19.6999 3.59133 19.6999 4.30008Z"
+                                      fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card flq-card-image flq-card-image-instagram">
+                        <a href="#" class="card-image">
+                                    <span class="flq-image flq-responsive
+  flq-responsive-1x1">
+                                        <img src="{% static 'exclusive/assets/images/background-ticker/10.jpg' %}"
+                                             alt="">
+                                    </span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M6.22506 0.450134C3.03566 0.450134 0.450134 3.03566 0.450134 6.22506V17.7749C0.450134 20.9643 3.03566 23.5498 6.22506 23.5498H17.7749C20.9643 23.5498 23.5498 20.9643 23.5498 17.7749V6.22506C23.5498 3.03566 20.9643 0.450134 17.7749 0.450134H6.22506ZM5.5834 12C5.5834 15.5437 8.45621 18.4166 12 18.4166C15.5437 18.4166 18.4166 15.5437 18.4166 12C18.4166 8.45621 15.5437 5.5834 12 5.5834C8.45621 5.5834 5.5834 8.45621 5.5834 12ZM12 15.8499C14.1263 15.8499 15.8499 14.1263 15.8499 12C15.8499 9.87365 14.1263 8.15003 12 8.15003C9.87366 8.15003 8.15004 9.87365 8.15004 12C8.15004 14.1263 9.87366 15.8499 12 15.8499ZM19.6999 4.30008C19.6999 5.00883 19.1253 5.5834 18.4166 5.5834C17.7078 5.5834 17.1333 5.00883 17.1333 4.30008C17.1333 3.59133 17.7078 3.01677 18.4166 3.01677C19.1253 3.01677 19.6999 3.59133 19.6999 4.30008Z"
+                                      fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card flq-card-image flq-card-image-instagram">
+                        <a href="#" class="card-image">
+                                    <span class="flq-image flq-responsive
+  flq-responsive-1x1">
+                                        <img src="{% static 'exclusive/assets/images/background-ticker/11.jpg' %}"
+                                             alt="">
+                                    </span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M6.22506 0.450134C3.03566 0.450134 0.450134 3.03566 0.450134 6.22506V17.7749C0.450134 20.9643 3.03566 23.5498 6.22506 23.5498H17.7749C20.9643 23.5498 23.5498 20.9643 23.5498 17.7749V6.22506C23.5498 3.03566 20.9643 0.450134 17.7749 0.450134H6.22506ZM5.5834 12C5.5834 15.5437 8.45621 18.4166 12 18.4166C15.5437 18.4166 18.4166 15.5437 18.4166 12C18.4166 8.45621 15.5437 5.5834 12 5.5834C8.45621 5.5834 5.5834 8.45621 5.5834 12ZM12 15.8499C14.1263 15.8499 15.8499 14.1263 15.8499 12C15.8499 9.87365 14.1263 8.15003 12 8.15003C9.87366 8.15003 8.15004 9.87365 8.15004 12C8.15004 14.1263 9.87366 15.8499 12 15.8499ZM19.6999 4.30008C19.6999 5.00883 19.1253 5.5834 18.4166 5.5834C17.7078 5.5834 17.1333 5.00883 17.1333 4.30008C17.1333 3.59133 17.7078 3.01677 18.4166 3.01677C19.1253 3.01677 19.6999 3.59133 19.6999 4.30008Z"
+                                      fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card flq-card-image flq-card-image-instagram">
+                        <a href="#" class="card-image">
+                                    <span class="flq-image flq-responsive
+  flq-responsive-1x1">
+                                        <img src="{% static 'exclusive/assets/images/background-ticker/12.jpg' %}"
+                                             alt="">
+                                    </span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M6.22506 0.450134C3.03566 0.450134 0.450134 3.03566 0.450134 6.22506V17.7749C0.450134 20.9643 3.03566 23.5498 6.22506 23.5498H17.7749C20.9643 23.5498 23.5498 20.9643 23.5498 17.7749V6.22506C23.5498 3.03566 20.9643 0.450134 17.7749 0.450134H6.22506ZM5.5834 12C5.5834 15.5437 8.45621 18.4166 12 18.4166C15.5437 18.4166 18.4166 15.5437 18.4166 12C18.4166 8.45621 15.5437 5.5834 12 5.5834C8.45621 5.5834 5.5834 8.45621 5.5834 12ZM12 15.8499C14.1263 15.8499 15.8499 14.1263 15.8499 12C15.8499 9.87365 14.1263 8.15003 12 8.15003C9.87366 8.15003 8.15004 9.87365 8.15004 12C8.15004 14.1263 9.87366 15.8499 12 15.8499ZM19.6999 4.30008C19.6999 5.00883 19.1253 5.5834 18.4166 5.5834C17.7078 5.5834 17.1333 5.00883 17.1333 4.30008C17.1333 3.59133 17.7078 3.01677 18.4166 3.01677C19.1253 3.01677 19.6999 3.59133 19.6999 4.30008Z"
+                                      fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card flq-card-image flq-card-image-instagram">
+                        <a href="#" class="card-image">
+                                    <span class="flq-image flq-responsive
+  flq-responsive-1x1">
+                                        <img src="{% static 'exclusive/assets/images/background-ticker/13.jpg' %}"
+                                             alt="">
+                                    </span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M6.22506 0.450134C3.03566 0.450134 0.450134 3.03566 0.450134 6.22506V17.7749C0.450134 20.9643 3.03566 23.5498 6.22506 23.5498H17.7749C20.9643 23.5498 23.5498 20.9643 23.5498 17.7749V6.22506C23.5498 3.03566 20.9643 0.450134 17.7749 0.450134H6.22506ZM5.5834 12C5.5834 15.5437 8.45621 18.4166 12 18.4166C15.5437 18.4166 18.4166 15.5437 18.4166 12C18.4166 8.45621 15.5437 5.5834 12 5.5834C8.45621 5.5834 5.5834 8.45621 5.5834 12ZM12 15.8499C14.1263 15.8499 15.8499 14.1263 15.8499 12C15.8499 9.87365 14.1263 8.15003 12 8.15003C9.87366 8.15003 8.15004 9.87365 8.15004 12C8.15004 14.1263 9.87366 15.8499 12 15.8499ZM19.6999 4.30008C19.6999 5.00883 19.1253 5.5834 18.4166 5.5834C17.7078 5.5834 17.1333 5.00883 17.1333 4.30008C17.1333 3.59133 17.7078 3.01677 18.4166 3.01677C19.1253 3.01677 19.6999 3.59133 19.6999 4.30008Z"
+                                      fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card flq-card-image flq-card-image-instagram">
+                        <a href="#" class="card-image">
+                                    <span class="flq-image flq-responsive
+  flq-responsive-1x1">
+                                        <img src="{% static 'exclusive/assets/images/background-ticker/14.jpg' %}"
+                                             alt="">
+                                    </span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M6.22506 0.450134C3.03566 0.450134 0.450134 3.03566 0.450134 6.22506V17.7749C0.450134 20.9643 3.03566 23.5498 6.22506 23.5498H17.7749C20.9643 23.5498 23.5498 20.9643 23.5498 17.7749V6.22506C23.5498 3.03566 20.9643 0.450134 17.7749 0.450134H6.22506ZM5.5834 12C5.5834 15.5437 8.45621 18.4166 12 18.4166C15.5437 18.4166 18.4166 15.5437 18.4166 12C18.4166 8.45621 15.5437 5.5834 12 5.5834C8.45621 5.5834 5.5834 8.45621 5.5834 12ZM12 15.8499C14.1263 15.8499 15.8499 14.1263 15.8499 12C15.8499 9.87365 14.1263 8.15003 12 8.15003C9.87366 8.15003 8.15004 9.87365 8.15004 12C8.15004 14.1263 9.87366 15.8499 12 15.8499ZM19.6999 4.30008C19.6999 5.00883 19.1253 5.5834 18.4166 5.5834C17.7078 5.5834 17.1333 5.00883 17.1333 4.30008C17.1333 3.59133 17.7078 3.01677 18.4166 3.01677C19.1253 3.01677 19.6999 3.59133 19.6999 4.30008Z"
+                                      fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card flq-card-image flq-card-image-instagram">
+                        <a href="#" class="card-image">
+                                    <span class="flq-image flq-responsive
+  flq-responsive-1x1">
+                                        <img src="{% static 'exclusive/assets/images/background-ticker/15.jpg' %}"
+                                             alt="">
+                                    </span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M6.22506 0.450134C3.03566 0.450134 0.450134 3.03566 0.450134 6.22506V17.7749C0.450134 20.9643 3.03566 23.5498 6.22506 23.5498H17.7749C20.9643 23.5498 23.5498 20.9643 23.5498 17.7749V6.22506C23.5498 3.03566 20.9643 0.450134 17.7749 0.450134H6.22506ZM5.5834 12C5.5834 15.5437 8.45621 18.4166 12 18.4166C15.5437 18.4166 18.4166 15.5437 18.4166 12C18.4166 8.45621 15.5437 5.5834 12 5.5834C8.45621 5.5834 5.5834 8.45621 5.5834 12ZM12 15.8499C14.1263 15.8499 15.8499 14.1263 15.8499 12C15.8499 9.87365 14.1263 8.15003 12 8.15003C9.87366 8.15003 8.15004 9.87365 8.15004 12C8.15004 14.1263 9.87366 15.8499 12 15.8499ZM19.6999 4.30008C19.6999 5.00883 19.1253 5.5834 18.4166 5.5834C17.7078 5.5834 17.1333 5.00883 17.1333 4.30008C17.1333 3.59133 17.7078 3.01677 18.4166 3.01677C19.1253 3.01677 19.6999 3.59133 19.6999 4.30008Z"
+                                      fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card flq-card-image flq-card-image-instagram">
+                        <a href="#" class="card-image">
+                                    <span class="flq-image flq-responsive
+  flq-responsive-1x1">
+                                        <img src="{% static 'exclusive/assets/images/background-ticker/16.jpg' %}"
+                                             alt="">
+                                    </span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M6.22506 0.450134C3.03566 0.450134 0.450134 3.03566 0.450134 6.22506V17.7749C0.450134 20.9643 3.03566 23.5498 6.22506 23.5498H17.7749C20.9643 23.5498 23.5498 20.9643 23.5498 17.7749V6.22506C23.5498 3.03566 20.9643 0.450134 17.7749 0.450134H6.22506ZM5.5834 12C5.5834 15.5437 8.45621 18.4166 12 18.4166C15.5437 18.4166 18.4166 15.5437 18.4166 12C18.4166 8.45621 15.5437 5.5834 12 5.5834C8.45621 5.5834 5.5834 8.45621 5.5834 12ZM12 15.8499C14.1263 15.8499 15.8499 14.1263 15.8499 12C15.8499 9.87365 14.1263 8.15003 12 8.15003C9.87366 8.15003 8.15004 9.87365 8.15004 12C8.15004 14.1263 9.87366 15.8499 12 15.8499ZM19.6999 4.30008C19.6999 5.00883 19.1253 5.5834 18.4166 5.5834C17.7078 5.5834 17.1333 5.00883 17.1333 4.30008C17.1333 3.59133 17.7078 3.01677 18.4166 3.01677C19.1253 3.01677 19.6999 3.59133 19.6999 4.30008Z"
+                                      fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card flq-card-image flq-card-image-instagram">
+                        <a href="#" class="card-image">
+                                    <span class="flq-image flq-responsive
+  flq-responsive-1x1">
+                                        <img src="{% static 'exclusive/assets/images/background-ticker/17.jpg' %}"
+                                             alt="">
+                                    </span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M6.22506 0.450134C3.03566 0.450134 0.450134 3.03566 0.450134 6.22506V17.7749C0.450134 20.9643 3.03566 23.5498 6.22506 23.5498H17.7749C20.9643 23.5498 23.5498 20.9643 23.5498 17.7749V6.22506C23.5498 3.03566 20.9643 0.450134 17.7749 0.450134H6.22506ZM5.5834 12C5.5834 15.5437 8.45621 18.4166 12 18.4166C15.5437 18.4166 18.4166 15.5437 18.4166 12C18.4166 8.45621 15.5437 5.5834 12 5.5834C8.45621 5.5834 5.5834 8.45621 5.5834 12ZM12 15.8499C14.1263 15.8499 15.8499 14.1263 15.8499 12C15.8499 9.87365 14.1263 8.15003 12 8.15003C9.87366 8.15003 8.15004 9.87365 8.15004 12C8.15004 14.1263 9.87366 15.8499 12 15.8499ZM19.6999 4.30008C19.6999 5.00883 19.1253 5.5834 18.4166 5.5834C17.7078 5.5834 17.1333 5.00883 17.1333 4.30008C17.1333 3.59133 17.7078 3.01677 18.4166 3.01677C19.1253 3.01677 19.6999 3.59133 19.6999 4.30008Z"
+                                      fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card flq-card-image flq-card-image-instagram">
+                        <a href="#" class="card-image">
+                                    <span class="flq-image flq-responsive
+  flq-responsive-1x1">
+                                        <img src="{% static 'exclusive/assets/images/background-ticker/18.jpg' %}"
+                                             alt="">
+                                    </span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M6.22506 0.450134C3.03566 0.450134 0.450134 3.03566 0.450134 6.22506V17.7749C0.450134 20.9643 3.03566 23.5498 6.22506 23.5498H17.7749C20.9643 23.5498 23.5498 20.9643 23.5498 17.7749V6.22506C23.5498 3.03566 20.9643 0.450134 17.7749 0.450134H6.22506ZM5.5834 12C5.5834 15.5437 8.45621 18.4166 12 18.4166C15.5437 18.4166 18.4166 15.5437 18.4166 12C18.4166 8.45621 15.5437 5.5834 12 5.5834C8.45621 5.5834 5.5834 8.45621 5.5834 12ZM12 15.8499C14.1263 15.8499 15.8499 14.1263 15.8499 12C15.8499 9.87365 14.1263 8.15003 12 8.15003C9.87366 8.15003 8.15004 9.87365 8.15004 12C8.15004 14.1263 9.87366 15.8499 12 15.8499ZM19.6999 4.30008C19.6999 5.00883 19.1253 5.5834 18.4166 5.5834C17.7078 5.5834 17.1333 5.00883 17.1333 4.30008C17.1333 3.59133 17.7078 3.01677 18.4166 3.01677C19.1253 3.01677 19.6999 3.59133 19.6999 4.30008Z"
+                                      fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <div class="card-body">
+                        </div>
                     </div>
                 </div>
             </div>
-            {% include 'exclusive/utilities/footer.html' %}
+        </div>
     </div>
+    {% endcomment %}
+    <div class="py-7">
+        <div class="container">
+            <div class="accordion" data-sr="accordion" data-sr-interval="100" data-sr-duration="1000"
+                 data-sr-distance="10">
+                <div class="accordion-item" data-sr-item="accordion">
+                    <h2 class="accordion-header h5">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1"
+                                aria-expanded="true" aria-controls="faq-1"> Why is there a cost associated with this
+                            spiritual program? <span class="accordion-button-icon"></span>
+                        </button>
+                    </h2>
+                    <div id="faq-1" class="accordion-collapse collapse  show">
+                        <div class="accordion-body">
+                            <p>Your contribution supports the ongoing development of resources,
+                                ensures sustainability for Dr. Jan's work, and allows us to offer this
+                                transformative knowledge to a wider audience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-sr-item="accordion">
+                    <h2 class="accordion-header h5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-12" aria-expanded="false" aria-controls="faq-12"> Is there a time limit for accessing the program materials? <span class="accordion-button-icon"></span>
+                        </button>
+                    </h2>
+                    <div id="faq-12" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>No! Once you register, you will have lifetime access to all course materials.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-sr-item="accordion">
+                    <h2 class="accordion-header h5">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2"
+                                aria-expanded="true" aria-controls="faq-2"> I have a religious background. Is this
+                            program for me? <span class="accordion-button-icon"></span>
+                        </button>
+                    </h2>
+                    <div id="faq-2" class="accordion-collapse collapse  show">
+                        <div class="accordion-body">
+                            <p>Absolutely! This program explores universal themes of spirituality and offers practices
+                                that can enhance your existing faith or spiritual path.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-sr-item="accordion">
+                    <h2 class="accordion-header h5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-3" aria-expanded="false" aria-controls="faq-3"> I'm not religious.
+                            Will this program be relevant to me? <span class="accordion-button-icon"></span>
+                        </button>
+                    </h2>
+                    <div id="faq-3" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Yes. This program focuses on inner development, self-discovery, and connecting to
+                                something greater than ourselves, regardless of any specific religious affiliation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-sr-item="accordion">
+                    <h2 class="accordion-header h5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-4" aria-expanded="false" aria-controls="faq-4"> Do I need any
+                            experience or knowledge about spirituality? <span class="accordion-button-icon"></span>
+                        </button>
+                    </h2>
+                    <div id="faq-4" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Not at all! The program is designed for all levels, whether you're a beginner or have
+                                experience with different spiritual practices.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-sr-item="accordion">
+                    <h2 class="accordion-header h5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-5" aria-expanded="false" aria-controls="faq-5"> What kind of
+                            benefits can I expect from this program?
+                            <span class="accordion-button-icon"></span>
+                        </button>
+                    </h2>
+                    <div id="faq-5" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Participants may experience increased inner peace, a deeper sense of purpose, stronger
+                                connection to their higher self, and the ability to find meaning in challenges.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-sr-item="accordion">
+                    <h2 class="accordion-header h5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-6" aria-expanded="false" aria-controls="faq-6"> May Fly behold,
+                            living days him divided signs forth after? <span class="accordion-button-icon"></span>
+                        </button>
+                    </h2>
+                    <div id="faq-6" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Said whales place. And kind under moveth spirit be she'd you'll that. Rule created
+                                darkness. Second. Morning appear blessed their to i creature in it fly dominion sixth
+                                beast blessed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flq-background-color-100">
+        <div class="container">
+            <div class="row gx-0 justify-content-center">
+                <div class="col-12 col-lg-10 col-xl">
+                    <div class="py-7 flq-vertical-rhythm" data-sr="contact-form" data-sr-interval="100"
+                         data-sr-duration="1000" data-sr-distance="10">
+                        <h2 class="h1" data-sr-item="contact-form">Need More Info? Contact Us.</h2>
+                        <p data-sr-item="contact-form">If you have questions about our programs, pricing, or anything else, we'd love to hear from you.</p>
+                        <div class="flq-social" data-sr-item=contact-form>
+                            <ul class="g-4">
+                                <li>
+                                    <a href="#" class="flq-social-link">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21.533 7.11169C21.5482 7.32488 21.5482 7.53811 21.5482 7.7513C21.5482 14.2538 16.599 21.7462 7.5533 21.7462C4.76648 21.7462 2.17767 20.9391 0 19.5381C0.395953 19.5838 0.776625 19.599 1.18781 19.599C3.48727 19.599 5.60405 18.8224 7.29441 17.4975C5.13197 17.4518 3.31978 16.0356 2.69541 14.0863C3 14.132 3.30455 14.1624 3.62437 14.1624C4.06598 14.1624 4.50764 14.1015 4.91878 13.995C2.66498 13.5381 0.974578 11.5584 0.974578 9.16753V9.10664C1.62937 9.47213 2.39086 9.70055 3.19791 9.73097C1.87303 8.8477 1.00505 7.34011 1.00505 5.63452C1.00505 4.72083 1.24866 3.88327 1.67508 3.1523C4.09641 6.13706 7.73601 8.08627 11.8172 8.2995C11.7411 7.93402 11.6954 7.55335 11.6954 7.17263C11.6954 4.46194 13.8883 2.25385 16.6141 2.25385C18.0304 2.25385 19.3095 2.84775 20.208 3.80714C21.3197 3.59395 22.3857 3.18277 23.3299 2.61933C22.9643 3.76149 22.1877 4.72088 21.1674 5.32997C22.1573 5.22342 23.1167 4.94925 23.9999 4.56858C23.33 5.54316 22.4924 6.41114 21.533 7.11169V7.11169Z"
+                                                  fill="currentColor"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flq-social-link">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.625 12C23.625 5.57812 18.4219 0.375 12 0.375C5.57812 0.375 0.375 5.57812 0.375 12C0.375 17.8022 4.62609 22.6116 10.1836 23.4844V15.3605H7.23047V12H10.1836V9.43875C10.1836 6.52547 11.918 4.91625 14.5744 4.91625C15.8466 4.91625 17.1769 5.14313 17.1769 5.14313V8.0025H15.7106C14.2669 8.0025 13.8164 8.89875 13.8164 9.81797V12H17.0405L16.5248 15.3605H13.8164V23.4844C19.3739 22.6116 23.625 17.8022 23.625 12Z"
+                                                  fill="currentColor"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flq-social-link">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M6.22506 0.450134C3.03566 0.450134 0.450134 3.03566 0.450134 6.22506V17.7749C0.450134 20.9643 3.03566 23.5498 6.22506 23.5498H17.7749C20.9643 23.5498 23.5498 20.9643 23.5498 17.7749V6.22506C23.5498 3.03566 20.9643 0.450134 17.7749 0.450134H6.22506ZM5.5834 12C5.5834 15.5437 8.45621 18.4166 12 18.4166C15.5437 18.4166 18.4166 15.5437 18.4166 12C18.4166 8.45621 15.5437 5.5834 12 5.5834C8.45621 5.5834 5.5834 8.45621 5.5834 12ZM12 15.8499C14.1263 15.8499 15.8499 14.1263 15.8499 12C15.8499 9.87365 14.1263 8.15003 12 8.15003C9.87366 8.15003 8.15004 9.87365 8.15004 12C8.15004 14.1263 9.87366 15.8499 12 15.8499ZM19.6999 4.30008C19.6999 5.00883 19.1253 5.5834 18.4166 5.5834C17.7078 5.5834 17.1333 5.00883 17.1333 4.30008C17.1333 3.59133 17.7078 3.01677 18.4166 3.01677C19.1253 3.01677 19.6999 3.59133 19.6999 4.30008Z"
+                                                  fill="currentColor"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <form class="mt-6" action="#">
+                            <div class="row gy-4">
+                                <div class="col-12 col-sm" data-sr-item="contact-form">
+                                    <input class="form-control flq-form-user form-control-lg" type="text"
+                                           placeholder="Your Name">
+                                </div>
+                                <div class="col-12 col-sm" data-sr-item="contact-form">
+                                    <input class="form-control flq-form-mail form-control-lg" type="email"
+                                           placeholder="Your Email">
+                                </div>
+                                <div class="col-12" data-sr-item="contact-form">
+                                    <textarea class="form-control flq-form-message form-control-lg" rows="5"
+                                              placeholder="Your Message"></textarea>
+                                </div>
+                                <div class="col-12" data-sr-item="contact-form">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="contact_form"><label
+                                            class="form-check-label" for="contact_form">Save my name, email, and website
+                                        in this browser for the next time I comment.</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-auto" data-sr-item="contact-form">
+                                    <button class="btn btn-block btn-lg">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-1 d-none d-xl-block"></div>
+            </div>
+        </div>
+    </div>
+    {% include 'exclusive/utilities/footer.html' %}
+</div>
 {% endblock %}
