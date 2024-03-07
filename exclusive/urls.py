@@ -14,5 +14,7 @@ urlpatterns = [
     path('faqs/', FAQsView.as_view(), name='faqs'),
     path('contact/', ContactView.as_view(), name='contact'),
     path('pricing/', PricingView.as_view(), name='pricing'),
+    path('checkout/', CheckoutView.as_view(), name='checkout'),
+    path('confirm-payment/', ConfirmPaymentView.as_view(), name='confirm_payment'),
     path('logout/', LogoutView.as_view(), name='logout'),
 ]

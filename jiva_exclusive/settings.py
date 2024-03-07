@@ -147,5 +147,7 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
 LOGIN_URL = '/login/'
+
+# Paystack API keys
+PAYSTACK_SECRET_KEY = os.environ['PAYSTACK_SECRET_KEY']

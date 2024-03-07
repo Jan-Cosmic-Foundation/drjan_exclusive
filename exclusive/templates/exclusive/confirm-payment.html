@@ -1,0 +1,55 @@
+{% extends 'exclusive/base.html' %}
+{% load static %}
+
+{% block navbar_fixed %}
+{% endblock %}
+
+{% block content %}
+
+<div class="content-wrap">
+    <div class="py-7 flq-background-color-100"
+         style="background-image: radial-gradient(100% 100% at 50% 0%, hsla(var(--flq-color-brand), 0.14) 25%, hsla(var(--flq-color-background), 0) 100%);">
+        <div class="container" data-sr="pricing" data-sr-interval="150" data-sr-duration="1200" data-sr-distance="30">
+            <div class="row align-items-center justify-content-center g-5">
+                <div class="col-12 col-sm-10 col-md-7 col-lg-6 col-xl-5" data-sr-item="pricing">
+                    <div class="card flq-card-pricing">
+                        {% if status == "success" %}
+                            <div class="card-head">
+                                <div class="card-subtitle h4">
+                                    Payment Successful
+                                    <span class="mx-2"><img width="30"
+                                                            src="{% static 'exclusive/assets/images/icons/check.png' %}"></span>
+                                </div>
+                            </div>
+                            <div class="card-body flq-vertical-rhythm">
+                            <p style="font-size: 15.5px">You've taken a powerful step. Inner peace. Profound wisdom.
+                                Transformative practices. Divine grace awaits 🕊️</p>
+                        </div>
+                        {% else %}
+                            <div class="card-head">
+                                <div class="card-subtitle h4">
+                                    Payment Failed
+                                    <span class="mx-2"><img width="30"
+                                                            src="{% static 'exclusive/assets/images/icons/close.png' %}"></span>
+                                </div>
+                            </div>
+                            <div class="card-body flq-vertical-rhythm">
+                        </div>
+                        {% endif %}
+                        <div class="card-footer">
+                            <a href="{% url 'course:index' %}" class="btn btn-block">
+                                <span class="mx-2">{% if status == "success" %} Get Started {% else %} Try Again {% endif %}</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 19L19 12L8 5V19Z" fill="currentColor"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'exclusive/utilities/footer.html' %}
+</div>
+{% endblock %}
