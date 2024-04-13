@@ -88,3 +88,4 @@ env.bak/
 venv.bak/
 static
 !exclusive/static
+!registration/static
