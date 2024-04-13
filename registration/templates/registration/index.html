@@ -1,0 +1,444 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Wilio Survey, Quotation, Review and Register form Wizard by Ansonika.">
+    <meta name="author" content="Ansonika">
+    <title>Wilio | Survey, Quotation, Review and Register form Wizard</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="{% static 'registration/assets/css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'registration/assets/css/menu.css' %}" rel="stylesheet">
+    <link href="{% static 'registration/assets/css/style.css' %}" rel="stylesheet">
+	<link href="{% static 'registration/assets/css/vendors.css' %}" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="{% static 'registration/assets/css/custom.css' %}" rel="stylesheet">
+	
+	<!-- MODERNIZR MENU -->
+	<script src="{% static 'registration/assets/js/modernizr.js' %}"></script>
+	
+	<script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-11097556-8']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</head>
+
+<body>
+	
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div><!-- /Preload -->
+	
+	<div id="loader_form">
+		<div data-loader="circle-side-2"></div>
+	</div><!-- /loader_form -->
+
+	<div class="container full-height">
+		<div class="row text-center m-5">
+			<div class="col-lg-12 text-center">
+				<div >
+					<a href="index.html"><img src="{% static 'registration/assets/img/logo.jpg' %}" alt="logo" height="60"></a>
+				</div>
+				<!-- /logo -->
+				<div id="form_title">
+					<h3 class="text-uppercase mt-3">2024 JCF International <br>Training & Retreat</h3>
+					<p>Date: 21st July, 2024</p>
+				</div>
+				<!-- /form_title -->
+			</div>
+		</div>
+		<div class="row">
+			{% comment %}
+			<div class="col-lg-6 content-left">
+				<div class="content-left-wrapper">
+					<a href="index.html" id="logo"><img src="img/logo.png" alt="" width="49" height="35"></a>
+					<div id="social">
+						<ul>
+							<li><a href="#0"><i class="bi bi-facebook"></i></a></li>
+							<li><a href="#0"><i class="bi bi-twitter-x"></i></a></li>
+							<li><a href="#0"><i class="bi bi-instagram"></i></a></li>
+							<li><a href="#0"><i class="bi bi-tiktok"></i></a></li>
+						</ul>
+					</div>
+					<!-- /social -->
+					<div>
+						<figure><img src="img/info_graphic_1.svg" alt="" class="img-fluid"></figure>
+						<h2>Satisfaction Survey</h2>
+						<p>Tation argumentum et usu, dicit viderer evertitur te has. Eu dictas concludaturque usu, facete detracto patrioque an per, lucilius pertinacia eu vel. Adhuc invidunt duo ex. Eu tantas dolorum ullamcorper qui.</p>
+						<a href="https://1.envato.market/JAL9r" class="btn_1 rounded" target="_parent">Purchase this template</a>
+						<a href="#start" class="btn_1 rounded mobile_btn">Start Now!</a>
+					</div>
+					<div class="copy">© 2024 Wilio</div>
+				</div>
+				<!-- /content-left-wrapper -->
+			</div>
+			<!-- /content-left -->
+			{% endcomment %}
+
+			<div class="content-right" id="start">
+				<div id="wizard_container" class="my-auto">
+					<div id="top-wizard">
+							<div id="progressbar"></div>
+						</div>
+						<!-- /top-wizard -->
+						<form id="wrapped" method="POST" action="{% url 'registration:register' %}">
+							{% csrf_token %}
+							<input id="website" name="website" type="text" value="">
+							<!-- Leave for security protection, read docs for details -->
+							<div id="middle-wizard">
+								<!-- participant details -->
+								<div class="step">
+									<h3 class="main_question"><strong>1/5</strong>Please fill with your details</h3>
+									<div class="form-group">
+										<input type="text" name="firstname" class="form-control required" placeholder="First Name">
+									</div>
+									<div class="form-group">
+										<input type="text" name="lastname" class="form-control required" placeholder="Last Name">
+									</div>
+									<div class="form-group">
+										<input type="email" name="email" class="form-control" placeholder="Your Email">
+									</div>
+									<div class="form-group">
+										<input type="tel" name="phone" class="form-control required" placeholder="Phone Number">
+									</div>
+									<div class="form-group">
+										<div class="styled-select clearfix">
+											<select class="wide required" name="country">
+												<option value="">Your Country</option>
+												<option value="Europe">Europe</option>
+												<option value="Asia">Asia</option>
+												<option value="North America">North America</option>
+												<option value="South America">South America</option>
+												<option value="Oceania">Oceania</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-3">
+											<div class="form-group">
+												<input type="number" name="age" class="form-control" placeholder="Age">
+											</div>
+										</div>
+										<div class="col-9">
+											<div class="form-group radio_input">
+												<label class="container_radio">Male
+													<input type="radio" name="gender" value="Male" class="required">
+													<span class="checkmark"></span>
+												</label>
+												<label class="container_radio">Female
+													<input type="radio" name="gender" value="Female" class="required">
+													<span class="checkmark"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<!-- /row -->
+									<div class="form-group terms">
+										<label class="container_check">Please accept our <a href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">Terms and conditions</a>
+											<input type="checkbox" name="terms" value="Yes" class="required">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+								<!-- /step-->
+								<!-- impartation -->
+								<div class="step">
+									<h3 class="main_question"><strong>2/5</strong>Have you received any Impartation from Doctor Jan in the past?</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">No - I have never received an Impartation
+											<input type="radio" name="question_1" value="No" class="required" onchange="getVals(this, 'question_1');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Yes - I have received an Impartation
+											<input type="radio" name="question_1" value="Yes" class="required" onchange="getVals(this, 'question_1');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<!-- another question -->
+									<div class="mt-5">
+										<h3 class="main_question">Are you a Registered Student ?</h3>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">No, I am not
+											<input type="radio" name="question_2" value="No" class="required" onchange="getVals(this, 'question_2');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Yes, I am (Intermediate/Advanced Course)
+											<input type="radio" name="question_2" value="Yes" class="required" onchange="getVals(this, 'question_2');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+								<!-- /step-->
+								<div class="step">
+									<h3 class="main_question"><strong>3/5</strong>Are you attending the launch of Generation 7 (Save the Children) Program ?</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Yes
+											<input type="radio" name="question_3" value="Yes" class="required" onchange="getVals(this, 'question_3');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">No
+											<input type="radio" name="question_3" value="No" class="required" onchange="getVals(this, 'question_3');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div>
+										<div class="mt-4">
+											<h3 class="main_question">If yes, please provide the following details</h3>
+										</div>
+										<div class="form-group">
+											<input type="text" name="spouse_name" class="form-control" placeholder="Spouse Name">
+										</div>
+										<div class="row">
+											<div class="col-4">
+												<div class="form-group">
+													<input type="text" name="child_1_name" class="form-control " placeholder="Child's Name">
+												</div>
+											</div>
+											<div class="col-4">
+												<div class="form-group">
+													<input type="number" name="child_1_age" class="form-control" placeholder="Child's Age">
+												</div>
+											</div>
+											<div class="col-4">
+												<div class="form-group">
+													<input type="number" name="child_1_shirt_size" class="form-control" placeholder="Child's Shirt Size">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-4">
+												<div class="form-group">
+													<input type="text" name="child_1_name" class="form-control" placeholder="Child's Name">
+												</div>
+											</div>
+											<div class="col-4">
+												<div class="form-group">
+													<input type="number" name="child_1_age" class="form-control" placeholder="Child's Age">
+												</div>
+											</div>
+											<div class="col-4">
+												<div class="form-group">
+													<input type="number" name="child_1_shirt_size" class="form-control" placeholder="Child's Shirt Size">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-4">
+												<div class="form-group">
+													<input type="text" name="child_1_name" class="form-control" placeholder="Child's Name">
+												</div>
+											</div>
+											<div class="col-4">
+												<div class="form-group">
+													<input type="number" name="child_1_age" class="form-control" placeholder="Child's Age">
+												</div>
+											</div>
+											<div class="col-4">
+												<div class="form-group">
+													<input type="number" name="child_1_shirt_size" class="form-control" placeholder="Child's Shirt Size">
+												</div>
+											</div>
+										</div>
+
+<!--									<div class="form-group">-->
+<!--										<label>In no, please describe with few words why</label>-->
+<!--										<textarea name="additional_message" class="form-control" style="height:100px;" placeholder="Type here additional info..." onkeyup="getVals(this, 'additional_message');"></textarea>-->
+<!--									</div>-->
+								</div>
+								</div>
+								<!-- /step-->
+								<div class="step">
+									<h3 class="main_question"><strong>4/5</strong>How do you intend to commute to the site ?</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Personal Vehicle
+											<input type="radio" name="question_4" value="Personal Vehicle" class="required" onchange="getVals(this, 'question_4');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Public Transport
+											<input type="radio" name="question_4" value="Public Transport" class="required" onchange="getVals(this, 'question_4');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<!-- another question -->
+									<div class="mt-4">
+										<h3 class="main_question">If public transport, what is your preference</h3>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Will get there on public transport myself
+											<input type="radio" name="question_5" value="Quite Satisfied" class="required" onchange="getVals(this, 'question_5');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Will join organized transport by JCF
+											<input type="radio" name="question_5" value="Quite Satisfied" class="required" onchange="getVals(this, 'question_5');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<!-- another question -->
+									<div class="mt-4">
+										<h3 class="main_question">If Personal transport, are you willing to offer a lift?</h3>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Yes, contact me for ride sharing
+											<input type="radio" name="question_6" value="Quite Satisfied" class="required" onchange="getVals(this, 'question_6');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">No, it's fully occupied
+											<input type="radio" name="question_6" value="Quite Satisfied" class="required" onchange="getVals(this, 'question_6');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<!-- another question -->
+									<div class="mt-4">
+										<h3 class="main_question">Accommodation Preference</h3>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">I prefer to stay in a hotel
+											<input type="radio" name="question_7" value="Hotel" class="required" onchange="getVals(this, 'question_7');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">I prefer to stay on site
+											<input type="radio" name="question_7" value="Onsite" class="required" onchange="getVals(this, 'question_7');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<!-- another question -->
+									<div class="mt-4">
+										<h3 class="main_question">Date of Arrival on Site</h3>
+										<input type="date" name="arrival_date" class="form-control date" placeholder="Arrival Date">
+									</div>
+
+
+								</div>
+								<!-- /step-->
+								<div class="submit step">
+									<h3 class="main_question"><strong>5/5</strong>Summary</h3>
+									<div class="summary">
+										<ul>
+											<li><strong>1</strong>
+												<h5>Have you received any Impartation from Doctor Jan in the past?</h5>
+												<p id="question_1"></p>
+											</li>
+											<li><strong>2</strong>
+												<h5>Are you a Registered Student ?</h5>
+												<p id="question_2"></p>
+											</li>
+											<li><strong>3</strong>
+												<h5>Are you attending the launch of Generation 7 (Save the Children) Program ?</h5>
+												<p id="question_3"></p>
+<!--												<p id="additional_message"></p>-->
+											</li>
+											<li><strong>4</strong>
+												<h5>How do you intend to commute to the site ?</h5>
+												<p id="question_4"></p>
+											</li>
+											<li><strong>5</strong>
+												<h5>Accommodation Preference</h5>
+												<p id="question_7"></p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- /step-->
+							</div>
+							<!-- /middle-wizard -->
+							<div id="bottom-wizard">
+								<button type="button" name="backward" class="backward">Prev</button>
+								<button type="button" name="forward" class="forward">Next</button>
+								<button type="submit" name="process" class="submit" onclick="submitForm()">Submit</button>
+							</div>
+							<!-- /bottom-wizard -->
+						</form>
+					</div>
+					<!-- /Wizard container -->
+			</div>
+			<!-- /content-right-->
+		</div>
+		<!-- /row-->
+	</div>
+	<!-- /container-fluid -->
+
+
+	<!-- Modal terms -->
+	<div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="termsLabel">Terms and conditions</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in <strong>nec quod novum accumsan</strong>, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, <strong>in porro albucius qui</strong>, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn_1" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	
+	<!-- COMMON SCRIPTS -->
+	<script src="{% static 'registration/assets/js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'registration/assets/js/common_scripts.min.js' %}"></script>
+	<script src="{% static 'registration/assets/js/velocity.min.js' %}"></script>
+	<script src="{% static 'registration/assets/js/functions.js' %}"></script>
+
+	<!-- Wizard script -->
+	<script src="{% static 'registration/assets/js/survey_func.js' %}"></script>
+<script>
+    function submitForm() {
+        document.getElementById("wrapped").submit();
+    }
+</script>
+
+</body>
+
+
+</html>
