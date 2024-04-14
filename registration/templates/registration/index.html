@@ -7,8 +7,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Wilio Survey, Quotation, Review and Register form Wizard by Ansonika.">
-    <meta name="author" content="Ansonika">
+    <meta name="description" content="Jan Cosmic Foundation">
+    <meta name="author" content="JCF">
     <title>JCF | 2024 Event Registration</title>
 
     <!-- Favicons-->
@@ -47,6 +47,11 @@
             s.parentNode.insertBefore(ga, s);
         })();
     </script>
+<!--	<style>-->
+<!--		body {-->
+<!--			background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url("{% static 'registration/assets/img/bg-1.jpg' %}");-->
+<!--		}-->
+<!--	</style>-->
 
 </head>
 
@@ -68,10 +73,14 @@
 				</div>
 				<!-- /logo -->
 				<div id="form_title">
-					<h3 class="text-uppercase mt-3">2024 JCF International <br>Training & Retreat</h3>
+					<h3 class="text-uppercase mt-3 mx-auto">2024 JCF International Training & Retreat</h3>
 					<p>Date: 21st July, 2024</p>
 				</div>
 				<!-- /form_title -->
+				<!-- image -->
+<!--				<div class="col-lg-12 h-25">-->
+<!--					<figure><img src="{% static 'registration/assets/img/bg-1.jpg' %}" alt="" class="img-fluid"></figure>-->
+<!--				</div>-->
 			</div>
 		</div>
 		<div class="row">
@@ -132,11 +141,12 @@
 										<div class="styled-select clearfix">
 											<select class="wide required" name="country">
 												<option value="">Your Country</option>
+												<option value="Ghana">Ghana</option>
+												<option value="USA">USA</option>
+												<option value="UK">UK</option>
+												<option value="Canada">Canada</option>
 												<option value="Europe">Europe</option>
-												<option value="Asia">Asia</option>
-												<option value="North America">North America</option>
-												<option value="South America">South America</option>
-												<option value="Oceania">Oceania</option>
+												<option value="Europe">Europe</option>
 											</select>
 										</div>
 									</div>
@@ -219,6 +229,9 @@
 									<div>
 										<div class="mt-4">
 											<h3 class="main_question">If yes, please provide the following details</h3>
+										</div>
+										<div class="form-group">
+											<input type="number" name="total_number" class="form-control" placeholder="Total Number Attending (Including Children)">
 										</div>
 										<div class="form-group">
 											<input type="text" name="spouse_name" class="form-control" placeholder="Spouse Name">
@@ -339,7 +352,7 @@
 										</label>
 									</div>
 									<div class="form-group">
-										<label class="container_radio version_2">I prefer to stay on site
+										<label class="container_radio version_2">I prefer to stay on site (bring my own tents)
 											<input type="radio" name="question_7" value="Onsite" class="required" onchange="getVals(this, 'question_7');">
 											<span class="checkmark"></span>
 										</label>
@@ -370,14 +383,14 @@
 												<p id="question_3"></p>
 <!--												<p id="additional_message"></p>-->
 											</li>
-											<li><strong>4</strong>
-												<h5>How do you intend to commute to the site ?</h5>
-												<p id="question_4"></p>
-											</li>
-											<li><strong>5</strong>
-												<h5>Accommodation Preference</h5>
-												<p id="question_7"></p>
-											</li>
+<!--											<li><strong>4</strong>-->
+<!--												<h5>How do you intend to commute to the site ?</h5>-->
+<!--												<p id="question_4"></p>-->
+<!--											</li>-->
+<!--											<li><strong>5</strong>-->
+<!--												<h5>Accommodation Preference</h5>-->
+<!--												<p id="question_7"></p>-->
+<!--											</li>-->
 										</ul>
 									</div>
 								</div>
