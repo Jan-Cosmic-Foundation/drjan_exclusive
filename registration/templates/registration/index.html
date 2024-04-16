@@ -74,7 +74,7 @@
 				<!-- /logo -->
 				<div id="form_title">
 					<h3 class="text-uppercase mt-3 mx-auto">2024 JCF International Training & Retreat</h3>
-					<p>Date: 21st July, 2024</p>
+					<p>Date: 21st July, 2024 <br>Event Fee: GHC 2000</p>
 				</div>
 				<!-- /form_title -->
 				<!-- image -->
@@ -132,7 +132,7 @@
 										<input type="text" name="lastname" class="form-control required" placeholder="Last Name">
 									</div>
 									<div class="form-group">
-										<input type="email" name="email" class="form-control" placeholder="Your Email">
+										<input type="email" name="email" class="form-control required" placeholder="Your Email">
 									</div>
 									<div class="form-group">
 										<input type="tel" name="phone" class="form-control required" placeholder="Phone Number">
@@ -237,53 +237,62 @@
 											<input type="text" name="spouse_name" class="form-control" placeholder="Spouse Name">
 										</div>
 										<div class="row">
-											<div class="col-4">
+											<div class="col-6">
 												<div class="form-group">
-													<input type="text" name="child_1_name" class="form-control " placeholder="Child's Name">
+													<input type="text" name="child_name" class="form-control " placeholder="Child's Name">
 												</div>
 											</div>
-											<div class="col-4">
+											<div class="col-6">
 												<div class="form-group">
-													<input type="number" name="child_1_age" class="form-control" placeholder="Child's Age">
-												</div>
-											</div>
-											<div class="col-4">
-												<div class="form-group">
-													<input type="number" name="child_1_shirt_size" class="form-control" placeholder="Child's Shirt Size">
+													<input type="number" name="child_age" class="form-control" placeholder="Child's Age">
 												</div>
 											</div>
 										</div>
 										<div class="row">
-											<div class="col-4">
+											<div class="col-6">
 												<div class="form-group">
-													<input type="text" name="child_1_name" class="form-control" placeholder="Child's Name">
+													<input type="text" name="child_name" class="form-control" placeholder="Child's Name">
 												</div>
 											</div>
-											<div class="col-4">
+											<div class="col-6">
 												<div class="form-group">
-													<input type="number" name="child_1_age" class="form-control" placeholder="Child's Age">
-												</div>
-											</div>
-											<div class="col-4">
-												<div class="form-group">
-													<input type="number" name="child_1_shirt_size" class="form-control" placeholder="Child's Shirt Size">
+													<input type="number" name="child_age" class="form-control" placeholder="Child's Age">
 												</div>
 											</div>
 										</div>
 										<div class="row">
-											<div class="col-4">
+											<div class="col-6">
 												<div class="form-group">
-													<input type="text" name="child_1_name" class="form-control" placeholder="Child's Name">
+													<input type="text" name="child_name" class="form-control" placeholder="Child's Name">
 												</div>
 											</div>
-											<div class="col-4">
+											<div class="col-6">
 												<div class="form-group">
-													<input type="number" name="child_1_age" class="form-control" placeholder="Child's Age">
+													<input type="number" name="child_age" class="form-control" placeholder="Child's Age">
 												</div>
 											</div>
-											<div class="col-4">
+										</div>
+										<div class="row">
+											<div class="col-6">
 												<div class="form-group">
-													<input type="number" name="child_1_shirt_size" class="form-control" placeholder="Child's Shirt Size">
+													<input type="text" name="child_name" class="form-control" placeholder="Child's Name">
+												</div>
+											</div>
+											<div class="col-6">
+												<div class="form-group">
+													<input type="number" name="child_age" class="form-control" placeholder="Child's Age">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-6">
+												<div class="form-group">
+													<input type="text" name="child_name" class="form-control" placeholder="Child's Name">
+												</div>
+											</div>
+											<div class="col-6">
+												<div class="form-group">
+													<input type="number" name="child_age" class="form-control" placeholder="Child's Age">
 												</div>
 											</div>
 										</div>
@@ -295,17 +304,17 @@
 								</div>
 								</div>
 								<!-- /step-->
-								<div class="step">
+								<div class="submit step">
 									<h3 class="main_question"><strong>4/5</strong>How do you intend to commute to the site ?</h3>
 									<div class="form-group">
 										<label class="container_radio version_2">Personal Vehicle
-											<input type="radio" name="question_4" value="Personal Vehicle" class="required" onchange="getVals(this, 'question_4');">
+											<input type="radio" name="question_4" value="Personal" class="required" onchange="getVals(this, 'question_4');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_radio version_2">Public Transport
-											<input type="radio" name="question_4" value="Public Transport" class="required" onchange="getVals(this, 'question_4');">
+											<input type="radio" name="question_4" value="Public" class="required" onchange="getVals(this, 'question_4');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -315,13 +324,13 @@
 									</div>
 									<div class="form-group">
 										<label class="container_radio version_2">Will get there on public transport myself
-											<input type="radio" name="question_5" value="Quite Satisfied" class="required" onchange="getVals(this, 'question_5');">
+											<input type="radio" name="question_5" value="Public" class="" onchange="getVals(this, 'question_5');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_radio version_2">Will join organized transport by JCF
-											<input type="radio" name="question_5" value="Quite Satisfied" class="required" onchange="getVals(this, 'question_5');">
+											<input type="radio" name="question_5" value="Organized" class="" onchange="getVals(this, 'question_5');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -331,13 +340,13 @@
 									</div>
 									<div class="form-group">
 										<label class="container_radio version_2">Yes, contact me for ride sharing
-											<input type="radio" name="question_6" value="Quite Satisfied" class="required" onchange="getVals(this, 'question_6');">
+											<input type="radio" name="question_6" value="Yes" class="" onchange="getVals(this, 'question_6');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_radio version_2">No, it's fully occupied
-											<input type="radio" name="question_6" value="Quite Satisfied" class="required" onchange="getVals(this, 'question_6');">
+											<input type="radio" name="question_6" value="No" class="" onchange="getVals(this, 'question_6');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -347,13 +356,13 @@
 									</div>
 									<div class="form-group">
 										<label class="container_radio version_2">I prefer to stay in a hotel
-											<input type="radio" name="question_7" value="Hotel" class="required" onchange="getVals(this, 'question_7');">
+											<input type="radio" name="question_7" value="Hotel" class="" onchange="getVals(this, 'question_7');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_radio version_2">I prefer to stay on site (bring my own tents)
-											<input type="radio" name="question_7" value="Onsite" class="required" onchange="getVals(this, 'question_7');">
+											<input type="radio" name="question_7" value="Onsite" class="" onchange="getVals(this, 'question_7');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -366,34 +375,34 @@
 
 								</div>
 								<!-- /step-->
-								<div class="submit step">
-									<h3 class="main_question"><strong>5/5</strong>Summary</h3>
-									<div class="summary">
-										<ul>
-											<li><strong>1</strong>
-												<h5>Have you received any Impartation from Doctor Jan in the past?</h5>
-												<p id="question_1"></p>
-											</li>
-											<li><strong>2</strong>
-												<h5>Are you a Registered Student ?</h5>
-												<p id="question_2"></p>
-											</li>
-											<li><strong>3</strong>
-												<h5>Are you attending the launch of Generation 7 (Save the Children) Program ?</h5>
-												<p id="question_3"></p>
-<!--												<p id="additional_message"></p>-->
-											</li>
-<!--											<li><strong>4</strong>-->
-<!--												<h5>How do you intend to commute to the site ?</h5>-->
-<!--												<p id="question_4"></p>-->
+<!--								<div class="submit step">-->
+<!--									<h3 class="main_question"><strong>5/5</strong>Summary</h3>-->
+<!--									<div class="summary">-->
+<!--										<ul>-->
+<!--											<li><strong>1</strong>-->
+<!--												<h5>Have you received any Impartation from Doctor Jan in the past?</h5>-->
+<!--												<p id="question_1"></p>-->
 <!--											</li>-->
-<!--											<li><strong>5</strong>-->
-<!--												<h5>Accommodation Preference</h5>-->
-<!--												<p id="question_7"></p>-->
+<!--											<li><strong>2</strong>-->
+<!--												<h5>Are you a Registered Student ?</h5>-->
+<!--												<p id="question_2"></p>-->
 <!--											</li>-->
-										</ul>
-									</div>
-								</div>
+<!--											<li><strong>3</strong>-->
+<!--												<h5>Are you attending the launch of Generation 7 (Save the Children) Program ?</h5>-->
+<!--												<p id="question_3"></p>-->
+<!--&lt;!&ndash;												<p id="additional_message"></p>&ndash;&gt;-->
+<!--											</li>-->
+<!--&lt;!&ndash;											<li><strong>4</strong>&ndash;&gt;-->
+<!--&lt;!&ndash;												<h5>How do you intend to commute to the site ?</h5>&ndash;&gt;-->
+<!--&lt;!&ndash;												<p id="question_4"></p>&ndash;&gt;-->
+<!--&lt;!&ndash;											</li>&ndash;&gt;-->
+<!--&lt;!&ndash;											<li><strong>5</strong>&ndash;&gt;-->
+<!--&lt;!&ndash;												<h5>Accommodation Preference</h5>&ndash;&gt;-->
+<!--&lt;!&ndash;												<p id="question_7"></p>&ndash;&gt;-->
+<!--&lt;!&ndash;											</li>&ndash;&gt;-->
+<!--										</ul>-->
+<!--									</div>-->
+<!--								</div>-->
 								<!-- /step-->
 							</div>
 							<!-- /middle-wizard -->

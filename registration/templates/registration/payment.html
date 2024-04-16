@@ -123,7 +123,6 @@
 								<tr>
 									<th><h6>Event Name</h6></th>
 									<th><h6>Event Fee</h6></th>
-									<th><h6>Payment</h6></th>
 								</tr>
 							</thead>
 							<tbody>
@@ -132,28 +131,29 @@
 										<h6>2024 Event Registration</h6>
 									</td>
 									<td>
-										<p>GH₵ 100.00</p>
-									</td>
-									<td>
-										<a class="btn_brand" href="{% url 'registration:checkout' %}?event=main">Pay Online</a>
+										<p>GH₵ 2000.00</p>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<h6>Generation 7 (Save the Children)</h6>
+										<h6>Generation 7 (Save the Children) - {{ gen7_total_number }} attendees</h6>
 									</td>
 									<td>
-										<p>GH₵ 100.00</p>
-									</td>
-									<td>
-										<p>
-											<a class="btn-brand" href="{% url 'registration:checkout' %}?event=other">Pay Online</a>
-										</p>
+										<p>GH₵ {{ gen7_amount }}</p>
 									</td>
 								</tr>
+							<tr>
+								<td>
+									<h6>Total</h6>
+								</td>
+								<td>
+									<p><strong>GH₵ {{ total_amount }}</strong></p>
+								</td>
+							</tr>
 							</tbody>
 
 						</table>
+						<a class="btn_1 mb-4" href="{% url 'registration:checkout' %}?quantity={{gen7_total_number}}&reference={{ reference }}">Pay Online</a>
 					</div>
 					{% comment %}
 					<div>
