@@ -96,7 +96,7 @@
 				</div>
 				<!-- /logo -->
 				<div id="form_title">
-					<h3 class="text-uppercase mt-3">Thanks for Registering! 🕊️<br>2024 Event Fee</h3>
+					<h3 class="text-uppercase mt-3">Thanks for Registering! 🕊️<br>Support Us 👐</h3>
 					<p>Date: 21st July, 2024</p>
 				</div>
 				<!-- /form_title -->
@@ -112,48 +112,56 @@
 		<div class="container margin_60_35">
 			<div class="row">
 				<div class="col-lg-8">
-					<h4>Payment</h4>
+					<h4>Donation</h4>
 					<p>
-						Make payment online or to the payment details below.
+						Help us make these events and projects a success by making a donation. (You can donate any amount you wish to support us online or through the bank details below.)
 					</p>
 					<!-- order details -->
 					<div>
 						<table>
 							<thead>
 								<tr>
-									<th><h6>Event Name</h6></th>
-									<th><h6>Event Fee</h6></th>
+									<th><h6>Project Name</h6></th>
+									<th><h6></h6></th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
 									<td>
-										<h6>2024 Event Registration</h6>
+										<h6>International Training and Retreat</h6>
 									</td>
 									<td>
-										<p>GH₵ 2000.00</p>
+										<p><a class="btn_1" href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">Support</a></p>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<h6>Generation 7 (Save the Children) - {{ gen7_total_number }} attendees</h6>
+										<h6>Guide the Children</h6>
 									</td>
 									<td>
-										<p>GH₵ {{ gen7_amount }}</p>
+										<p><a class="btn_1" href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">Support</a></p>
 									</td>
 								</tr>
 							<tr>
 								<td>
-									<h6>Total</h6>
+									<h6>JCF Village and Farms</h6>
 								</td>
 								<td>
-									<p><strong>GH₵ {{ total_amount }}</strong></p>
+									<p><strong><a class="btn_1" href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">Support</a></strong></p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<h6>JCF ADMINISTRATIVE EXPENSES</h6>
+								</td>
+								<td>
+									<p><strong><a class="btn_1" href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">Support</a></strong></p>
 								</td>
 							</tr>
 							</tbody>
 
 						</table>
-						<a class="btn_1 mb-4" href="{% url 'registration:checkout' %}?quantity={{gen7_total_number}}&reference={{ reference }}">Pay Online</a>
+<!--						<a class="btn_1 mb-4" href="{% url 'registration:checkout' %}?quantity={{gen7_total_number}}&reference={{ reference }}">Pay Online</a>-->
 					</div>
 					{% comment %}
 					<div>
@@ -211,9 +219,9 @@
 				<!-- End col lg 9 -->
 				<aside class="col-lg-4">
 					<div class="box_style_2">
-						<h5>Payment Details (Manual)</h5>
+						<h5>Donation Details</h5>
 						<p>
-							Please Send Any Fee to the following Bank Accounts
+							Please Send Any Donation to the following Accounts
 							<br>
 							<strong>Account Name:</strong>
 							Jan Cosmic Foundation
@@ -223,6 +231,10 @@
 							<br>
 							<strong>SWIFT Code:</strong>
 							FBLIGHAC
+							<br>
+							<br>
+							<strong>Cedi Account #</strong>
+							1050442576516
 							<br>
 							<strong>Dollar Account #</strong>
 							1951442576511
@@ -293,6 +305,42 @@
 		<span></span>
 	</div>
 	<!-- /cd-overlay-content -->
+
+		<!-- Modal terms -->
+	<div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="termsLabel">Donation Amount</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Please enter the amount you wish to donate.</p>
+					<form action="{% url 'registration:checkout' %}" method="get">
+						{% csrf_token %}
+						<div class="form-group">
+							<input type="number" class="form-control" name="amount" placeholder="Amount (GH₵)" required>
+						</div>
+						<div class="form-group">
+							<input type="email" class="form-control" name="email" placeholder="Email" required>
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" name="name" placeholder="Full Name">
+						</div>
+						<!-- add two buttons for online payment and manual payment -->
+						<button type="submit" class="btn_1">Pay Online</button>
+						<button type="submit" class="btn_1">Pay Manually</button>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn_1" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
 
 	<!-- COMMON SCRIPTS -->
 	<script src="{% static 'registration/assets/js/jquery-3.7.1.min.js' %}"></script>

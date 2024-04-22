@@ -28,3 +28,11 @@ class Child(models.Model):
     participant = models.ForeignKey(Participant, on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
     age = models.IntegerField(blank=True, null=True)
+
+
+class Donation(models.Model):
+    name = models.CharField(max_length=50, blank=True, null=True)
+    email = models.EmailField(blank=True, null=True)
+    reference = models.CharField(max_length=50, blank=True, null=True)
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
+    paid = models.BooleanField(default=False)

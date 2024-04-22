@@ -7,7 +7,7 @@ from django.shortcuts import render, redirect
 from django.views import View
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.conf import settings
-from .models import Participant, Child
+from .models import Participant, Child, Donation
 import random
 import string
 
@@ -87,16 +87,16 @@ def index(request):
                     age=int(j)
                 )
 
-        payment_context = {
-            "total_amount": float(2000 + (total_number * 100)),
-            "gen7_amount": float(total_number * 100),
-            "gen7_total_number": int(total_number),
-            "gen7_attendee": True if question_3 == "Yes" else False,
-            "reference": payment_reference,
+        # payment_context = {
+        #     "total_amount": float(2000 + (total_number * 100)),
+        #     "gen7_amount": float(total_number * 100),
+        #     "gen7_total_number": int(total_number),
+        #     "gen7_attendee": True if question_3 == "Yes" else False,
+        #     "reference": payment_reference,
+        #
+        # }
 
-        }
-
-        return render(request, 'registration/payment.html', payment_context)
+        return render(request, 'registration/payment.html')
     return render(request, 'registration/index.html')
 
 
@@ -108,13 +108,24 @@ class CheckoutView(View):
     template_name = 'exclusive/payment.html'
 
     def get(self, request):
-        quantity = request.GET.get('quantity', 1)
-        amount = 200000 + (10000 * int(quantity))
+        amount = request.GET.get('amount')
         reference = request.GET.get('reference')
+        email = request.GET.get('email')
+        name = request.GET.get('name')
 
-        # get participant email
-        participant = Participant.objects.get(payment_reference=reference)
-        email = participant.email
+        reference = generate_payment_reference() if not reference else reference
+
+        # create donation record
+        Donation.objects.create(
+            name=name,
+            email=email,
+            reference=reference,
+            amount=float(amount),
+        )
+
+        # # get participant email
+        # participant = Participant.objects.get(payment_reference=reference)
+        # email = participant.email
 
         hostname = request.get_host()
 
@@ -122,7 +133,7 @@ class CheckoutView(View):
 
         payload = json.dumps({
             "email": email,
-            "amount": amount,
+            "amount": float(amount) * 100,
             "callback_url": f"http://{hostname}/event-registration/confirm-payment/",
             "reference": reference,
             "channels": [
@@ -165,9 +176,9 @@ class ConfirmPaymentView(View):
         context['status'] = status
 
         if status == 'success':
-            p = Participant.objects.get(payment_reference=reference)
-            p.paid = True
-            p.save()
+            d = Donation.objects.get(reference=reference)
+            d.paid = True
+            d.save()
 
         print(context)
         return render(request, self.template_name, context)
