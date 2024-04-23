@@ -38,7 +38,9 @@ def index(request):
         question_5 = data.get('question_5')
         question_6 = data.get('question_6')
         question_7 = data.get('question_7')
+        question_8 = data.get('question_8')
         arrival_date = data.get('arrival_date')
+        additional_message = data.get('additional_message')
 
         # generation 7
         total_number = float(data.get('total_number')) if data.get('total_number') else 0
@@ -73,7 +75,9 @@ def index(request):
             question_5=question_5,
             question_6=question_6,
             question_7=question_7,
+            question_8=question_8,
             arrival_date=arrival_date,
+            additional_message=additional_message,
             spouse_name=spouse_name,
             gen7_total_attendees=total_number,
             payment_reference=payment_reference
@@ -101,7 +105,12 @@ def index(request):
 
 
 def payment(request):
-    return render(request, 'registration/payment.html')
+    context = {}
+    if request.GET:
+        support = request.GET.get('supportTo')
+
+        context['support'] = support
+    return render(request, 'registration/payment.html', context)
 
 
 class CheckoutView(View):
