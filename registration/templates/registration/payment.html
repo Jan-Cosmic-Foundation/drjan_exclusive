@@ -403,6 +403,25 @@
 		<!-- /.modal-dialog -->
 	</div>
 
+	{% if support %}
+<!-- write a javascript to open modal on page load	-->
+	<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        console.log("Document is ready."); // Check if document ready event is firing
+
+        // Attempt to open the modal
+        try {
+            var modal = document.getElementById("terms-txt");
+            var modalInstance = new bootstrap.Modal(modal); // Assuming you're using Bootstrap for modal functionality
+            modalInstance.show(); // Try to open the modal
+            console.log("Modal opened successfully."); // Log success
+        } catch (error) {
+            console.error("Error opening modal:", error); // Log any errors
+        }
+    });
+</script>
+	{% endif %}
+
 	<!-- COMMON SCRIPTS -->
 	<script src="{% static 'registration/assets/js/jquery-3.7.1.min.js' %}"></script>
     <script src="{% static 'registration/assets/js/common_scripts.min.js' %}"></script>
