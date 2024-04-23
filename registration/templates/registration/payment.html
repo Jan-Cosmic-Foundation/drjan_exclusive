@@ -329,7 +329,7 @@
 						</div>
 						<!-- add two buttons for online payment and manual payment -->
 						<button type="submit" class="btn_1">Pay Online</button>
-						<button type="submit" class="btn_1">Pay Manually</button>
+						<button class="btn_1" data-bs-toggle="modal" data-bs-target="#manual_donation">Pay Manually</button>
 					</form>
 				</div>
 				<div class="modal-footer">
@@ -347,22 +347,35 @@
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-body">
-					<p>Please enter the amount you wish to donate.</p>
-					<form action="{% url 'registration:checkout' %}" method="get">
-						{% csrf_token %}
-						<div class="form-group">
-							<input type="number" class="form-control" name="amount" placeholder="Amount (GH₵)" required>
-						</div>
-						<div class="form-group">
-							<input type="email" class="form-control" name="email" placeholder="Email" required>
-						</div>
-						<div class="form-group">
-							<input type="text" class="form-control" name="name" placeholder="Full Name">
-						</div>
-						<!-- add two buttons for online payment and manual payment -->
-						<button type="submit" class="btn_1">Pay Online</button>
-						<button type="submit" class="btn_1">Pay Manually</button>
-					</form>
+					<h5>Donation Details</h5>
+						<p>
+							Please Send Any Donation to the following Accounts
+							<br>
+							<strong>Account Name:</strong>
+							Jan Cosmic Foundation
+							<br>
+							<strong>Bank Name:</strong>
+							Fidelity Bank Ghana Limited.
+							<br>
+							<strong>SWIFT Code:</strong>
+							FBLIGHAC
+							<br>
+							<br>
+							<strong>Cedi Account #</strong>
+							1050442576516
+							<br>
+							<strong>Dollar Account #</strong>
+							1951442576511
+							<br>
+							<strong>Euro Account #</strong>
+							1953442576518
+							<br>
+							<strong>MTN Merchant Number:</strong>
+							0597428051
+							<br>
+							<br>
+							Kindly confirm with the office at +233 55 059 0054 after you make your Donation, Thank you.
+						</p>
 				</div>
 			</div>
 			<!-- /.modal-content -->
