@@ -121,6 +121,7 @@ class CheckoutView(View):
         reference = request.GET.get('reference')
         email = request.GET.get('email')
         name = request.GET.get('name')
+        project = request.GET.get('project')
 
         reference = generate_payment_reference() if not reference else reference
 
@@ -129,6 +130,7 @@ class CheckoutView(View):
             name=name,
             email=email,
             reference=reference,
+            project=project,
             amount=float(amount),
         )
 

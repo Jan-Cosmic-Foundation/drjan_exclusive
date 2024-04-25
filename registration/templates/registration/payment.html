@@ -131,7 +131,7 @@
 										<h6>International Training and Retreat</h6>
 									</td>
 									<td>
-										<p><a class="btn_1" href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">Support</a></p>
+										<p><a class="btn_1 support-button" href="#" data-project-name="retreat" data-bs-toggle="modal" data-bs-target="#terms-txt">Support</a></p>
 									</td>
 								</tr>
 								<tr>
@@ -139,7 +139,7 @@
 										<h6>Guide the Children</h6>
 									</td>
 									<td>
-										<p><a class="btn_1" href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">Support</a></p>
+										<p><a class="btn_1 support-button" href="#" data-project-name="children" data-bs-toggle="modal" data-bs-target="#terms-txt">Support</a></p>
 									</td>
 								</tr>
 							<tr>
@@ -147,7 +147,7 @@
 									<h6>JCF Village and Farms</h6>
 								</td>
 								<td>
-									<p><strong><a class="btn_1" href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">Support</a></strong></p>
+									<p><strong><a class="btn_1 support-button" href="#" data-project-name="village" data-bs-toggle="modal" data-bs-target="#terms-txt">Support</a></strong></p>
 								</td>
 							</tr>
 							<tr>
@@ -155,7 +155,7 @@
 									<h6>JCF ADMINISTRATIVE EXPENSES</h6>
 								</td>
 								<td>
-									<p><strong><a class="btn_1" href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">Support</a></strong></p>
+									<p><strong><a class="btn_1 support-button" href="#" data-project-name="admin" data-bs-toggle="modal" data-bs-target="#terms-txt">Support</a></strong></p>
 								</td>
 							</tr>
 							</tbody>
@@ -344,6 +344,7 @@
 						<div class="form-group">
 							<input type="text" class="form-control" name="name" placeholder="Full Name">
 						</div>
+						<input id="projectInput" type="hidden" name="project" value="retreat">
 						<!-- add two buttons for online payment and manual payment -->
 						<button type="submit" class="btn_1">Pay Online</button>
 						<button class="btn_1" data-bs-toggle="modal" data-bs-target="#manual_donation">Pay Manually</button>
@@ -421,6 +422,34 @@
     });
 </script>
 	{% endif %}
+
+	<script>
+			// ============================== pass data to modal ==============================
+	 // Function to handle support button click
+    function handleSupportButtonClick(event) {
+        // Prevent default link behavior
+        // event.preventDefault();
+		console.log("Support button clicked.");
+
+        // Retrieve necessary data from data attributes
+        var projectName = event.target.getAttribute('data-project-name');
+		console.log("Project name:", projectName);
+
+        // find the input field and set the value
+		var projectInput = document.getElementById('projectInput');
+		projectInput.value = projectName;
+
+		// // Open the modal
+		// var modal = new bootstrap.Modal(document.getElementById('terms-txt'));
+		// modal.show();
+    }
+
+    // Attach event listeners to support buttons
+    var supportButtons = document.querySelectorAll('.support-button');
+    supportButtons.forEach(function(button) {
+        button.addEventListener('click', handleSupportButtonClick);
+    });
+	</script>
 
 	<!-- COMMON SCRIPTS -->
 	<script src="{% static 'registration/assets/js/jquery-3.7.1.min.js' %}"></script>
