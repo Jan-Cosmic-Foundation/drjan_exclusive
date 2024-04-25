@@ -14,8 +14,9 @@ class ChildAdmin(admin.ModelAdmin):
 
 
 class DonationAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'reference', 'amount', 'paid')
+    list_display = ('name', 'email', 'reference', 'amount', 'project', 'paid')
     search_fields = ('name', 'email', 'reference', 'amount', 'paid')
+    list_filter = ('paid',)
 
 
 admin.site.register(Participant, ParticipantAdmin)
