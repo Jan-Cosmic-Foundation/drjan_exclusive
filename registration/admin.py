@@ -4,8 +4,9 @@ from .models import Participant, Child, Donation
 
 
 class ParticipantAdmin(admin.ModelAdmin):
-    list_display = ('first_name', 'last_name', 'email', 'phone')
+    list_display = ('first_name', 'last_name', 'email', 'phone', 'question_3')
     search_fields = ('first_name', 'last_name', 'email', 'phone')
+    list_filter = ('question_3', )
 
 
 class ChildAdmin(admin.ModelAdmin):

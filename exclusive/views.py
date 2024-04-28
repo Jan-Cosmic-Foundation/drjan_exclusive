@@ -1,5 +1,4 @@
 import json
-
 import requests
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
@@ -22,11 +21,10 @@ from django.conf import settings
 #         return render(request, self.template_name, context)
 
 
-class CourseIndexView(LoginRequiredMixin, View):
+class CourseIndexView(View):
     template_name = 'exclusive/main-landing.html'
-    login_url = '/login/'
+    # login_url = '/login/'
 
-    @require_registered_user
     def get(self, request):
         courses_ = Course.objects.all()
         context = {
