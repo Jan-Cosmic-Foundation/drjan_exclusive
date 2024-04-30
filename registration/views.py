@@ -129,10 +129,7 @@ def analytics(request):
 
         total_gen7 += p.children.count()
 
-    total_p_outside_ghana = 0
-    for p in participants:
-        if p.country != 'Ghana' or p.country != 'ghana' or p.country != 'GH':
-            total_p_outside_ghana += 1
+    total_p_not_in_ghana = participants.filter(country__iexact='Ghana').count()
 
     total_spouse = participants.filter(spouse_name__isnull=False).count()
 
@@ -140,7 +137,7 @@ def analytics(request):
         'total': total,
         'total_children': total_children,
         'total_gen7': total_gen7,
-        'total_p_outside_ghana': total_p_outside_ghana
+        'total_p_outside_ghana': total_p_not_in_ghana
     }
     return render(request, 'registration/analytics.html', context)
 
