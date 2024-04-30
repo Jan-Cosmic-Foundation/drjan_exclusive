@@ -162,7 +162,9 @@
                 </button>
                 {% endcomment %}
                 <div class="d-flex align-items-center ms-4 d-none d-sm-flex">
-                    <button class="btn btn-xs btn-outline btn-white d-none d-md-flex" data-fancybox data-src="#flq_popup_signin" data-base-class="flq-fancybox-signin" data-animation-duration="1000" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false"> Join Now </button>
+                    {% if not request.user.profile.registered %}
+                    <a href="{% url 'course:pricing' %}" class="btn btn-xs btn-outline btn-white d-none d-md-flex"> Join Now </a>
+                    {% endif %}
                     <button class="btn btn-link btn-icon-md d-md-none" data-fancybox data-src="#flq_popup_signin" data-base-class="flq-fancybox-signin" data-animation-duration="1000" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10 17L15 12M15 12L10 7M15 12H3M15 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -182,6 +184,7 @@
                                     <span class="nav-link-name">Profile</span>
                                 </a>
                             </li>
+                            {% comment %}
                             <li class="nav-item">
                                 <a href="account-favorites.html" class="nav-link">
                                     <span class="nav-link-name">Favorites</span>
@@ -202,6 +205,7 @@
                                     <span class="nav-link-name">Notifications</span>
                                 </a>
                             </li>
+                            {% endcomment %}
                             <li class="nav-item">
                                 <a href="{% url 'course:logout' %}" class="nav-link">
                                     <span class="nav-link-name">Logout</span>
