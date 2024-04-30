@@ -129,10 +129,16 @@ def analytics(request):
 
         total_gen7 += p.children.count()
 
+    total_p_outside_ghana = 0
+    for p in participants:
+        if p.country != 'Ghana' or p.country != 'ghana':
+            total_p_outside_ghana += 1
+
     context = {
         'total': total,
         'total_children': total_children,
-        'total_gen7': total_gen7
+        'total_gen7': total_gen7,
+        'total_p_outside_ghana': total_p_outside_ghana
     }
     return render(request, 'registration/analytics.html', context)
 
