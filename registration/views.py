@@ -137,7 +137,7 @@ def analytics(request):
         'total': total,
         'total_children': total_children,
         'total_gen7': total_gen7,
-        'total_p_outside_ghana': total_p_not_in_ghana
+
     }
     return render(request, 'registration/analytics.html', context)
 
