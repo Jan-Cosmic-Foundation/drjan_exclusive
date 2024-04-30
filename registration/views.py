@@ -135,7 +135,10 @@ def analytics(request):
         if p.country != 'Ghana':
             p_not_ghana += 1
 
-    total_spouse = participants.filter(spouse_name__isnull=False).count()
+    total_spouse = 0
+    for p in participants:
+        if p.spouse_name:
+            total_spouse += 1
 
     context = {
         'total': total,
