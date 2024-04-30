@@ -129,15 +129,21 @@ def analytics(request):
 
         total_gen7 += p.children.count()
 
-    total_p_not_in_ghana = participants.filter(country__iexact='Ghana').count()
+    # number of participants not in ghana
+    p_not_ghana = 0
+    for p in participants:
+        if p.country != 'Ghana':
+            p_not_ghana += 1
 
     total_spouse = participants.filter(spouse_name__isnull=False).count()
 
     context = {
         'total': total,
+        'total_students_coming_GTC': q_3.count(),
+        'total_spouse': total_spouse,
         'total_children': total_children,
         'total_gen7': total_gen7,
-
+        'total_not_ghana': p_not_ghana,
     }
     return render(request, 'registration/analytics.html', context)
 
