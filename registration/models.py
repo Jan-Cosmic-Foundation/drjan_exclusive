@@ -27,7 +27,7 @@ class Participant(models.Model):
 
 
 class Child(models.Model):
-    participant = models.ForeignKey(Participant, on_delete=models.CASCADE)
+    participant = models.ForeignKey(Participant, on_delete=models.CASCADE, related_name='children')
     name = models.CharField(max_length=50)
     age = models.IntegerField(blank=True, null=True)
 

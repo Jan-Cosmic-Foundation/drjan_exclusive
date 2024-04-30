@@ -113,6 +113,28 @@ def payment(request):
     return render(request, 'registration/payment.html', context)
 
 
+def analytics(request):
+    participants = Participant.objects.all()
+    total = participants.count()
+
+    children = Child.objects.all()
+    total_children = children.count()
+
+    total_gen7 = 0
+    for p in participants:
+        if p.spouse_name:
+            total_gen7 += 1
+        if p.children.all():
+            total_gen7 += p.children.count()
+
+    context = {
+        'total': total,
+        'total_children': total_children,
+        'total_gen7': total_gen7
+    }
+    return render(request, 'registration/analytics.html', context)
+
+
 class CheckoutView(View):
     template_name = 'exclusive/payment.html'
 

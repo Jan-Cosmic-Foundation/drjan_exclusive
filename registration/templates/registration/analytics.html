@@ -1,0 +1,178 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from www.ansonika.com/wilio/payment.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 22:51:22 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Jan Cosmic Foundation">
+    <meta name="author" content="JCF">
+    <title>JCF | 2024 Event Registration</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="{% static 'registration/assets/css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'registration/assets/css/menu.css' %}" rel="stylesheet">
+    <link href="{% static 'registration/assets/css/style.css' %}" rel="stylesheet">
+	<link href="{% static 'registration/assets/css/vendors.css' %}" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="{% static 'registration/assets/css/custom.css' %}" rel="stylesheet">
+
+	<!-- MODERNIZR MENU -->
+	<script src="{% static 'registration/assets/js/modernizr.js' %}"></script>
+
+	<style>
+		/* Table style */
+		table {
+		  width: 100%;
+		  border-collapse: collapse;
+		  margin-bottom: 20px;
+		}
+
+		/* Table header style */
+		thead {
+		  background-color: #f2f2f2;
+		}
+
+		/* Table header cells style */
+		thead th {
+		  text-align: left;
+		  padding: 10px;
+		}
+
+		/* Table body cells style */
+		td {
+		  padding: 10px;
+		  border-bottom: 1px solid #ddd;
+		}
+
+		/* Table body cells with h5 style */
+		td h5 {
+		  margin: 0;
+		}
+
+		/* Table body cells with p style */
+		td p {
+		  margin: 0;
+		}
+
+		/* Table hover effect */
+		tbody tr:hover {
+		  background-color: #f9f9f9;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div><!-- /Preload -->
+
+	<div id="loader_form">
+		<div data-loader="circle-side-2"></div>
+	</div><!-- /loader_form -->
+
+	<header>
+		<div class="container">
+		    <div class="row text-center m-5">
+			<div class="col-lg-12 text-center">
+				<div >
+					<a href="index.html"><img src="{% static 'registration/assets/img/logo.jpg' %}" alt="logo" height="60"></a>
+				</div>
+				<!-- /logo -->
+				<div id="form_title">
+					<h3 class="text-uppercase mt-3">Analytics ✅</h3>
+				</div>
+				<!-- /form_title -->
+			</div>
+		</div>
+		</div>
+		<!-- /container -->
+	</header>
+	<!-- /Header -->
+
+	<main id="general_page">
+			<div class="container margin_60_35">
+			<div class="row">
+				<div class="col-lg-8 mx-auto">
+				<div>
+						<table>
+							<thead>
+								<tr>
+									<th><h6>Name</h6></th>
+									<th><h6>Numbers</h6></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<h6>Total Participants</h6>
+									</td>
+									<td>
+										<p>{{total}}</p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h6>Total Children</h6>
+									</td>
+									<td>
+										<p>{{total_children}}</p>
+									</td>
+								</tr>
+							<tr>
+								<td>
+									<h6>Total Gen 7 Attendants</h6>
+								</td>
+								<td>
+									<p><strong>{{total_gen7}}</strong></p>
+								</td>
+							</tr>
+							</tbody>
+
+						</table>
+<!--						<a class="btn_1 mb-4" href="{% url 'registration:checkout' %}?quantity={{gen7_total_number}}&reference={{ reference }}">Pay Online</a>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<div class="cd-overlay-nav">
+		<span></span>
+	</div>
+	<!-- /cd-overlay-nav -->
+
+	<div class="cd-overlay-content">
+		<span></span>
+	</div>
+	<!-- /cd-overlay-content -->
+
+	<!-- COMMON SCRIPTS -->
+	<script src="{% static 'registration/assets/js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'registration/assets/js/common_scripts.min.js' %}"></script>
+	<script src="{% static 'registration/assets/js/velocity.min.js' %}"></script>
+	<script src="{% static 'registration/assets/js/functions.js' %}"></script>
+
+	<!-- SPECIFIC SCRIPTS -->
+	<script src="{% static 'registration/assets/assets/validate.js' %}"></script>
+
+</body>
+
+<!-- Mirrored from www.ansonika.com/wilio/payment.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 22:51:22 GMT -->
+</html>
