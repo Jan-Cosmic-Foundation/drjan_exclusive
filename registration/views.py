@@ -120,12 +120,14 @@ def analytics(request):
     children = Child.objects.all()
     total_children = children.count()
 
-    total_gen7 = 0
+    q_3 = participants.filter(question_3='Yes')
+    total_gen7 = q_3.count()
+
     for p in participants:
         if p.spouse_name:
             total_gen7 += 1
-        if p.children.all():
-            total_gen7 += p.children.count()
+
+        total_gen7 += p.children.count()
 
     context = {
         'total': total,
