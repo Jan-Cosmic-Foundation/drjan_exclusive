@@ -226,7 +226,12 @@ class SignupView(View):
             return render(request, self.template_name, {'error': 'Email already in use.'})
 
         user = User.objects.create_user(username=email.split("@")[0], email=email, password=password)
-        user.first_name, user.last_name = full_name.split(maxsplit=1)
+
+        try:
+            user.first_name, user.last_name = full_name.split(maxsplit=1)
+        except ValueError:
+            user.first_name = full_name
+
         user.save()
 
         profile = Profile(user=user)
