@@ -85,8 +85,7 @@
                                         <a href="{% url 'course:pricing' %}" class="btn btn-icon-sm">
                                             <span class="btn-name">Get Started</span>
                                         </a>
-                                    {% else %}
-                                    {% if not request.user.profile.registered %}
+                                    {% elif not request.user.profile.registered %}
                                         <a href="{% url 'course:pricing' %}" class="btn btn-icon-sm">
                                             <span class="btn-name">Register</span>
                                         </a>
@@ -102,8 +101,6 @@
                                 <div class="col-auto" data-sr-item="movie">
                                     {% if request.user.is_anonymous %}
                                         <a href="{% url 'course:login' %}" class="btn btn-link">Login</a>
-                                    {% else %}
-<!--                                        <a href="#instructions" class="btn btn-link">Instructions</a>-->
                                     {% endif %}
                                 </div>
                             </div>
