@@ -81,9 +81,14 @@
                         <div class="pt-1">
                             <div class="row gy-4 align-items-center">
                                 <div class="col-auto" data-sr-item="movie">
-                                    {% if not request.user.profile.registered %}
+                                    {% if request.user.is_anonymous %}
                                         <a href="{% url 'course:pricing' %}" class="btn btn-icon-sm">
                                             <span class="btn-name">Get Started</span>
+                                        </a>
+                                    {% else %}
+                                    {% if not request.user.profile.registered %}
+                                        <a href="{% url 'course:pricing' %}" class="btn btn-icon-sm">
+                                            <span class="btn-name">Register</span>
                                         </a>
                                     {% else %}
                                         <a href="#courses" class="btn btn-icon-sm">

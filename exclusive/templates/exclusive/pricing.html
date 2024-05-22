@@ -58,7 +58,11 @@
                             </ul>
                         </div>
                         <div class="card-footer">
-                            <a href="{% url 'course:signup' %}" class="btn btn-block">Get Started</a>
+                            {% if request.user.is_anonymous %}
+                            <a href="{% url 'course:signup' %}" class="btn btn-block">Enroll</a>
+                            {% else %}
+                            <a href="{% url 'course:checkout' %}" class="btn btn-block">Enroll</a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
