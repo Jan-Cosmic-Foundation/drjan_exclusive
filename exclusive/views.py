@@ -108,16 +108,15 @@ class FAQsView(View):
         return render(request, self.template_name)
 
 
-class ContactView(LoginRequiredMixin, View):
+class ContactView(View):
     template_name = 'exclusive/contact.html'
 
     def get(self, request):
         return render(request, self.template_name)
 
 
-class PricingView(LoginRequiredMixin, View):
+class PricingView(View):
     template_name = 'exclusive/pricing.html'
-    login_url = '/login/'
 
     def get(self, request):
         return render(request, self.template_name)
@@ -130,7 +129,7 @@ class CheckoutView(LoginRequiredMixin, View):
     login_url = '/login/'
 
     def get(self, request):
-        amount = 20000
+        amount = 300000
         email = request.user.email
 
         url = "https://api.paystack.co/transaction/initialize"
@@ -239,7 +238,7 @@ class SignupView(View):
 
         login(request, user)
 
-        return redirect('course:pricing')
+        return redirect('course:checkout')
 
 
 class ProfileView(LoginRequiredMixin, View):

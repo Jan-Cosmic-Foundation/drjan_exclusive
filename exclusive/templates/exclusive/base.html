@@ -162,8 +162,8 @@
                 </button>
                 {% endcomment %}
                 <div class="d-flex align-items-center ms-4 d-none d-sm-flex">
-                    {% if not request.user.profile.registered %}
-                    <a href="{% url 'course:pricing' %}" class="btn btn-xs btn-outline btn-white d-none d-md-flex"> Join Now </a>
+                    {% if request.user.is_anonymous%}
+                    <a href="{% url 'course:pricing' %}" class="btn btn-xs btn-outline btn-white d-none d-md-flex"> Login </a>
                     {% endif %}
                     <button class="btn btn-link btn-icon-md d-md-none" data-fancybox data-src="#flq_popup_signin" data-base-class="flq-fancybox-signin" data-animation-duration="1000" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
