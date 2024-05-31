@@ -163,7 +163,7 @@
                 {% endcomment %}
                 <div class="d-flex align-items-center ms-4 d-none d-sm-flex">
                     {% if request.user.is_anonymous%}
-                    <a href="{% url 'course:pricing' %}" class="btn btn-xs btn-outline btn-white d-none d-md-flex"> Login </a>
+                    <a href="{% url 'course:login' %}" class="btn btn-xs btn-outline btn-white d-none d-md-flex"> Login </a>
                     {% endif %}
                     <button class="btn btn-link btn-icon-md d-md-none" data-fancybox data-src="#flq_popup_signin" data-base-class="flq-fancybox-signin" data-animation-duration="1000" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -171,6 +171,7 @@
                         </svg>
                     </button>
                 </div>
+                {% if not request.user.is_anonymous %}
                 <div class="flq-dropdown flq-dropdown-nav ms-4 d-none d-sm-flex">
                     <button class="btn btn-link align-self-center">
                         <span class="flq-image flq-navbar-top-user">
@@ -214,6 +215,7 @@
                         </ul>
                     </div>
                 </div>
+                {% endif %}
                 <button class="flq-navbar-top-toggle btn btn-link ms-4 d-flex d-lg-none" data-fancybox data-src="#flq_navbar_mobile" data-base-class="flq-fancybox-navbar" data-animation-duration="1000" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
                     <span></span>
                     <span></span>
