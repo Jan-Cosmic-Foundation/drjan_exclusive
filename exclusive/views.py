@@ -165,7 +165,7 @@ class CheckoutView(LoginRequiredMixin, View):
 
         response = requests.request("POST", url, headers=headers, data=payload)
         response_data = response.json()
-
+        print(response_data)
         return redirect(response_data['data']['authorization_url'])
 
 
