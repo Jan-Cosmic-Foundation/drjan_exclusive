@@ -155,10 +155,10 @@ PAYSTACK_SECRET_KEY = os.environ['PAYSTACK_SECRET_KEY']
 
 
 # Email settings
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' if os.environ["DEBUG"] == 'True' else 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' if os.environ["DEBUG"] == 'False' else 'django.core.mail.backends.console.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'jancosmicfoundation@gmail.com'
-EMAIL_HOST_PASSWORD = 'balq fdop zoil utmy'
+EMAIL_HOST_PASSWORD = os.environ["EMAIL_APP_PASSWORD"]
 DEFAULT_FROM_EMAIL = 'jancosmicfoundation@gmail.com'
