@@ -1,5 +1,7 @@
 from django.urls import path
 from .views import *
+from django.urls import path
+
 
 app_name = 'course'
 urlpatterns = [
@@ -17,4 +19,8 @@ urlpatterns = [
     path('checkout/', CheckoutView.as_view(), name='checkout'),
     path('confirm-payment/', ConfirmPaymentView.as_view(), name='confirm_payment'),
     path('logout/', LogoutView.as_view(), name='logout'),
+     path('password_reset/', password_reset_request, name='password_reset'),
+    path('password_reset/done/', password_reset_done, name='password_reset_done'),
+    path('reset/<uidb64>/<token>/', password_reset_confirm, name='password_reset_confirm'),
+    path('reset/done/', password_reset_complete, name='password_reset_complete'),
 ]

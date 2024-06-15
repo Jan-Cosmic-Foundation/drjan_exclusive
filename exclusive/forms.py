@@ -1,0 +1,14 @@
+# forms.py
+from django import forms
+from django.contrib.auth.forms import PasswordResetForm
+
+class CustomPasswordResetForm(PasswordResetForm):
+    email = forms.EmailField(
+        label="Email",
+        max_length=254,
+        widget=forms.EmailInput(attrs={
+            'class': 'form-control flq-form-mail flq-form-translucent',
+            'placeholder': 'Email',
+            'required': 'required'
+        })
+    )

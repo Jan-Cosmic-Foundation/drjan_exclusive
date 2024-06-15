@@ -1,5 +1,6 @@
 import json
 import requests
+from django import forms
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 from django.views import View
@@ -7,6 +8,19 @@ from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Course, Lesson, Profile
 from .decorators import require_registered_user
+from django.conf import settings
+from django.contrib.auth.views import PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
+from django.urls import reverse_lazy
+from .forms import CustomPasswordResetForm
+from django.contrib.auth.tokens import default_token_generator
+from django.contrib.auth.forms import PasswordResetForm, SetPasswordForm
+from django.shortcuts import render, redirect
+from django.template.loader import render_to_string
+from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
+from django.utils.encoding import force_bytes, force_str
+from django.contrib.sites.shortcuts import get_current_site
+from django.contrib.auth.models import User
+from django.core.mail import send_mail
 from django.conf import settings
 
 
@@ -138,6 +152,7 @@ class CheckoutView(LoginRequiredMixin, View):
             "email": email,
             "amount": amount,
             "callback_url": "https://awake.drbaffourjan.com/confirm-payment/",
+            "split_code": "SPL_NB7LnX54qz",
             "channels": [
                 "card",
                 "mobile_money"
@@ -259,4 +274,65 @@ class LogoutView(View):
     def get(self, request):
         logout(request)
         return redirect('course:login')
+
+
+# =========================================== password reset ==============================================
+def password_reset_request(request):
+    error = None
+    if request.method == "POST":
+        password_reset_form = PasswordResetForm(request.POST)
+        if password_reset_form.is_valid():
+            data = password_reset_form.cleaned_data['email']
+            associated_users = User.objects.filter(email=data)
+            if associated_users.exists():
+                for user in associated_users:
+                    subject = "Password Reset Requested"
+                    email_template_name = "exclusive/password/password_reset_email.html"
+                    c = {
+                        "email": user.email,
+                        'domain': get_current_site(request).domain,
+                        'site_name': 'Your Site Name',
+                        "uid": urlsafe_base64_encode(force_bytes(user.pk)),
+                        "user": user,
+                        'token': default_token_generator.make_token(user),
+                        'protocol': 'http',
+                    }
+                    email = render_to_string(email_template_name, c)
+                    send_mail(subject, email, settings.DEFAULT_FROM_EMAIL, [user.email], fail_silently=False, html_message=email )
+                return redirect("/password_reset/done/")
+            else:
+                error = "Email is not registered."
+    password_reset_form = PasswordResetForm()
+    return render(request=request, template_name="exclusive/password/password_reset.html", context={"password_reset_form":password_reset_form, "error": error})
+
+def password_reset_done(request):
+    return render(request=request, template_name="exclusive/password/password_reset_done.html")
+
+def password_reset_confirm(request, uidb64=None, token=None):
+    error = None
+    uid = force_str(urlsafe_base64_decode(uidb64))
+    user = User.objects.get(pk=uid)
+    
+    if request.method == 'POST':
+        form = SetPasswordForm(user, request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/reset/done/')
+        else:
+            error = form.errors.get('new_password2', None)[0]
+            print(error)
+    else:
+        form = SetPasswordForm(user)
+    
+    context = {
+        'form': form,
+        'uidb64': uidb64,
+        'token': token,
+        'error': error,
+    }
+    
+    return render(request, 'exclusive/password/password_reset_confirm.html', context)
+
+def password_reset_complete(request):
+    return render(request=request, template_name="exclusive/password/password_reset_complete.html")
 
