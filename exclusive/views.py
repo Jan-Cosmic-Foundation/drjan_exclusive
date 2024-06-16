@@ -1,4 +1,6 @@
 import json
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 import requests
 from django import forms
 from django.contrib.auth import authenticate, login, logout
@@ -129,6 +131,10 @@ class ContactView(View):
         email = request.POST.get("email")
         message = request.POST.get("message")
         
+        Comment.objects.create(name, email, message)
+        
+        # Reverse the URL to redirect after the comment is created
+        return HttpResponseRedirect(reverse('comment_success')) 
         
 
 

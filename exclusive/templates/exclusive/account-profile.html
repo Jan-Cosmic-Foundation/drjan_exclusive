@@ -12,7 +12,7 @@
                 <div class="flq-account-content">
                             <span class="flq-account-avatar mb-4">
                                 <span class="flq-image flq-responsive flq-responsive-1x1 flq-rounded">
-                                    <img src="{% static 'exclusive/assets/images/user-160x160.jpg' %}" alt="">
+                                    <img src="{% static 'exclusive/assets/images/profile.jpg' %}" alt="">
                                 </span>
                             </span>
                     <table class="table">
@@ -24,6 +24,10 @@
                         <tr>
                             <td class="flq-color-meta">Last Name</td>
                             <td>{{ user.last_name }}</td>
+                        </tr>
+                        <tr>
+                            <td class="flq-color-meta">Email</td>
+                            <td>{{ user.email }}</td>
                         </tr>
                         {% comment %}
                         <tr>
