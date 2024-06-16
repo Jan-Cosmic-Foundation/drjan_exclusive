@@ -7,8 +7,8 @@
 {% block content %}
         <div class="flq-background py-md-7 py-6" style="background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('{% static 'exclusive/assets/images/background/test-1.jpg' %}'); background-size: cover; background-position: center">
             <div class="container text-center">
-                <h1 class="display-6 mb-1 d-none d-md-block">Have Questions ?</h1>
-                <h2 class="mb-1 d-md-none">Have Questions ?</h2>
+                <h1 class="display-6 mb-1 d-none d-md-block">Need Help ?</h1>
+                <h2 class="mb-1 d-md-none">Need Help ?</h2>
                 <p class="">Questions ? Suggestions ?</p>
             </div>
         </div>
@@ -74,18 +74,18 @@
                 <div class="container-small">
                     <div class="text-center mb-5" data-sr="contact-text" data-sr-interval="100" data-sr-duration="1000" data-sr-distance="10">
                         <span class="flq-subtitle badge" data-sr-item="contact-text">Contact Form</span>
-                        <h2 class="display-6" data-sr-item="contact-text">Say Hello</h2>
+                        <h2 class="display-6" data-sr-item="contact-text">Leave a Message</h2>
                     </div>
-                    <form action="#">
+                    <form action="{% url 'course:contact' %}" method="post">
                         <div class="row gy-4" data-sr="contact-form" data-sr-interval="100" data-sr-duration="1000" data-sr-distance="10">
                             <div class="col-12 col-sm" data-sr-item="contact-form">
-                                <input class="form-control flq-form-user form-control-lg" type="text" placeholder="Your Name">
+                                <input class="form-control flq-form-user form-control-lg" type="text" placeholder="Your Name" name="name" required>
                             </div>
                             <div class="col-12 col-sm" data-sr-item="contact-form">
-                                <input class="form-control flq-form-mail form-control-lg" type="email" placeholder="Your Email">
+                                <input class="form-control flq-form-mail form-control-lg" type="email" placeholder="Your Email" name="email" required>
                             </div>
                             <div class="col-12" data-sr-item="contact-form">
-                                <textarea class="form-control flq-form-message form-control-lg" rows="5" placeholder="Your Message"></textarea>
+                                <textarea class="form-control flq-form-message form-control-lg" rows="5" placeholder="Your Message" name="message"></textarea>
                             </div>
                             <div class="col-12" data-sr-item="contact-form">
                                 <div class="form-check">

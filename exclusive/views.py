@@ -6,22 +6,18 @@ from django.shortcuts import render, redirect
 from django.views import View
 from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Course, Lesson, Profile
-from .decorators import require_registered_user
 from django.conf import settings
-from django.contrib.auth.views import PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
-from django.urls import reverse_lazy
-from .forms import CustomPasswordResetForm
 from django.contrib.auth.tokens import default_token_generator
 from django.contrib.auth.forms import PasswordResetForm, SetPasswordForm
-from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.utils.encoding import force_bytes, force_str
 from django.contrib.sites.shortcuts import get_current_site
-from django.contrib.auth.models import User
 from django.core.mail import send_mail
-from django.conf import settings
+
+from .models import *
+from .decorators import require_registered_user
+
 
 
 # class IndexView(View):
@@ -127,6 +123,13 @@ class ContactView(View):
 
     def get(self, request):
         return render(request, self.template_name)
+    
+    def post(self, request):
+        name = request.POST.get("name")
+        email = request.POST.get("email")
+        message = request.POST.get("message")
+        
+        
 
 
 class PricingView(View):
@@ -193,11 +196,15 @@ class ConfirmPaymentView(LoginRequiredMixin, View):
         context['status'] = status
 
         if status == 'success':
+            # update the user registration status
             user = request.user
             user.profile.registered = True
             user.profile.save()
+            
+            # save in payments
+            p = Payment(user, amount)
+            p.save()
 
-        print(context)
         return render(request, self.template_name, context)
 
 
@@ -237,7 +244,7 @@ class SignupView(View):
         password = request.POST.get('password')
 
         if User.objects.filter(email=email).exists():
-            return render(request, self.template_name, {'error': 'Email already in use.'})
+            return render(request, self.template_name, {'error': 'Email is already registered. Try Logging in.'})
 
         user = User.objects.create_user(username=email.split("@")[0], email=email, password=password)
 

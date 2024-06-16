@@ -14,8 +14,18 @@ class CourseAdmin(admin.ModelAdmin):
 class LessonAdmin(admin.ModelAdmin):
     list_display = ('id', 'lesson_number', 'course', 'title', 'lesson_type', 'video_source')
     prepopulated_fields = {'slug': ('title',)}
+    
+    
+class PaymentAdmin(admin.ModelAdmin):
+    list_display = ("id", "user", "amount", "date")
+    
+
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ("id", "name", "email")
 
 
 admin.site.register(Profile, ProfileAdmin)
 admin.site.register(Course, CourseAdmin)
 admin.site.register(Lesson, LessonAdmin)
+admin.site.register(Payment, PaymentAdmin)
+admin.site.register(Comment, CommentAdmin)
