@@ -42,6 +42,7 @@
                 </div>
                 {% endcomment %}
                 <div class="col-12 col-sm-10 col-md-7 col-lg-6 col-xl-5" data-sr-item="pricing">
+                {% comment %}
                     <div class="card flq-card-pricing">
                         <div class="card-head">
                             <div class="card-subtitle h6">Awake and Aware</div>
@@ -63,6 +64,26 @@
                             <a href="{% url 'course:signup' %}" class="btn btn-block">Enroll</a>
                             {% else %}
                             <a href="{% url 'course:checkout' %}" class="btn btn-block">Enroll</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                 {% endcomment %}
+                     <div class="card flq-card-pricing">
+                        <div class="card-head">
+                            <div class="card-subtitle h6">Already a student ?</div>
+{#                            <div class="card-price h4"><span>GHC</span>3000<span class="d-none"></span></div>#}
+                            
+                        </div>
+                        <div class="card-body flq-vertical-rhythm">
+                            <p style="font-size: 15.5px">Kindly contact the JCF administration to be given access to the courses. </p>
+                        </div>
+                        <!-- <div class="card-price mt-2 h5"><span>$</span>200<span class="d-none"></span></div> -->
+                        <div class="card-footer">
+                            {% if request.user.is_anonymous %}
+                            <a href="{% url 'course:signup' %}" class="btn btn-block">Enroll</a>
+                            {% else %}
+{#                            <a href="{% url 'course:checkout' %}" class="btn btn-block">Enroll</a>#}
+                            <a href="https://wa.link/rbzxdp" class="btn btn-block">Contact</a>
                             {% endif %}
                         </div>
                     </div>

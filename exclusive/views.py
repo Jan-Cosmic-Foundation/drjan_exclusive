@@ -21,7 +21,6 @@ from .models import *
 from .decorators import require_registered_user
 
 
-
 # class IndexView(View):
 #     template_name = 'exclusive/index.html'
 #
@@ -35,6 +34,7 @@ from .decorators import require_registered_user
 
 class CourseIndexView(View):
     template_name = 'exclusive/main-landing.html'
+
     # login_url = '/login/'
 
     def get(self, request):
@@ -125,17 +125,16 @@ class ContactView(View):
 
     def get(self, request):
         return render(request, self.template_name)
-    
+
     def post(self, request):
         name = request.POST.get("name")
         email = request.POST.get("email")
         message = request.POST.get("message")
-        
+
         Comment.objects.create(name, email, message)
-        
+
         # Reverse the URL to redirect after the comment is created
-        return HttpResponseRedirect(reverse('comment_success')) 
-        
+        return HttpResponseRedirect(reverse('comment_success'))
 
 
 class PricingView(View):
@@ -206,7 +205,7 @@ class ConfirmPaymentView(LoginRequiredMixin, View):
             user = request.user
             user.profile.registered = True
             user.profile.save()
-            
+
             # save in payments
             p = Payment(user, amount)
             p.save()
@@ -234,7 +233,7 @@ class LoginView(View):
             auth_user = authenticate(request, username=user.username, password=password)
             if auth_user is not None:
                 login(request, auth_user)
-                return redirect('course:index')         # todo: if the user is not registered redirect to pricing
+                return redirect('course:index')  # todo: if the user is not registered redirect to pricing
         return render(request, self.template_name, {'error': 'Invalid email or password'})
 
 
@@ -266,7 +265,8 @@ class SignupView(View):
 
         login(request, user)
 
-        return redirect('course:checkout')
+        return redirect('course:index')
+        # return redirect('course:checkout')
 
 
 class ProfileView(LoginRequiredMixin, View):
@@ -311,21 +311,25 @@ def password_reset_request(request):
                         'protocol': 'http',
                     }
                     email = render_to_string(email_template_name, c)
-                    send_mail(subject, email, settings.DEFAULT_FROM_EMAIL, [user.email], fail_silently=False, html_message=email )
+                    send_mail(subject, email, settings.DEFAULT_FROM_EMAIL, [user.email], fail_silently=False,
+                              html_message=email)
                 return redirect("/password_reset/done/")
             else:
                 error = "Email is not registered."
     password_reset_form = PasswordResetForm()
-    return render(request=request, template_name="exclusive/password/password_reset.html", context={"password_reset_form":password_reset_form, "error": error})
+    return render(request=request, template_name="exclusive/password/password_reset.html",
+                  context={"password_reset_form": password_reset_form, "error": error})
+
 
 def password_reset_done(request):
     return render(request=request, template_name="exclusive/password/password_reset_done.html")
+
 
 def password_reset_confirm(request, uidb64=None, token=None):
     error = None
     uid = force_str(urlsafe_base64_decode(uidb64))
     user = User.objects.get(pk=uid)
-    
+
     if request.method == 'POST':
         form = SetPasswordForm(user, request.POST)
         if form.is_valid():
@@ -336,16 +340,16 @@ def password_reset_confirm(request, uidb64=None, token=None):
             print(error)
     else:
         form = SetPasswordForm(user)
-    
+
     context = {
         'form': form,
         'uidb64': uidb64,
         'token': token,
         'error': error,
     }
-    
+
     return render(request, 'exclusive/password/password_reset_confirm.html', context)
+
 
 def password_reset_complete(request):
     return render(request=request, template_name="exclusive/password/password_reset_complete.html")
-
