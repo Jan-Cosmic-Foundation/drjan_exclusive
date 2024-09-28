@@ -141,6 +141,9 @@ class PricingView(View):
     template_name = 'exclusive/pricing.html'
 
     def get(self, request):
+        # if the user is already registered, redirect to the course index
+        if request.user.is_authenticated and request.user.profile.registered:
+            return redirect('course:index')
         return render(request, self.template_name)
 
 
