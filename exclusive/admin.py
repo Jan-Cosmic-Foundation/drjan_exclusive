@@ -3,8 +3,11 @@ from .models import *
 
 
 class ProfileAdmin(admin.ModelAdmin):
-    list_display = ('id', 'user', 'phone_number', 'registered', 'intermediate_access', 'advanced_access')
+    list_display = ('id', 'user_name', 'user', 'phone_number', 'registered', 'intermediate_access', 'advanced_access')
     actions = ['make_registered', 'make_intermediate', 'make_advanced']
+
+    def user_name(self, obj):
+        return f"{obj.user.first_name} {obj.user.last_name}"
 
     def make_registered(self, request, queryset):
         queryset.update(registered=True)
