@@ -15,7 +15,7 @@ class Profile(models.Model):
     advanced_access = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.user.username
+        return f"{self.user.first_name} {self.user.last_name} - ({self.user.username})"
 
 
 class Course(models.Model):
