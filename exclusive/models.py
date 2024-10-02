@@ -25,6 +25,7 @@ class Course(models.Model):
     description = models.TextField()
     thumbnail = models.ImageField(upload_to='course_images')
     level = models.CharField(max_length=50)
+    year = models.IntegerField(validators=[MinValueValidator(2019), MaxValueValidator(2090)], default=2021)
     core = models.BooleanField(default=False)
     course_number = models.IntegerField(unique=True, blank=True, null=True, validators=[MinValueValidator(0), MaxValueValidator(5)])
 
