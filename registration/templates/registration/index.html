@@ -9,36 +9,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Jan Cosmic Foundation">
     <meta name="author" content="JCF">
-    <title>JCF | 2024 Event Registration</title>
+    <title>JCF | 2025 Event Registration</title>
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
+          href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
+          href="img/apple-touch-icon-144x144-precomposed.png">
 
     <!-- GOOGLE WEB FONT -->
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
 
     <!-- BASE CSS -->
     <link href="{% static 'registration/assets/css/bootstrap.min.css' %}" rel="stylesheet">
-	<link href="{% static 'registration/assets/css/menu.css' %}" rel="stylesheet">
+    <link href="{% static 'registration/assets/css/menu.css' %}" rel="stylesheet">
     <link href="{% static 'registration/assets/css/style.css' %}" rel="stylesheet">
-	<link href="{% static 'registration/assets/css/vendors.css' %}" rel="stylesheet">
+    <link href="{% static 'registration/assets/css/vendors.css' %}" rel="stylesheet">
 
     <!-- YOUR CUSTOM CSS -->
     <link href="{% static 'registration/assets/css/custom.css' %}" rel="stylesheet">
-	
-	<!-- MODERNIZR MENU -->
-	<script src="{% static 'registration/assets/js/modernizr.js' %}"></script>
-	
-	<script type="text/javascript">
+
+    <!-- MODERNIZR MENU -->
+    <script src="{% static 'registration/assets/js/modernizr.js' %}"></script>
+
+    <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-11097556-8']);
         _gaq.push(['_trackPageview']);
 
-        (function() {
+        (function () {
             var ga = document.createElement('script');
             ga.type = 'text/javascript';
             ga.async = true;
@@ -47,44 +49,44 @@
             s.parentNode.insertBefore(ga, s);
         })();
     </script>
-<!--	<style>-->
-<!--		body {-->
-<!--			background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url("{% static 'registration/assets/img/bg-1.jpg' %}");-->
-<!--		}-->
-<!--	</style>-->
+    <!--	<style>-->
+    <!--		body {-->
+    <!--			background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url("{% static 'registration/assets/img/bg-1.jpg' %}");-->
+    <!--		}-->
+    <!--	</style>-->
 
 </head>
 
 <body>
-	
-	<div id="preloader">
-		<div data-loader="circle-side"></div>
-	</div><!-- /Preload -->
-	
-	<div id="loader_form">
-		<div data-loader="circle-side-2"></div>
-	</div><!-- /loader_form -->
 
-	<div class="container full-height">
-		<div class="row text-center m-5">
-			<div class="col-lg-12 text-center">
-				<div >
-					<a href="index.html"><img src="{% static 'registration/assets/img/logo.jpg' %}" alt="logo" height="60"></a>
-				</div>
-				<!-- /logo -->
-				<div id="form_title">
-					<h3 class="text-uppercase mt-3 mx-auto">2024 JCF International Training & Retreat</h3>
-					<p>Date: 21st July, 2024</p>
-				</div>
-				<!-- /form_title -->
-				<!-- image -->
-<!--				<div class="col-lg-12 h-25">-->
-<!--					<figure><img src="{% static 'registration/assets/img/bg-1.jpg' %}" alt="" class="img-fluid"></figure>-->
-<!--				</div>-->
-			</div>
-		</div>
-		<div class="row">
-			{% comment %}
+<div id="preloader">
+    <div data-loader="circle-side"></div>
+</div><!-- /Preload -->
+
+<div id="loader_form">
+    <div data-loader="circle-side-2"></div>
+</div><!-- /loader_form -->
+
+<div class="container full-height">
+    <div class="row text-center m-5">
+        <div class="col-lg-12 text-center">
+            <div>
+                <a href="index.html"><img src="{% static 'registration/assets/img/logo.jpg' %}" alt="logo" height="60"></a>
+            </div>
+            <!-- /logo -->
+            <div id="form_title">
+                <h3 class="text-uppercase mt-3 mx-auto">2025 JCF International Retreat</h3>
+                <p>Date: 29th April, 2025</p>
+            </div>
+            <!-- /form_title -->
+            <!-- image -->
+            <!--				<div class="col-lg-12 h-25">-->
+            <!--					<figure><img src="{% static 'registration/assets/img/bg-1.jpg' %}" alt="" class="img-fluid"></figure>-->
+            <!--				</div>-->
+        </div>
+    </div>
+    <div class="row">
+        {% comment %}
 			<div class="col-lg-6 content-left">
 				<div class="content-left-wrapper">
 					<a href="index.html" id="logo"><img src="img/logo.png" alt="" width="49" height="35"></a>
@@ -111,555 +113,555 @@
 			<!-- /content-left -->
 			{% endcomment %}
 
-			<div class="content-right" id="start">
-				<div id="wizard_container" class="my-auto">
-					<div id="top-wizard">
-							<div id="progressbar"></div>
-						</div>
-						<!-- /top-wizard -->
-						<form id="wrapped" method="POST" action="{% url 'registration:register' %}">
-							{% csrf_token %}
-							<input id="website" name="website" type="text" value="">
-							<!-- Leave for security protection, read docs for details -->
-							<div id="middle-wizard">
-								<!-- participant details -->
-								<div class="step">
-									<h3 class="main_question"><strong>1/5</strong>Please fill with your details</h3>
-									<div class="form-group">
-										<input type="text" name="firstname" class="form-control required" placeholder="First Name">
-									</div>
-									<div class="form-group">
-										<input type="text" name="lastname" class="form-control required" placeholder="Last Name">
-									</div>
-									<div class="form-group">
-										<input type="email" name="email" class="form-control required" placeholder="Your Email">
-									</div>
-									<div class="form-group">
-										<input type="tel" name="phone" class="form-control required" placeholder="Phone Number">
-									</div>
-									<div class="form-group">
-										<label for="dob">Date of Birth</label>
-										<input id="dob" type="date" name="dob" class="form-control date" placeholder="Date of Birth">
-									</div>
-									<div class="form-group">
-										<input list="countries" class="form-control required" name="country"
-											   id="countryInput" placeholder="Your Country">
-										<datalist id="countries">
-											<option value="Afghanistan">
-											<option value="Albania">
-											<option value="Algeria">
-											<option value="Andorra">
-											<option value="Angola">
-											<option value="Antigua and Barbuda">
-											<option value="Argentina">
-											<option value="Armenia">
-											<option value="Australia">
-											<option value="Austria">
-											<option value="Azerbaijan">
-											<option value="Bahamas">
-											<option value="Bahrain">
-											<option value="Bangladesh">
-											<option value="Barbados">
-											<option value="Belarus">
-											<option value="Belgium">
-											<option value="Belize">
-											<option value="Benin">
-											<option value="Bhutan">
-											<option value="Bolivia">
-											<option value="Bosnia and Herzegovina">
-											<option value="Botswana">
-											<option value="Brazil">
-											<option value="Brunei">
-											<option value="Bulgaria">
-											<option value="Burkina Faso">
-											<option value="Burundi">
-											<option value="Cabo Verde">
-											<option value="Cambodia">
-											<option value="Cameroon">
-											<option value="Canada">
-											<option value="Central African Republic">
-											<option value="Chad">
-											<option value="Chile">
-											<option value="China">
-											<option value="Colombia">
-											<option value="Comoros">
-											<option value="Congo (Congo-Brazzaville)">
-											<option value="Costa Rica">
-											<option value="Croatia">
-											<option value="Cuba">
-											<option value="Cyprus">
-											<option value="Czechia (Czech Republic)">
-											<option value="Democratic Republic of the Congo">
-											<option value="Denmark">
-											<option value="Djibouti">
-											<option value="Dominica">
-											<option value="Dominican Republic">
-											<option value="Ecuador">
-											<option value="Egypt">
-											<option value="El Salvador">
-											<option value="Equatorial Guinea">
-											<option value="Eritrea">
-											<option value="Estonia">
-											<option value="Eswatini">
-											<option value="Ethiopia">
-											<option value="Fiji">
-											<option value="Finland">
-											<option value="France">
-											<option value="Gabon">
-											<option value="Gambia">
-											<option value="Georgia">
-											<option value="Germany">
-											<option value="Ghana">
-											<option value="Greece">
-											<option value="Grenada">
-											<option value="Guatemala">
-											<option value="Guinea">
-											<option value="Guinea-Bissau">
-											<option value="Guyana">
-											<option value="Haiti">
-											<option value="Holy See">
-											<option value="Honduras">
-											<option value="Hungary">
-											<option value="Iceland">
-											<option value="India">
-											<option value="Indonesia">
-											<option value="Iran">
-											<option value="Iraq">
-											<option value="Ireland">
-											<option value="Israel">
-											<option value="Italy">
-											<option value="Jamaica">
-											<option value="Japan">
-											<option value="Jordan">
-											<option value="Kazakhstan">
-											<option value="Kenya">
-											<option value="Kiribati">
-											<option value="Kuwait">
-											<option value="Kyrgyzstan">
-											<option value="Laos">
-											<option value="Latvia">
-											<option value="Lebanon">
-											<option value="Lesotho">
-											<option value="Liberia">
-											<option value="Libya">
-											<option value="Liechtenstein">
-											<option value="Lithuania">
-											<option value="Luxembourg">
-											<option value="Madagascar">
-											<option value="Malawi">
-											<option value="Malaysia">
-											<option value="Maldives">
-											<option value="Mali">
-											<option value="Malta">
-											<option value="Marshall Islands">
-											<option value="Mauritania">
-											<option value="Mauritius">
-											<option value="Mexico">
-											<option value="Micronesia">
-											<option value="Moldova">
-											<option value="Monaco">
-											<option value="Mongolia">
-											<option value="Montenegro">
-											<option value="Morocco">
-											<option value="Mozambique">
-											<option value="Myanmar (formerly Burma)">
-											<option value="Namibia">
-											<option value="Nauru">
-											<option value="Nepal">
-											<option value="Netherlands">
-											<option value="New Zealand">
-											<option value="Nicaragua">
-											<option value="Niger">
-											<option value="Nigeria">
-											<option value="North Korea">
-											<option value="North Macedonia">
-											<option value="Norway">
-											<option value="Oman">
-											<option value="Pakistan">
-											<option value="Palau">
-											<option value="Palestine State">
-											<option value="Panama">
-											<option value="Papua New Guinea">
-											<option value="Paraguay">
-											<option value="Peru">
-											<option value="Philippines">
-											<option value="Poland">
-											<option value="Portugal">
-											<option value="Qatar">
-											<option value="Romania">
-											<option value="Russia">
-											<option value="Rwanda">
-											<option value="Saint Kitts and Nevis">
-											<option value="Saint Lucia">
-											<option value="Saint Vincent and the Grenadines">
-											<option value="Samoa">
-											<option value="San Marino">
-											<option value="Sao Tome and Principe">
-											<option value="Saudi Arabia">
-											<option value="Senegal">
-											<option value="Serbia">
-											<option value="Seychelles">
-											<option value="Sierra Leone">
-											<option value="Singapore">
-											<option value="Slovakia">
-											<option value="Slovenia">
-											<option value="Solomon Islands">
-											<option value="Somalia">
-											<option value="South Africa">
-											<option value="South Korea">
-											<option value="South Sudan">
-											<option value="Spain">
-											<option value="Sri Lanka">
-											<option value="Sudan">
-											<option value="Suriname">
-											<option value="Sweden">
-											<option value="Switzerland">
-											<option value="Syria">
-											<option value="Tajikistan">
-											<option value="Tanzania">
-											<option value="Thailand">
-											<option value="Timor-Leste">
-											<option value="Togo">
-											<option value="Tonga">
-											<option value="Trinidad and Tobago">
-											<option value="Tunisia">
-											<option value="Turkey">
-											<option value="Turkmenistan">
-											<option value="Tuvalu">
-											<option value="Uganda">
-											<option value="Ukraine">
-											<option value="United Arab Emirates">
-											<option value="United Kingdom">
-											<option value="United States of America">
-											<option value="Uruguay">
-											<option value="Uzbekistan">
-											<option value="Vanuatu">
-											<option value="Venezuela">
-											<option value="Vietnam">
-											<option value="Yemen">
-											<option value="Zambia">
-											<option value="Zimbabwe">
-										</datalist>
-
-									</div>
-
-									<div class="row">
-<!--										<div class="col-6">-->
-<!--											<div class="form-group">-->
-<!--												<input type="date" name="dob" class="form-control date"  placeholder="Date of Birth">-->
-<!--											</div>-->
-<!--										</div>-->
-										<div class="col-6">
-											<div class="form-group radio_input">
-												<label class="container_radio">Male
-													<input type="radio" name="gender" value="Male" class="required">
-													<span class="checkmark"></span>
-												</label>
-												<label class="container_radio">Female
-													<input type="radio" name="gender" value="Female" class="required">
-													<span class="checkmark"></span>
-												</label>
-											</div>
-										</div>
-									</div>
-									<!-- /row -->
-<!--									<div class="form-group terms">-->
-<!--										<label class="container_check">Please accept our <a href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">Terms and conditions</a>-->
-<!--											<input type="checkbox" name="terms" value="Yes" class="required">-->
-<!--											<span class="checkmark"></span>-->
-<!--										</label>-->
-<!--									</div>-->
-								</div>
-								<!-- /step-->
-								<!-- impartation -->
-								<div class="step">
-									<h3 class="main_question"><strong>2/5</strong>Have you received any Impartation from Doctor Jan in the past?</h3>
-									<div class="form-group">
-										<label class="container_radio version_2">No - I have never received an Impartation
-											<input type="radio" name="question_1" value="No" class="required" onchange="getVals(this, 'question_1');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_radio version_2">Yes - I have received an Impartation
-											<input type="radio" name="question_1" value="Yes" class="required" onchange="getVals(this, 'question_1');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<!-- another question -->
-									<div class="mt-5">
-										<h3 class="main_question">Are you a Registered Student ?</h3>
-									</div>
-									<div class="form-group">
-										<label class="container_radio version_2">No, I am not
-											<input type="radio" name="question_2" value="No" class="required" onchange="getVals(this, 'question_2');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_radio version_2">Yes, I am (Intermediate/Advanced Course)
-											<input type="radio" name="question_2" value="Yes" class="required" onchange="getVals(this, 'question_2');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-								</div>
-								<!-- /step-->
-								<div class="step">
-									<h3 class="main_question"><strong>3/5</strong>Are you attending the launch of Guide the Children (Save the Children) Program ?</h3>
-									<div class="form-group">
-										<label class="container_radio version_2">Yes
-											<input type="radio" name="question_3" value="Yes" class="required" onchange="getVals(this, 'question_3');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_radio version_2">No
-											<input type="radio" name="question_3" value="No" class="required" onchange="getVals(this, 'question_3');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div>
-										<div class="mt-4">
-											<h3 class="main_question">If yes, please provide the following details for (Save the Children)</h3>
-										</div>
-										<div class="form-group">
-											<input type="number" name="total_number" class="form-control" placeholder="Total Number Attending (Including Children)">
-										</div>
-										<div class="form-group">
-											<input type="text" name="spouse_name" class="form-control" placeholder="Spouse Name">
-										</div>
-										<div class="row">
-											<div class="col-6">
-												<div class="form-group">
-													<input type="text" name="child_name" class="form-control " placeholder="Child's Name">
-												</div>
-											</div>
-											<div class="col-6">
-												<div class="form-group">
-													<input type="number" name="child_age" class="form-control" placeholder="Child's Age">
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-6">
-												<div class="form-group">
-													<input type="text" name="child_name" class="form-control" placeholder="Child's Name">
-												</div>
-											</div>
-											<div class="col-6">
-												<div class="form-group">
-													<input type="number" name="child_age" class="form-control" placeholder="Child's Age">
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-6">
-												<div class="form-group">
-													<input type="text" name="child_name" class="form-control" placeholder="Child's Name">
-												</div>
-											</div>
-											<div class="col-6">
-												<div class="form-group">
-													<input type="number" name="child_age" class="form-control" placeholder="Child's Age">
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-6">
-												<div class="form-group">
-													<input type="text" name="child_name" class="form-control" placeholder="Child's Name">
-												</div>
-											</div>
-											<div class="col-6">
-												<div class="form-group">
-													<input type="number" name="child_age" class="form-control" placeholder="Child's Age">
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-6">
-												<div class="form-group">
-													<input type="text" name="child_name" class="form-control" placeholder="Child's Name">
-												</div>
-											</div>
-											<div class="col-6">
-												<div class="form-group">
-													<input type="number" name="child_age" class="form-control" placeholder="Child's Age">
-												</div>
-											</div>
-										</div>
-								</div>
-								</div>
-								<!-- /step-->
-								<div class="step">
-									<h3 class="main_question"><strong>4/5</strong>How do you intend to commute to the site ?</h3>
-									<div class="form-group">
-										<label class="container_radio version_2">Personal Vehicle
-											<input type="radio" name="question_4" value="Personal" class="required" onchange="getVals(this, 'question_4');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_radio version_2">Public Transport
-											<input type="radio" name="question_4" value="Public" class="required" onchange="getVals(this, 'question_4');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<!-- another question -->
-									<div class="mt-4">
-										<h3 class="main_question">If public transport, what is your preference</h3>
-									</div>
-									<div class="form-group">
-										<label class="container_radio version_2">Will get there on public transport myself
-											<input type="radio" name="question_5" value="Public" class="" onchange="getVals(this, 'question_5');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_radio version_2">Will join organized transport by JCF
-											<input type="radio" name="question_5" value="Organized" class="" onchange="getVals(this, 'question_5');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_radio version_2">Not Applicable
-											<input type="radio" name="question_5" value="" class="">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<!-- another question -->
-									<div class="mt-4">
-										<h3 class="main_question">If Personal transport, are you willing to offer a lift?</h3>
-									</div>
-									<div class="form-group">
-										<label class="container_radio version_2">Yes, contact me for ride sharing
-											<input type="radio" name="question_6" value="Yes" class="" onchange="getVals(this, 'question_6');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_radio version_2">No, it's fully occupied
-											<input type="radio" name="question_6" value="No" class="" onchange="getVals(this, 'question_6');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_radio version_2">Not Applicable
-											<input type="radio" name="question_6" value="" class="">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<!-- another question -->
-									<div class="mt-4">
-										<h3 class="main_question">Accommodation Preference</h3>
-									</div>
-									<div class="form-group">
-										<label class="container_radio version_2">I prefer to stay in a hotel
-											<input type="radio" name="question_7" value="Hotel" class="" onchange="getVals(this, 'question_7');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_radio version_2">I prefer to stay on site (bring my own tents)
-											<input type="radio" name="question_7" value="Onsite" class="" onchange="getVals(this, 'question_7');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<!-- another question -->
-									<div class="mt-4">
-										<h3 class="main_question">Date of Arrival on Site NB: Event start date is 21st July</h3>
-										<input type="date" name="arrival_date" class="form-control date" placeholder="Arrival Date">
-									</div>
+        <div class="content-right" id="start">
+            <div id="wizard_container" class="my-auto">
+                <div id="top-wizard">
+                    <div id="progressbar"></div>
+                </div>
+                <!-- /top-wizard -->
+                <form id="wrapped" method="POST" action="{% url 'registration:register' %}">
+                    {% csrf_token %}
+                    <input id="website" name="website" type="text" value="">
+                    <!-- Leave for security protection, read docs for details -->
+                    <div id="middle-wizard">
+                        <!-- participant details -->
+                        <div class="step">
+                            <h3 class="main_question"><strong>1/5</strong>Please fill with your details</h3>
+                            <div class="form-group">
+                                <input type="text" name="firstname" class="form-control required"
+                                       placeholder="First Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="lastname" class="form-control required"
+                                       placeholder="Last Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control required" placeholder="Your Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="phone" class="form-control required" placeholder="Phone Number">
+                            </div>
+                            <div class="form-group">
+                                <label for="dob">Date of Birth</label>
+                                <input id="dob" type="date" name="dob" class="form-control date"
+                                       placeholder="Date of Birth">
+                            </div>
+                            <div class="form-group">
+                                <input list="countries" class="form-control required" name="country"
+                                       id="countryInput" placeholder="Your Country">
+                                <datalist id="countries">
+                                    <option value="Afghanistan">
+                                    <option value="Albania">
+                                    <option value="Algeria">
+                                    <option value="Andorra">
+                                    <option value="Angola">
+                                    <option value="Antigua and Barbuda">
+                                    <option value="Argentina">
+                                    <option value="Armenia">
+                                    <option value="Australia">
+                                    <option value="Austria">
+                                    <option value="Azerbaijan">
+                                    <option value="Bahamas">
+                                    <option value="Bahrain">
+                                    <option value="Bangladesh">
+                                    <option value="Barbados">
+                                    <option value="Belarus">
+                                    <option value="Belgium">
+                                    <option value="Belize">
+                                    <option value="Benin">
+                                    <option value="Bhutan">
+                                    <option value="Bolivia">
+                                    <option value="Bosnia and Herzegovina">
+                                    <option value="Botswana">
+                                    <option value="Brazil">
+                                    <option value="Brunei">
+                                    <option value="Bulgaria">
+                                    <option value="Burkina Faso">
+                                    <option value="Burundi">
+                                    <option value="Cabo Verde">
+                                    <option value="Cambodia">
+                                    <option value="Cameroon">
+                                    <option value="Canada">
+                                    <option value="Central African Republic">
+                                    <option value="Chad">
+                                    <option value="Chile">
+                                    <option value="China">
+                                    <option value="Colombia">
+                                    <option value="Comoros">
+                                    <option value="Congo (Congo-Brazzaville)">
+                                    <option value="Costa Rica">
+                                    <option value="Croatia">
+                                    <option value="Cuba">
+                                    <option value="Cyprus">
+                                    <option value="Czechia (Czech Republic)">
+                                    <option value="Democratic Republic of the Congo">
+                                    <option value="Denmark">
+                                    <option value="Djibouti">
+                                    <option value="Dominica">
+                                    <option value="Dominican Republic">
+                                    <option value="Ecuador">
+                                    <option value="Egypt">
+                                    <option value="El Salvador">
+                                    <option value="Equatorial Guinea">
+                                    <option value="Eritrea">
+                                    <option value="Estonia">
+                                    <option value="Eswatini">
+                                    <option value="Ethiopia">
+                                    <option value="Fiji">
+                                    <option value="Finland">
+                                    <option value="France">
+                                    <option value="Gabon">
+                                    <option value="Gambia">
+                                    <option value="Georgia">
+                                    <option value="Germany">
+                                    <option value="Ghana">
+                                    <option value="Greece">
+                                    <option value="Grenada">
+                                    <option value="Guatemala">
+                                    <option value="Guinea">
+                                    <option value="Guinea-Bissau">
+                                    <option value="Guyana">
+                                    <option value="Haiti">
+                                    <option value="Holy See">
+                                    <option value="Honduras">
+                                    <option value="Hungary">
+                                    <option value="Iceland">
+                                    <option value="India">
+                                    <option value="Indonesia">
+                                    <option value="Iran">
+                                    <option value="Iraq">
+                                    <option value="Ireland">
+                                    <option value="Israel">
+                                    <option value="Italy">
+                                    <option value="Jamaica">
+                                    <option value="Japan">
+                                    <option value="Jordan">
+                                    <option value="Kazakhstan">
+                                    <option value="Kenya">
+                                    <option value="Kiribati">
+                                    <option value="Kuwait">
+                                    <option value="Kyrgyzstan">
+                                    <option value="Laos">
+                                    <option value="Latvia">
+                                    <option value="Lebanon">
+                                    <option value="Lesotho">
+                                    <option value="Liberia">
+                                    <option value="Libya">
+                                    <option value="Liechtenstein">
+                                    <option value="Lithuania">
+                                    <option value="Luxembourg">
+                                    <option value="Madagascar">
+                                    <option value="Malawi">
+                                    <option value="Malaysia">
+                                    <option value="Maldives">
+                                    <option value="Mali">
+                                    <option value="Malta">
+                                    <option value="Marshall Islands">
+                                    <option value="Mauritania">
+                                    <option value="Mauritius">
+                                    <option value="Mexico">
+                                    <option value="Micronesia">
+                                    <option value="Moldova">
+                                    <option value="Monaco">
+                                    <option value="Mongolia">
+                                    <option value="Montenegro">
+                                    <option value="Morocco">
+                                    <option value="Mozambique">
+                                    <option value="Myanmar (formerly Burma)">
+                                    <option value="Namibia">
+                                    <option value="Nauru">
+                                    <option value="Nepal">
+                                    <option value="Netherlands">
+                                    <option value="New Zealand">
+                                    <option value="Nicaragua">
+                                    <option value="Niger">
+                                    <option value="Nigeria">
+                                    <option value="North Korea">
+                                    <option value="North Macedonia">
+                                    <option value="Norway">
+                                    <option value="Oman">
+                                    <option value="Pakistan">
+                                    <option value="Palau">
+                                    <option value="Palestine State">
+                                    <option value="Panama">
+                                    <option value="Papua New Guinea">
+                                    <option value="Paraguay">
+                                    <option value="Peru">
+                                    <option value="Philippines">
+                                    <option value="Poland">
+                                    <option value="Portugal">
+                                    <option value="Qatar">
+                                    <option value="Romania">
+                                    <option value="Russia">
+                                    <option value="Rwanda">
+                                    <option value="Saint Kitts and Nevis">
+                                    <option value="Saint Lucia">
+                                    <option value="Saint Vincent and the Grenadines">
+                                    <option value="Samoa">
+                                    <option value="San Marino">
+                                    <option value="Sao Tome and Principe">
+                                    <option value="Saudi Arabia">
+                                    <option value="Senegal">
+                                    <option value="Serbia">
+                                    <option value="Seychelles">
+                                    <option value="Sierra Leone">
+                                    <option value="Singapore">
+                                    <option value="Slovakia">
+                                    <option value="Slovenia">
+                                    <option value="Solomon Islands">
+                                    <option value="Somalia">
+                                    <option value="South Africa">
+                                    <option value="South Korea">
+                                    <option value="South Sudan">
+                                    <option value="Spain">
+                                    <option value="Sri Lanka">
+                                    <option value="Sudan">
+                                    <option value="Suriname">
+                                    <option value="Sweden">
+                                    <option value="Switzerland">
+                                    <option value="Syria">
+                                    <option value="Tajikistan">
+                                    <option value="Tanzania">
+                                    <option value="Thailand">
+                                    <option value="Timor-Leste">
+                                    <option value="Togo">
+                                    <option value="Tonga">
+                                    <option value="Trinidad and Tobago">
+                                    <option value="Tunisia">
+                                    <option value="Turkey">
+                                    <option value="Turkmenistan">
+                                    <option value="Tuvalu">
+                                    <option value="Uganda">
+                                    <option value="Ukraine">
+                                    <option value="United Arab Emirates">
+                                    <option value="United Kingdom">
+                                    <option value="United States of America">
+                                    <option value="Uruguay">
+                                    <option value="Uzbekistan">
+                                    <option value="Vanuatu">
+                                    <option value="Venezuela">
+                                    <option value="Vietnam">
+                                    <option value="Yemen">
+                                    <option value="Zambia">
+                                    <option value="Zimbabwe">
+                                </datalist>
+                            </div>
+                            <div class="form-group">
+                                <input list="regions" class="form-control required" name="region"
+                                       id="regionsInput" placeholder="Region (if in Ghana)">
+                                <datalist id="regions">
+                                    <option value="Greater Accra Region">
+                                    <option value="Ashanti Region">
+                                    <option value="Western Region">
+                                    <option value="Eastern Region">
+                                </datalist>
+                            </div>
 
 
-								</div>
-								<!-- /step-->
-								<div class="submit step">
-									<h3 class="main_question"><strong>5/5</strong>Do you have any medical background ? (First Aid, Nurse, Doctor, etc)</h3>
-									<div class="form-group">
-										<label class="container_radio version_2">Yes
-											<input type="radio" name="question_8" value="Yes" class="">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_radio version_2">No
-											<input type="radio" name="question_8" value="No" class="">
-											<span class="checkmark"></span>
-										</label>
-									</div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group radio_input">
+                                        <label class="container_radio">Male
+                                            <input type="radio" name="gender" value="Male" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container_radio">Female
+                                            <input type="radio" name="gender" value="Female" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /row -->
+                            <!--									<div class="form-group terms">-->
+                            <!--										<label class="container_check">Please accept our <a href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">Terms and conditions</a>-->
+                            <!--											<input type="checkbox" name="terms" value="Yes" class="required">-->
+                            <!--											<span class="checkmark"></span>-->
+                            <!--										</label>-->
+                            <!--									</div>-->
+                        </div>
+                        <!-- /step-->
+                        <!-- impartation -->
+                        <div class="step">
+                            <h3 class="main_question"><strong>2/5</strong>Have you received any Impartation from Doctor
+                                Jan in the past?</h3>
+                            <div class="form-group">
+                                <label class="container_radio version_2">No - I have never received an Impartation
+                                    <input type="radio" name="impartation" value="No" class="required"
+                                           onchange="getVals(this, 'impartation');">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="container_radio version_2">Yes - I have received an Impartation
+                                    <input type="radio" name="impartation" value="Yes" class="required"
+                                           onchange="getVals(this, 'impartation');">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <!-- another question -->
+                            <div class="mt-5">
+                                <h3 class="main_question">Are you a Registered Student ?</h3>
+                            </div>
+                            <div class="form-group">
+                                <label class="container_radio version_2">No, I am not
+                                    <input type="radio" name="registeredStudent" value="No" class="required"
+                                           onchange="getVals(this, 'registeredStudent');">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="container_radio version_2">Yes, I am in Intermediate
+                                    <input type="radio" name="registeredStudent" value="Intermediate" class="required"
+                                           onchange="getVals(this, 'registeredStudent');">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
 
-									<div class="mt-4">
-										<h3 class="main_question">Any Comments or Suggestions ?</h3>
-									</div>
-									<div class="form-group">
-										<label>Comments</label>
-										<textarea name="additional_message" class="form-control" style="height:100px;"
-												  placeholder="Type here additional info..."></textarea>
-									</div>
-								</div>
+                            <div class="form-group">
+                                <label class="container_radio version_2">Yes, I am in Advanced
+                                    <input type="radio" name="registeredStudent" value="Advanced" class="required"
+                                           onchange="getVals(this, 'registeredStudent');">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- /step-->
+                        <div class="step">
+                            <h3 class="main_question"><strong>3/5</strong>Are you attending the launch of Guide the
+                                Children Program ?</h3>
+                            <div class="form-group">
+                                <label class="container_radio version_2">Yes
+                                    <input type="radio" name="attendingGuideTheChildren" value="Yes" class="required"
+                                           onchange="getVals(this, 'attendingGuideTheChildren');">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="container_radio version_2">No
+                                    <input type="radio" name="attendingGuideTheChildren" value="No" class="required"
+                                           onchange="getVals(this, 'attendingGuideTheChildren');">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div>
+                                <div class="mt-4">
+                                    <h3 class="main_question">If yes, please provide the following details for (Guide
+                                        the Children)</h3>
+                                </div>
+                                <div class="form-group">
+                                    <input type="number" name="TotalAttendingGuideTheChildren" class="form-control"
+                                           placeholder="Total Number Attending (Including Children)">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /step-->
+                        <div class="step">
+                            <h3 class="main_question"><strong>4/5</strong>Accommodation and Transport Details</h3>
+                            </h3>
+                            <div class="form-group">
+                                <label class="container_radio version_2">I Prefer Dorm
+                                    <input type="radio" name="accommodation" value="Personal" class="required"
+                                           onchange="getVals(this, 'accommodation');">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="container_radio version_2">I Prefer 2 in 1 (to share with someone)
+                                    <input type="radio" name="accommodation" value="Public" class="required"
+                                           onchange="getVals(this, 'accommodation');">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="container_radio version_2">I Prefer 2 in 1 (Family)
+                                    <input type="radio" name="accommodation" value="Public" class="required"
+                                           onchange="getVals(this, 'accommodation');">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="container_radio version_2">I Prefer Single
+                                    <input type="radio" name="accommodation" value="Public" class="required"
+                                           onchange="getVals(this, 'accommodation');">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="container_radio version_2">I Prefer Hotel
+                                    <input type="radio" name="accommodation" value="Public" class="required"
+                                           onchange="getVals(this, 'accommodation');">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <!-- another question -->
+                            <div class="mt-4">
+                                <h3 class="main_question">How do you plan to get to the Retreat ?</h3>
+                            </div>
+                            <div class="form-group">
+                                <label class="container_radio version_2">Will get there on public transport myself
+                                    <input type="radio" name="transport" value="Public" class=""
+                                           onchange="getVals(this, 'transport');">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="container_radio version_2">Will join organized transport by JCF
+                                    <input type="radio" name="transport" value="Organized" class=""
+                                           onchange="getVals(this, 'transport');">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="container_radio version_2">Not Applicable
+                                    <input type="radio" name="transport" value="" class="">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <!-- another question -->
+                            <div class="mt-4">
+                                <h3 class="main_question">Date of Arrival on Site NB: Event start date is 21st July</h3>
+                                <input type="date" name="arrivalDate" class="form-control date"
+                                       placeholder="Arrival Date">
+                            </div>
 
-							</div>
-							<!-- /middle-wizard -->
-							<div id="bottom-wizard">
-								<button type="button" name="backward" class="backward">Prev</button>
-								<button type="button" name="forward" class="forward">Next</button>
-								<button type="submit" name="process" class="submit" onclick="submitForm()">Submit</button>
-							</div>
-							<!-- /bottom-wizard -->
-						</form>
 
-					<div class="mt-5 text-center">
-						<h5>Can't make it ? Support this Event</h5>
-						<p>
-							Support the program by donating to the foundation 🕊️🕊️.
-						</p>
-						<div>
-							<a href="/event-registration/donation/" class="btn_1">Donate</a>
-						</div>
+                        </div>
+                        <!-- /step-->
+                        <div class="submit step">
+                            <h3 class="main_question"><strong>5/5</strong> We would be needing volunteers to undertake
+                                key roles.
+                                Please select the role you would like to support with, and we will be in touch.</h3>
+                            <div class="form-group">
+                                <label class="container_radio version_2">First Aid Team (you should have some medical
+                                    background)
+                                    <input type="radio" name="volunteering" value="First Aid Team">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="container_radio version_2">Ushers
+                                    <input type="radio" name="volunteering" value="Ushers">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="container_radio version_2">Registrations and information
+                                    <input type="radio" name="volunteering" value="Registrations and information">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="container_radio version_2">Kitchen support
+                                    <input type="radio" name="volunteering" value="Kitchen support">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="container_radio version_2">Auditorium daily setup
+                                    <input type="radio" name="volunteering" value="Auditorium daily setup">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="container_radio version_2">Social activities
+                                    <input type="radio" name="volunteering" value="Social activities">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="container_radio version_2">Safety coordinators
+                                    <input type="radio" name="volunteering" value="Safety coordinators">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="container_radio version_2">Cannot volunteer
+                                    <input type="radio" name="volunteering" value="Cannot volunteer">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
 
-					</div>
-					</div>
-					<!-- /Wizard container -->
-			</div>
-			<!-- /content-right-->
-		</div>
-		<!-- /row-->
-	</div>
-	<!-- /container-fluid -->
+
+                            <div class="mt-4">
+                                <h3 class="main_question">Any Comments or Suggestions ?</h3>
+                            </div>
+                            <div class="form-group">
+                                <label>Comments</label>
+                                <textarea name="comments" class="form-control" style="height:100px;"
+                                          placeholder="Type here additional info..."></textarea>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /middle-wizard -->
+                    <div id="bottom-wizard">
+                        <button type="button" name="backward" class="backward">Prev</button>
+                        <button type="button" name="forward" class="forward">Next</button>
+                        <button type="submit" name="process" class="submit" onclick="submitForm()">Submit</button>
+                    </div>
+                    <!-- /bottom-wizard -->
+                </form>
+
+                <div class="mt-5 text-center">
+                    <h5>Can't make it ? Support this Event</h5>
+                    <p>
+                        Support the program by donating to the foundation 🕊️🕊️.
+                    </p>
+                    <div>
+                        <a href="/event-registration/donation/" class="btn_1">Donate</a>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /Wizard container -->
+        </div>
+        <!-- /content-right-->
+    </div>
+    <!-- /row-->
+</div>
+<!-- /container-fluid -->
 
 
-	<!-- Modal terms -->
-	<div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h4 class="modal-title" id="termsLabel">Terms and conditions</h4>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in <strong>nec quod novum accumsan</strong>, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
-					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, <strong>in porro albucius qui</strong>, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
-					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn_1" data-bs-dismiss="modal">Close</button>
-				</div>
-			</div>
-			<!-- /.modal-content -->
-		</div>
-		<!-- /.modal-dialog -->
-	</div>
-	<!-- /.modal -->
-	
-	<!-- COMMON SCRIPTS -->
-	<script src="{% static 'registration/assets/js/jquery-3.7.1.min.js' %}"></script>
-    <script src="{% static 'registration/assets/js/common_scripts.min.js' %}"></script>
-	<script src="{% static 'registration/assets/js/velocity.min.js' %}"></script>
-	<script src="{% static 'registration/assets/js/functions.js' %}"></script>
+<!-- Modal terms -->
+<div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="termsLabel">Terms and conditions</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, in porro albucius qui, in <strong>nec quod novum accumsan</strong>, mei
+                    ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne
+                    quod dicunt sensibus.</p>
+                <p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam
+                    dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt
+                    sensibus. Lorem ipsum dolor sit amet, <strong>in porro albucius qui</strong>, in nec quod novum
+                    accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum
+                    sanctus, pro ne quod dicunt sensibus.</p>
+                <p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam
+                    dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt
+                    sensibus.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn_1" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
 
-	<!-- Wizard script -->
-	<script src="{% static 'registration/assets/js/survey_func.js' %}"></script>
+<!-- COMMON SCRIPTS -->
+<script src="{% static 'registration/assets/js/jquery-3.7.1.min.js' %}"></script>
+<script src="{% static 'registration/assets/js/common_scripts.min.js' %}"></script>
+<script src="{% static 'registration/assets/js/velocity.min.js' %}"></script>
+<script src="{% static 'registration/assets/js/functions.js' %}"></script>
+
+<!-- Wizard script -->
+<script src="{% static 'registration/assets/js/survey_func.js' %}"></script>
 <script>
     function submitForm() {
         document.getElementById("wrapped").submit();

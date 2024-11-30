@@ -31,25 +31,14 @@ def index(request):
         country = data.get('country')
         dob = data.get('dob')
         gender = data.get('gender')
-        question_1 = data.get('question_1')
-        question_2 = data.get('question_2')
-        question_3 = data.get('question_3')
-        question_4 = data.get('question_4')
-        question_5 = data.get('question_5')
-        question_6 = data.get('question_6')
-        question_7 = data.get('question_7')
-        question_8 = data.get('question_8')
-        arrival_date = data.get('arrival_date')
-        additional_message = data.get('additional_message')
-
-        # generation 7
-        total_number = float(data.get('total_number')) if data.get('total_number') else 0
-        spouse_name = data.get('spouse_name')
-        child_name = data.getlist('child_name')
-        child_age = data.getlist('child_age')
-
-        if total_number == 0 and question_3 == "Yes":
-            total_number = 1
+        impartation = data.get('impartation')
+        registered_student = data.get('registeredStudent')
+        attending_gtc = data.get('attendingGuideTheChildren')
+        total_attending_gtc = data.get('TotalAttendingGuideTheChildren')
+        accommodation = data.get('accommodation')
+        arrival_date = data.get('arrivalDate')
+        volunteering = data.get('volunteering')
+        comments = data.get('comments')
 
         # generate payment reference
         payment_reference = generate_payment_reference()
@@ -68,28 +57,16 @@ def index(request):
             country=country,
             dob=dob,
             gender=gender,
-            question_1=question_1,
-            question_2=question_2,
-            question_3=question_3,
-            question_4=question_4,
-            question_5=question_5,
-            question_6=question_6,
-            question_7=question_7,
-            question_8=question_8,
+            impartation=impartation,
+            registered_student=registered_student,
+            attending_gtc=attending_gtc,
+            total_attending_gtc=total_attending_gtc,
+            accommodation=accommodation,
             arrival_date=arrival_date,
-            additional_message=additional_message,
-            spouse_name=spouse_name,
-            gen7_total_attendees=total_number,
+            volunteering=volunteering,
+            comments=comments,
             payment_reference=payment_reference
         )
-
-        for i, j in zip(child_name, child_age):
-            if i and j:
-                Child.objects.create(
-                    participant=participant,
-                    name=i,
-                    age=int(j)
-                )
 
         # payment_context = {
         #     "total_amount": float(2000 + (total_number * 100)),

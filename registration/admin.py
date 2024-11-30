@@ -24,9 +24,9 @@ class ExportCsvMixin:
 
 
 class ParticipantAdmin(admin.ModelAdmin, ExportCsvMixin):
-    list_display = ('first_name', 'last_name', 'email', 'phone', 'question_3', 'country')
+    list_display = ('first_name', 'last_name', 'email', 'phone', 'country', 'attending_gtc')
     search_fields = ('first_name', 'last_name', 'email', 'phone')
-    list_filter = ('question_3', 'country')
+    list_filter = ('attending_gtc', 'country')
     actions = ["export_as_csv"]
 
 
