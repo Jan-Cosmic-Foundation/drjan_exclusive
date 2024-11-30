@@ -13,7 +13,7 @@ class Participant(models.Model):
     impartation = models.CharField(max_length=50, blank=True, null=True)
     registered_student = models.CharField(max_length=50, blank=True, null=True)
     attending_gtc = models.CharField(max_length=50, blank=True, null=True)
-    total_attending_gtc = models.CharField(max_length=50, blank=True, null=True)
+    total_attending_gtc = models.IntegerField(max_length=50, blank=True, null=True)
     accommodation = models.CharField(max_length=50, blank=True, null=True)
     transport = models.CharField(max_length=50, blank=True, null=True)
     personal_transport = models.CharField(max_length=50, blank=True, null=True)
