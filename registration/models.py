@@ -9,7 +9,7 @@ class Participant(models.Model):
     dob = models.DateField(blank=True, null=True)
     gender = models.CharField(max_length=10)
     country = models.CharField(max_length=50, blank=True, null=True)
-    city = models.CharField(max_length=50)
+    region = models.CharField(max_length=50)
     impartation = models.CharField(max_length=50, blank=True, null=True)
     registered_student = models.CharField(max_length=50, blank=True, null=True)
     attending_gtc = models.CharField(max_length=50, blank=True, null=True)

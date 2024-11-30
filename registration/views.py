@@ -31,6 +31,8 @@ def index(request):
         country = data.get('country')
         dob = data.get('dob')
         gender = data.get('gender')
+        region = data.get('region')
+        transport = data.get('transport')
         impartation = data.get('impartation')
         registered_student = data.get('registeredStudent')
         attending_gtc = data.get('attendingGuideTheChildren')
@@ -65,6 +67,8 @@ def index(request):
             arrival_date=arrival_date,
             volunteering=volunteering,
             comments=comments,
+            region=region,
+            transport=transport,
             payment_reference=payment_reference
         )
 
