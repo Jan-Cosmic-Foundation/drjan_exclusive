@@ -16,6 +16,7 @@ class Participant(models.Model):
     total_attending_gtc = models.CharField(max_length=50, blank=True, null=True)
     accommodation = models.CharField(max_length=50, blank=True, null=True)
     transport = models.CharField(max_length=50, blank=True, null=True)
+    personal_transport = models.CharField(max_length=50, blank=True, null=True)
     volunteering = models.CharField(max_length=50, blank=True, null=True)
     comments = models.CharField(max_length=50, blank=True, null=True)
     arrival_date = models.DateField(blank=True, null=True)
