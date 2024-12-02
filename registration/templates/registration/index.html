@@ -347,14 +347,25 @@
                                 </datalist>
                             </div>
                             <div class="form-group">
-                                <input list="regions" class="form-control" name="region"
-                                       id="regionsInput" placeholder="Region (if in Ghana)">
-                                <datalist id="regions">
-                                    <option value="Greater Accra Region">
-                                    <option value="Ashanti Region">
-                                    <option value="Western Region">
-                                    <option value="Eastern Region">
-                                </datalist>
+                                <select class="form-control" name="region" id="regionsInput">
+                                    <option value="" disabled selected>Select a Region (if in Ghana)</option>
+                                    <option value="Ahafo Region">Ahafo Region</option>
+                                    <option value="Ashanti Region">Ashanti Region</option>
+                                    <option value="Bono East Region">Bono East Region</option>
+                                    <option value="Bono Region">Bono Region</option>
+                                    <option value="Central Region">Central Region</option>
+                                    <option value="Eastern Region">Eastern Region</option>
+                                    <option value="Greater Accra Region">Greater Accra Region</option>
+                                    <option value="North East Region">North East Region</option>
+                                    <option value="Northern Region">Northern Region</option>
+                                    <option value="Oti Region">Oti Region</option>
+                                    <option value="Savannah Region">Savannah Region</option>
+                                    <option value="Upper East Region">Upper East Region</option>
+                                    <option value="Upper West Region">Upper West Region</option>
+                                    <option value="Volta Region">Volta Region</option>
+                                    <option value="Western North Region">Western North Region</option>
+                                    <option value="Western Region">Western Region</option>
+                                </select>
                             </div>
 
 
@@ -446,12 +457,23 @@
                             </div>
                             <div>
                                 <div class="mt-4">
-                                    <h3 class="main_question">If yes, please provide the following details for (Guide
-                                        the Children)</h3>
+                                    <h3 class="main_question">Are you coming to the Retreat with a Child or a Spouse
+                                        ?</h3>
                                 </div>
                                 <div class="form-group">
-                                    <input type="number" name="TotalAttendingGuideTheChildren" class="form-control" value=0
-                                           placeholder="Total Number Attending (Including Children)">
+                                    <label class="container_radio version_2">Yes
+                                        <input type="radio" name="spouseOrChild" value="Yes"
+                                               class="required"
+                                               onchange="getVals(this, 'spouseOrChild');">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="container_radio version_2">No
+                                        <input type="radio" name="spouseOrChild" value="No" class="required"
+                                               onchange="getVals(this, 'spouseOrChild');">
+                                        <span class="checkmark"></span>
+                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -518,31 +540,34 @@
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
-                             <!-- another question -->
-									<div class="mt-4">
-										<h3 class="main_question">If personal transport, are you willing to offer a lift?</h3>
-									</div>
-									<div class="form-group">
-										<label class="container_radio version_2">Yes, contact me for ride sharing
-											<input type="radio" name="personalTransport" value="YesRideSharing" class="" onchange="getVals(this, 'personalTransport');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_radio version_2">No, it's fully occupied
-											<input type="radio" name="personalTransport" value="NoRideSharing" class="" onchange="getVals(this, 'personalTransport');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_radio version_2">Not Applicable
-											<input type="radio" name="personalTransport" value="N/A" class="">
-											<span class="checkmark"></span>
-										</label>
-									</div>
                             <!-- another question -->
                             <div class="mt-4">
-                                <h3 class="main_question">Date of arrival on Site NB: Event start date is 29th April, 2025</h3>
+                                <h3 class="main_question">If personal transport, are you willing to offer a lift?</h3>
+                            </div>
+                            <div class="form-group">
+                                <label class="container_radio version_2">Yes, contact me for ride sharing
+                                    <input type="radio" name="personalTransport" value="YesRideSharing" class=""
+                                           onchange="getVals(this, 'personalTransport');">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="container_radio version_2">No, it's fully occupied
+                                    <input type="radio" name="personalTransport" value="NoRideSharing" class=""
+                                           onchange="getVals(this, 'personalTransport');">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="container_radio version_2">Not Applicable
+                                    <input type="radio" name="personalTransport" value="N/A" class="">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <!-- another question -->
+                            <div class="mt-4">
+                                <h3 class="main_question">Date of arrival on Site NB: Event start date is 29th April,
+                                    2025</h3>
                                 <input type="date" name="arrivalDate" class="form-control date"
                                        placeholder="Arrival Date">
                             </div>

@@ -37,7 +37,7 @@ def index(request):
         impartation = data.get('impartation')
         registered_student = data.get('registeredStudent')
         attending_gtc = data.get('attendingGuideTheChildren')
-        total_attending_gtc = data.get('TotalAttendingGuideTheChildren')
+        spouse_or_child = data.get('spouseOrChild')
         accommodation = data.get('accommodation')
         arrival_date = data.get('arrivalDate')
         volunteering = data.get('volunteering')
@@ -63,7 +63,7 @@ def index(request):
             impartation=impartation,
             registered_student=registered_student,
             attending_gtc=attending_gtc,
-            total_attending_gtc=total_attending_gtc,
+            spouse_or_child=spouse_or_child,
             accommodation=accommodation,
             arrival_date=arrival_date,
             volunteering=volunteering,
