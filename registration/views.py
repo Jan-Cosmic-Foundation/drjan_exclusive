@@ -74,16 +74,11 @@ def index(request):
             payment_reference=payment_reference
         )
 
-        # payment_context = {
-        #     "total_amount": float(2000 + (total_number * 100)),
-        #     "gen7_amount": float(total_number * 100),
-        #     "gen7_total_number": int(total_number),
-        #     "gen7_attendee": True if question_3 == "Yes" else False,
-        #     "reference": payment_reference,
-        #
-        # }
+        payment_context = {
+            "reference": payment_reference,
+        }
 
-        return render(request, 'registration/payment.html')
+        return render(request, 'registration/payment.html', payment_context)
     return render(request, 'registration/index.html')
 
 
