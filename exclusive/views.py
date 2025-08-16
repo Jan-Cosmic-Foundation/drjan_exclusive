@@ -154,7 +154,7 @@ class CheckoutView(LoginRequiredMixin, View):
     login_url = '/login/'
 
     def get(self, request):
-        amount = 300000
+        amount = 100
         email = request.user.email
 
         url = "https://api.paystack.co/transaction/initialize"
