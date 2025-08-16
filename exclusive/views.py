@@ -162,7 +162,7 @@ class CheckoutView(LoginRequiredMixin, View):
         payload = json.dumps({
             "email": email,
             "amount": amount,
-            "callback_url": "https://awake.drbaffourjan.com/confirm-payment/",
+            "callback_url": "https://awake.drbaffourjan.com/confirm-payment",
             "split_code": "SPL_NB7LnX54qz",
             "channels": [
                 "card",
@@ -210,7 +210,8 @@ class ConfirmPaymentView(LoginRequiredMixin, View):
             user.profile.save()
 
             # save in payments
-            p = Payment(user, amount)
+            print(amount)
+            p = Payment(user=user, amount=amount)
             p.save()
 
         return render(request, self.template_name, context)
