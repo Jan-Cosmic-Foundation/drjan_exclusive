@@ -79,7 +79,7 @@ htmlcov/
 .pytest_cache/
 
 # Environments
-.env
+jiva_exclusive/.env
 .venv
 env/
 venv/
